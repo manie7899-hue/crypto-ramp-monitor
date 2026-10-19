@@ -1328,6 +1328,24 @@
         "type": "сайт",
         "url": "https://fantasypepe.com",
         "note": "мемкоин-проект, покупка через Wert"
+      },
+      {
+        "name": "Husky Inu",
+        "type": "сайт",
+        "url": "https://thehuskyinu.com",
+        "note": "мемкоин-пресейл HINU; карты через Wert (новости 2025); домен позже переиспользован"
+      },
+      {
+        "name": "Zash",
+        "type": "DeFi",
+        "url": "https://zash.space",
+        "note": "токен-соцсеть, пресейл $ZASH; виджет Wert (npm @wert-io/widget-initializer)"
+      },
+      {
+        "name": "YLDX",
+        "type": "DeFi",
+        "url": "https://yldx.com",
+        "note": "DeFiAI-платформа; виджет Wert в покупке; домен периодически недоступен"
       }
     ]
   },

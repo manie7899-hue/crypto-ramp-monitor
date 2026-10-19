@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (15):
+Прокладки (18):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -355,12 +355,15 @@ KYC: Да — ID для покупок
   - Token6900 — https://token6900.com  [крипто-проект, покупка через Wert]
   - MMON — https://mmon.ai  [AI/крипто-проект, покупка через Wert]
   - FantasyPepe — https://fantasypepe.com  [мемкоин-проект, покупка через Wert]
+  - Husky Inu — https://thehuskyinu.com  [мемкоин-пресейл HINU; карты через Wert (новости 2025); домен позже переиспользован]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
   - OSIS — https://osiscrypto.com  [токен OSIS (Polygon) в списке Wert]
   - LayerAI — https://layerai.org  [токен LAI/LPT в списке Wert (Ethereum/BNB)]
   - Remittix — https://app.remittix.io/dashboard  [PayFi-проект, покупка через Wert]
+  - Zash — https://zash.space  [токен-соцсеть, пресейл $ZASH; виджет Wert (npm @wert-io/widget-initializer)]
+  - YLDX — https://yldx.com  [DeFiAI-платформа; виджет Wert в покупке; домен периодически недоступен]
 
 ----------------------------------------------------------------
 
