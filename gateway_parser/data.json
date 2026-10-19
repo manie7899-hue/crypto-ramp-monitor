@@ -3246,6 +3246,42 @@
         "type": "Гифт-карты (маркетплейс)",
         "url": "https://swiftrecharge.com",
         "note": "оплата через Stripe"
+      },
+      {
+        "name": "Unstoppable Domains",
+        "type": "NFT",
+        "url": "https://unstoppabledomains.com",
+        "note": "оплата доменов через Stripe (доки GitBook)"
+      },
+      {
+        "name": "Nifty Gateway",
+        "type": "NFT",
+        "url": "https://niftygateway.com",
+        "note": "вывод баланса на Stripe/Gemini (help-центр)"
+      },
+      {
+        "name": "Koinly",
+        "type": "сайт",
+        "url": "https://koinly.io",
+        "note": "карточные платежи через Stripe (support)"
+      },
+      {
+        "name": "CoinTracking",
+        "type": "сайт",
+        "url": "https://cointracking.info",
+        "note": "подписки через Stripe (support)"
+      },
+      {
+        "name": "CoinTracker",
+        "type": "сайт",
+        "url": "https://cointracker.io",
+        "note": "Pay with Link (Stripe) (support)"
+      },
+      {
+        "name": "KICK",
+        "type": "гейминг",
+        "url": "https://kick.com",
+        "note": "payout-партнёр Stripe (help.kick.com)"
       }
     ]
   },
@@ -6881,6 +6917,12 @@
         "type": "шлюз",
         "url": "https://skrill.com",
         "note": "встроенный провайдер покупки"
+      },
+      {
+        "name": "Klarna",
+        "type": "платёжный процессор",
+        "url": "https://klarna.com",
+        "note": "покупка BTC через Klarna (страница биржи)"
       }
     ]
   },
@@ -8979,7 +9021,20 @@
       ]
     },
     "notes": "Покупка/обмен крипты внутри — через шлюзы: Bridge.",
-    "partners": []
+    "partners": [
+      {
+        "name": "Kinguin",
+        "type": "Гифт-карты (маркетплейс)",
+        "url": "https://kinguin.net",
+        "note": "принимает PayPal и Klarna (support)"
+      },
+      {
+        "name": "CEX.IO",
+        "type": "биржа",
+        "url": "https://cex.io",
+        "note": "покупка BTC через Klarna (страница биржи)"
+      }
+    ]
   },
   "klever.io": {
     "name": "Klever",
@@ -10556,7 +10611,14 @@
       ]
     },
     "notes": "Покупка/обмен крипты внутри — через шлюзы: MoonPay, Paybis.",
-    "partners": []
+    "partners": [
+      {
+        "name": "Dundle",
+        "type": "Гифт-карты (маркетплейс)",
+        "url": "https://dundle.com",
+        "note": "PayPal Checkout (оплата картой без передачи данных магазину)"
+      }
+    ]
   },
   "phantasma.io": {
     "name": "Phantasma",
@@ -15291,7 +15353,14 @@
       ]
     },
     "notes": "Игровые ключи и гифт-карты (Steam, Razer Gold, Amazon...); карта/PayPal/крипта.",
-    "partners": []
+    "partners": [
+      {
+        "name": "Klarna",
+        "type": "платёжный процессор",
+        "url": "https://klarna.com",
+        "note": "принимает PayPal и Klarna (support)"
+      }
+    ]
   },
   "eneba.com": {
     "name": "Eneba",
@@ -15305,7 +15374,14 @@
       ]
     },
     "notes": "Ключи и гифт-карты; карта/PayPal/Apple Pay.",
-    "partners": []
+    "partners": [
+      {
+        "name": "Braintree",
+        "type": "платёжный процессор",
+        "url": "https://braintreepayments.com",
+        "note": "иконки braintree_paypal в футере"
+      }
+    ]
   },
   "mygiftcardsupply.com": {
     "name": "MyGiftCardSupply",
@@ -15389,7 +15465,14 @@
       ]
     },
     "notes": "Официальный реселлер: Steam, Razer Gold, Amazon, Netflix; карта/PayPal.",
-    "partners": []
+    "partners": [
+      {
+        "name": "PayPal",
+        "type": "платёжный процессор",
+        "url": "https://paypal.com",
+        "note": "PayPal Checkout (оплата картой без передачи данных магазину)"
+      }
+    ]
   },
   "seagm.com": {
     "name": "SEA Gamer Mall",
@@ -15501,7 +15584,14 @@
       ]
     },
     "notes": "Гифт-карты и игровые предметы; карта/PayPal/крипта.",
-    "partners": []
+    "partners": [
+      {
+        "name": "Paysafe",
+        "type": "платёжный процессор",
+        "url": "https://paysafe.com",
+        "note": "Skrill (продукт Paysafe) в способах оплаты"
+      }
+    ]
   },
   "adyen.com": {
     "name": "Adyen",
@@ -15537,6 +15627,18 @@
         "type": "платёжная система",
         "url": "https://www.paypal.com",
         "note": "материнская компания"
+      },
+      {
+        "name": "Gift Up",
+        "type": "Гифт-карты (маркетплейс)",
+        "url": "https://giftup.com",
+        "note": "интеграция Braintree (help)"
+      },
+      {
+        "name": "Eneba",
+        "type": "Гифт-карты (маркетплейс)",
+        "url": "https://eneba.com",
+        "note": "иконки braintree_paypal в футере"
       }
     ]
   },
@@ -15616,6 +15718,12 @@
         "type": "шлюз",
         "url": "https://alchemypay.org",
         "note": "Skrill/NETELLER как методы оплаты"
+      },
+      {
+        "name": "Gameflip",
+        "type": "Гифт-карты (маркетплейс)",
+        "url": "https://gameflip.com",
+        "note": "Skrill (продукт Paysafe) в способах оплаты"
       }
     ]
   },
@@ -15638,6 +15746,12 @@
         "type": "шлюз",
         "url": "https://simplex.com",
         "note": "дочка Nuvei"
+      },
+      {
+        "name": "Gate.io",
+        "type": "биржа",
+        "url": "https://gate.com",
+        "note": "Buy Crypto через Simplex (Nuvei)"
       }
     ]
   },
@@ -15751,7 +15865,20 @@
       ]
     },
     "notes": "Merchant of Record для SaaS/цифровых товаров.",
-    "partners": []
+    "partners": [
+      {
+        "name": "3Commas",
+        "type": "сайт",
+        "url": "https://3commas.io",
+        "note": "процессинг подписок Paddle (help)"
+      },
+      {
+        "name": "Cryptohopper",
+        "type": "сайт",
+        "url": "https://cryptohopper.com",
+        "note": "карты через Paddle (docs)"
+      }
+    ]
   },
   "lemonsqueezy.com": {
     "name": "Lemon Squeezy",
@@ -16271,5 +16398,215 @@
     },
     "notes": "RU-магазин ключей и подписок; карты РФ; БЕЗ KYC.",
     "partners": []
+  },
+  "unstoppabledomains.com": {
+    "name": "Unstoppable Domains",
+    "type": "NFT",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Stripe",
+        "type": "платёжный процессор",
+        "url": "https://stripe.com",
+        "note": "оплата доменов через Stripe (доки GitBook)"
+      }
+    ]
+  },
+  "niftygateway.com": {
+    "name": "Nifty Gateway",
+    "type": "NFT",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Stripe",
+        "type": "платёжный процессор",
+        "url": "https://stripe.com",
+        "note": "вывод баланса на Stripe/Gemini (help-центр)"
+      }
+    ]
+  },
+  "koinly.io": {
+    "name": "Koinly",
+    "type": "сайт",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Stripe",
+        "type": "платёжный процессор",
+        "url": "https://stripe.com",
+        "note": "карточные платежи через Stripe (support)"
+      }
+    ]
+  },
+  "cointracking.info": {
+    "name": "CoinTracking",
+    "type": "сайт",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Stripe",
+        "type": "платёжный процессор",
+        "url": "https://stripe.com",
+        "note": "подписки через Stripe (support)"
+      }
+    ]
+  },
+  "cointracker.io": {
+    "name": "CoinTracker",
+    "type": "сайт",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Stripe",
+        "type": "платёжный процессор",
+        "url": "https://stripe.com",
+        "note": "Pay with Link (Stripe) (support)"
+      }
+    ]
+  },
+  "kick.com": {
+    "name": "KICK",
+    "type": "гейминг",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Stripe",
+        "type": "платёжный процессор",
+        "url": "https://stripe.com",
+        "note": "payout-партнёр Stripe (help.kick.com)"
+      }
+    ]
+  },
+  "3commas.io": {
+    "name": "3Commas",
+    "type": "сайт",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Paddle",
+        "type": "платёжный процессор",
+        "url": "https://paddle.com",
+        "note": "процессинг подписок Paddle (help)"
+      }
+    ]
+  },
+  "cryptohopper.com": {
+    "name": "Cryptohopper",
+    "type": "сайт",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Paddle",
+        "type": "платёжный процессор",
+        "url": "https://paddle.com",
+        "note": "карты через Paddle (docs)"
+      }
+    ]
+  },
+  "giftup.com": {
+    "name": "Gift Up",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Braintree",
+        "type": "платёжный процессор",
+        "url": "https://braintreepayments.com",
+        "note": "интеграция Braintree (help)"
+      }
+    ]
+  },
+  "gate.com": {
+    "name": "Gate.io",
+    "type": "биржа",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "зависит от сервиса",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "",
+    "partners": [
+      {
+        "name": "Nuvei",
+        "type": "платёжный процессор",
+        "url": "https://nuvei.com",
+        "note": "Buy Crypto через Simplex (Nuvei)"
+      }
+    ]
   }
 }
