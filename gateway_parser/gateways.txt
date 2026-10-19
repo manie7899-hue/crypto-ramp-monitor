@@ -340,47 +340,19 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (31):
+Прокладки (7):
 
-  [NFT]
-  - Mintable — https://mintable.app  [карточные платежи через Wert]
-  - Intercellar — https://www.intercellar.io  [вино-NFT; клиент с отзывом на wert.io]
-  - Rarible — https://rarible.com  [карточные платежи]
-  - OpenSea — https://opensea.io  [по регионам; проверь]
-  - Artega — https://intercom.help/artega-a51c01e55129/en/articles/10696141-wert-an-overview-for-users  [Artega partners with Wert for payment processing]
-  - KnownOrigin — https://knownorigin.io  [Wert встроен в 12+ маркетплейсов, вкл. KnownOrigin]
-  - LivLive — https://livlive.com  [fiat-to-chain NFT drops via Wert (RWA/AR)]
-  - Kalamint — https://kalamint.io  [Tezos-маркетплейс: топ-ап картой через Wert (2021)]
-  - LUXY NFT Marketplace — https://luxy.io  [card NFT checkout (Polygon/Syscoin)]
-  - ArtForge — https://artforge.io  [генеративные NFT (Tezos), wertpartnerid в коде сайта]
-  - LimeWire — https://limewire.com  [LMWR в таблице поддерживаемых токенов Wert]
-  - SpaceSeven — https://spaceseven.com  [BuiltWith: сайты с Wert; maintenance]
-  [кошелёк]
-  - Altme — https://altme.io  [интеграция в кошелёк цифровой идентичности]
-  - Vyvo — https://vyvo.com  [VSC (Vyvo Smart Chain) в списке токенов Wert]
-  - Atomex — https://wallet.atomex.me  [BuiltWith: сайты с Wert]
-  - Wombat — https://wombat.app  [BuiltWith: mint.wombat.app использует Wert]
   [интеграция]
   - Concordium — https://www.concordium.com  [покупка NFT]
-  - FinchTrade — https://finchtrade.com  [B2B-ликвидность]
   - Hemi — https://hemi.xyz  [модульный Bitcoin L2; фиат-онрамп через Wert]
   - Chronara — https://chronara.io  [zero-fee покупки картой через Wert]
-  - Tezos Foundation — https://tezos.foundation  [инвестор seed-раунда, интеграция в NFT-проекты]
-  - Avata — https://www.avata.gg  [страхование NFT-покупок поверх checkout Wert]
   - MNTR — https://mntr.io  [виджет Wert в живом HTML (wert_partner_id)]
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
-  - Changelly — https://changelly.com  [отзыв CEO на wert.io/fiat-onramp; Wert в buy-флоу Changelly]
-  - LATOKEN — https://latoken.com  [отзыв CTO: Wert — предпочитаемый onramp LATOKEN]
   [DeFi]
   - Shiba Inu (Shibarium) — https://shibatoken.com  [fiat onramp для BONE/USDC на Shibarium (2024)]
   [сайт]
   - RiffCoin — https://riffcoin.ca  [партнёрство на сайте проекта]
-  [платёжный процессор]
-  - Worldpay — https://worldpay.com  [карты JCB/Amex/Discover в чек-ауте Wert через Worldpay (2024)]
-  - Nuvei — https://nuvei.com  [карточный эквайринг Wert (логотип на wert.io)]
-  [брокер]
-  - Finery Markets — https://finerymarkets.com  [поставщик ликвидности для исполнения покупок Wert]
 
 ----------------------------------------------------------------
 

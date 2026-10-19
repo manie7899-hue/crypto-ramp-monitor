@@ -1240,52 +1240,16 @@
     "notes": "Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.",
     "partners": [
       {
-        "name": "Mintable",
-        "type": "NFT",
-        "url": "https://mintable.app",
-        "note": "карточные платежи через Wert"
-      },
-      {
-        "name": "Altme",
-        "type": "кошелёк",
-        "url": "https://altme.io",
-        "note": "интеграция в кошелёк цифровой идентичности"
-      },
-      {
         "name": "Concordium",
         "type": "интеграция",
         "url": "https://www.concordium.com",
         "note": "покупка NFT"
       },
       {
-        "name": "FinchTrade",
-        "type": "интеграция",
-        "url": "https://finchtrade.com",
-        "note": "B2B-ликвидность"
-      },
-      {
-        "name": "Intercellar",
-        "type": "NFT",
-        "url": "https://www.intercellar.io",
-        "note": "вино-NFT; клиент с отзывом на wert.io"
-      },
-      {
         "name": "Bitcoin Hyper",
         "type": "биржа",
         "url": "https://bitcoinhyper.io",
         "note": "SVM L2 для биткоина; карта через Wert"
-      },
-      {
-        "name": "Rarible",
-        "type": "NFT",
-        "url": "https://rarible.com",
-        "note": "карточные платежи"
-      },
-      {
-        "name": "OpenSea",
-        "type": "NFT",
-        "url": "https://opensea.io",
-        "note": "по регионам; проверь"
       },
       {
         "name": "Hemi",
@@ -1300,30 +1264,6 @@
         "note": "zero-fee покупки картой через Wert"
       },
       {
-        "name": "Artega",
-        "type": "NFT",
-        "url": "https://intercom.help/artega-a51c01e55129/en/articles/10696141-wert-an-overview-for-users",
-        "note": "Artega partners with Wert for payment processing"
-      },
-      {
-        "name": "KnownOrigin",
-        "type": "NFT",
-        "url": "https://knownorigin.io",
-        "note": "Wert встроен в 12+ маркетплейсов, вкл. KnownOrigin"
-      },
-      {
-        "name": "LivLive",
-        "type": "NFT",
-        "url": "https://livlive.com",
-        "note": "fiat-to-chain NFT drops via Wert (RWA/AR)"
-      },
-      {
-        "name": "Kalamint",
-        "type": "NFT",
-        "url": "https://kalamint.io",
-        "note": "Tezos-маркетплейс: топ-ап картой через Wert (2021)"
-      },
-      {
         "name": "Shiba Inu (Shibarium)",
         "type": "DeFi",
         "url": "https://shibatoken.com",
@@ -1336,94 +1276,10 @@
         "note": "партнёрство на сайте проекта"
       },
       {
-        "name": "LUXY NFT Marketplace",
-        "type": "NFT",
-        "url": "https://luxy.io",
-        "note": "card NFT checkout (Polygon/Syscoin)"
-      },
-      {
-        "name": "Tezos Foundation",
-        "type": "интеграция",
-        "url": "https://tezos.foundation",
-        "note": "инвестор seed-раунда, интеграция в NFT-проекты"
-      },
-      {
-        "name": "Avata",
-        "type": "интеграция",
-        "url": "https://www.avata.gg",
-        "note": "страхование NFT-покупок поверх checkout Wert"
-      },
-      {
-        "name": "Changelly",
-        "type": "биржа",
-        "url": "https://changelly.com",
-        "note": "отзыв CEO на wert.io/fiat-onramp; Wert в buy-флоу Changelly"
-      },
-      {
-        "name": "LATOKEN",
-        "type": "биржа",
-        "url": "https://latoken.com",
-        "note": "отзыв CTO: Wert — предпочитаемый onramp LATOKEN"
-      },
-      {
-        "name": "Worldpay",
-        "type": "платёжный процессор",
-        "url": "https://worldpay.com",
-        "note": "карты JCB/Amex/Discover в чек-ауте Wert через Worldpay (2024)"
-      },
-      {
-        "name": "Nuvei",
-        "type": "платёжный процессор",
-        "url": "https://nuvei.com",
-        "note": "карточный эквайринг Wert (логотип на wert.io)"
-      },
-      {
-        "name": "Finery Markets",
-        "type": "брокер",
-        "url": "https://finerymarkets.com",
-        "note": "поставщик ликвидности для исполнения покупок Wert"
-      },
-      {
         "name": "MNTR",
         "type": "интеграция",
         "url": "https://mntr.io",
         "note": "виджет Wert в живом HTML (wert_partner_id)"
-      },
-      {
-        "name": "ArtForge",
-        "type": "NFT",
-        "url": "https://artforge.io",
-        "note": "генеративные NFT (Tezos), wertpartnerid в коде сайта"
-      },
-      {
-        "name": "LimeWire",
-        "type": "NFT",
-        "url": "https://limewire.com",
-        "note": "LMWR в таблице поддерживаемых токенов Wert"
-      },
-      {
-        "name": "Vyvo",
-        "type": "кошелёк",
-        "url": "https://vyvo.com",
-        "note": "VSC (Vyvo Smart Chain) в списке токенов Wert"
-      },
-      {
-        "name": "Atomex",
-        "type": "кошелёк",
-        "url": "https://wallet.atomex.me",
-        "note": "BuiltWith: сайты с Wert"
-      },
-      {
-        "name": "SpaceSeven",
-        "type": "NFT",
-        "url": "https://spaceseven.com",
-        "note": "BuiltWith: сайты с Wert; maintenance"
-      },
-      {
-        "name": "Wombat",
-        "type": "кошелёк",
-        "url": "https://wombat.app",
-        "note": "BuiltWith: mint.wombat.app использует Wert"
       }
     ]
   },
