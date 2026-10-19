@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (26):
+Прокладки (35):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -348,6 +348,7 @@ KYC: Да — ID для покупок
   - Hemi — https://hemi.xyz  [модульный Bitcoin L2; фиат-онрамп через Wert]
   - Chronara — https://chronara.io  [zero-fee покупки картой через Wert]
   - MNTR — https://mntr.io  [виджет Wert в живом HTML (wert_partner_id)]
+  - Launchpad XYZ — https://launchpad.xyz  [web3-платформа LPX; buyWithETHWert]
   [сайт]
   - RiffCoin — https://riffcoin.ca  [партнёрство на сайте проекта]
   - Snorter Token — https://snortertoken.com  [мемкоин-проект, покупка через Wert]
@@ -363,6 +364,12 @@ KYC: Да — ID для покупок
   - Pepe Unchained — https://pepeunchained.com  [мемкоин-пресейл; Wert на сайте]
   - Crypto All-Stars — https://cryptoallstars.io  [мемкоин-пресейл; Wert на сайте]
   - Digitap — https://digitap.app  [$TAP пресейл 2026; Wert на сайте]
+  - Meme Index — https://memeindex.com  [индекс мемкоинов; Wert Widget в HTML]
+  - CatSlap — https://catslaptoken.com  [мемкоин SLAP; Wert Widget в HTML]
+  - Wall Street Ponke — https://wallstreetponke.com  [AI-мемкоин WPONKE; Wert Widget в HTML]
+  - Pepeto — https://pepetotoken.com  [мемкоин; виджет widget.wert.io]
+  - Oh Whale — https://ohwhale.io  [мемкоин-пресейл; @wert-io/widget-initializer в JS]
+  - Green Bitcoin — https://greenbitcoin.xyz  [эко-стейкинг; wertOrigin=widget.wert.io]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
@@ -372,6 +379,8 @@ KYC: Да — ID для покупок
   - Zash — https://zash.space  [токен-соцсеть, пресейл $ZASH; виджет Wert (npm @wert-io/widget-initializer)]
   - YLDX — https://yldx.com  [DeFiAI-платформа; виджет Wert в покупке; домен периодически недоступен]
   - DTX Exchange — https://dtxexchange.com  [трейдинг-платформа/пресейл; Wert на сайте]
+  - LiquidChain — https://liquidchain.com  [L3 (BTC+ETH+SOL); Wert Widget, пресейл $LIQUID]
+  - Mirror Chain — https://mirrorchain.io  [экосистема $MIRROR (Base); Wert Widget]
 
 ----------------------------------------------------------------
 

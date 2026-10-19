@@ -1394,6 +1394,60 @@
         "type": "сайт",
         "url": "https://digitap.app",
         "note": "$TAP пресейл 2026; Wert на сайте"
+      },
+      {
+        "name": "Meme Index",
+        "type": "сайт",
+        "url": "https://memeindex.com",
+        "note": "индекс мемкоинов; Wert Widget в HTML"
+      },
+      {
+        "name": "CatSlap",
+        "type": "сайт",
+        "url": "https://catslaptoken.com",
+        "note": "мемкоин SLAP; Wert Widget в HTML"
+      },
+      {
+        "name": "Wall Street Ponke",
+        "type": "сайт",
+        "url": "https://wallstreetponke.com",
+        "note": "AI-мемкоин WPONKE; Wert Widget в HTML"
+      },
+      {
+        "name": "LiquidChain",
+        "type": "DeFi",
+        "url": "https://liquidchain.com",
+        "note": "L3 (BTC+ETH+SOL); Wert Widget, пресейл $LIQUID"
+      },
+      {
+        "name": "Pepeto",
+        "type": "сайт",
+        "url": "https://pepetotoken.com",
+        "note": "мемкоин; виджет widget.wert.io"
+      },
+      {
+        "name": "Oh Whale",
+        "type": "сайт",
+        "url": "https://ohwhale.io",
+        "note": "мемкоин-пресейл; @wert-io/widget-initializer в JS"
+      },
+      {
+        "name": "Green Bitcoin",
+        "type": "сайт",
+        "url": "https://greenbitcoin.xyz",
+        "note": "эко-стейкинг; wertOrigin=widget.wert.io"
+      },
+      {
+        "name": "Launchpad XYZ",
+        "type": "интеграция",
+        "url": "https://launchpad.xyz",
+        "note": "web3-платформа LPX; buyWithETHWert"
+      },
+      {
+        "name": "Mirror Chain",
+        "type": "DeFi",
+        "url": "https://mirrorchain.io",
+        "note": "экосистема $MIRROR (Base); Wert Widget"
       }
     ]
   },
