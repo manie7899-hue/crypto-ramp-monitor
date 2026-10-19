@@ -3240,60 +3240,6 @@
         "type": "шлюз",
         "url": "https://onramper.com",
         "note": "Stripe в агрегаторе Onramper"
-      },
-      {
-        "name": "Jupiter",
-        "type": "DeFi",
-        "url": "https://jup.ag",
-        "note": "встроенный buy-виджет"
-      },
-      {
-        "name": "Shopify (Shopify Payments)",
-        "type": "мерчанты",
-        "url": "https://www.shopify.com",
-        "note": "Shopify Payments построен на Stripe"
-      },
-      {
-        "name": "Amazon",
-        "type": "мерчанты",
-        "url": "https://www.amazon.com",
-        "note": "Stripe процессит часть платежей Amazon"
-      },
-      {
-        "name": "Lyft",
-        "type": "мерчанты",
-        "url": "https://www.lyft.com",
-        "note": ""
-      },
-      {
-        "name": "Slack",
-        "type": "мерчанты",
-        "url": "https://slack.com",
-        "note": ""
-      },
-      {
-        "name": "Zoom",
-        "type": "мерчанты",
-        "url": "https://zoom.us",
-        "note": ""
-      },
-      {
-        "name": "Notion",
-        "type": "мерчанты",
-        "url": "https://www.notion.so",
-        "note": ""
-      },
-      {
-        "name": "DoorDash",
-        "type": "мерчанты",
-        "url": "https://www.doordash.com",
-        "note": ""
-      },
-      {
-        "name": "Substack",
-        "type": "мерчанты",
-        "url": "https://substack.com",
-        "note": ""
       }
     ]
   },
@@ -9027,14 +8973,7 @@
       ]
     },
     "notes": "Покупка/обмен крипты внутри — через шлюзы: Bridge.",
-    "partners": [
-      {
-        "name": "Bridge",
-        "type": "шлюз",
-        "url": "https://bridge.xyz",
-        "note": "встроенный провайдер покупки"
-      }
-    ]
+    "partners": []
   },
   "klever.io": {
     "name": "Klever",
@@ -10611,20 +10550,7 @@
       ]
     },
     "notes": "Покупка/обмен крипты внутри — через шлюзы: MoonPay, Paybis.",
-    "partners": [
-      {
-        "name": "MoonPay",
-        "type": "шлюз",
-        "url": "https://moonpay.com",
-        "note": "встроенный провайдер покупки"
-      },
-      {
-        "name": "Paybis",
-        "type": "шлюз",
-        "url": "https://paybis.com",
-        "note": "встроенный провайдер покупки"
-      }
-    ]
+    "partners": []
   },
   "phantasma.io": {
     "name": "Phantasma",
@@ -15584,44 +15510,7 @@
       ]
     },
     "notes": "Глобальный процессинг (ЕС, листинг AMS). Карты, APM, payouts.",
-    "partners": [
-      {
-        "name": "eBay",
-        "type": "мерчанты",
-        "url": "https://www.ebay.com",
-        "note": "основной процессинг eBay"
-      },
-      {
-        "name": "Spotify",
-        "type": "мерчанты",
-        "url": "https://www.spotify.com",
-        "note": ""
-      },
-      {
-        "name": "Uber",
-        "type": "мерчанты",
-        "url": "https://www.uber.com",
-        "note": ""
-      },
-      {
-        "name": "SHEIN",
-        "type": "мерчанты",
-        "url": "https://www.shein.com",
-        "note": ""
-      },
-      {
-        "name": "Booking.com",
-        "type": "мерчанты",
-        "url": "https://www.booking.com",
-        "note": ""
-      },
-      {
-        "name": "McDonald's",
-        "type": "мерчанты",
-        "url": "https://www.mcdonalds.com",
-        "note": ""
-      }
-    ]
+    "partners": []
   },
   "braintreepayments.com": {
     "name": "Braintree (PayPal)",
@@ -15637,18 +15526,6 @@
     },
     "notes": "Платёжная платформа PayPal для разработчиков.",
     "partners": [
-      {
-        "name": "Airbnb",
-        "type": "мерчанты",
-        "url": "https://www.airbnb.com",
-        "note": ""
-      },
-      {
-        "name": "Uber",
-        "type": "мерчанты",
-        "url": "https://www.uber.com",
-        "note": ""
-      },
       {
         "name": "PayPal",
         "type": "платёжная система",
@@ -15670,26 +15547,7 @@
       ]
     },
     "notes": "Британский процессинг: карты, APM, payouts, stablecoin-расчёты (USDC).",
-    "partners": [
-      {
-        "name": "Sony",
-        "type": "мерчанты",
-        "url": "https://www.sony.com",
-        "note": ""
-      },
-      {
-        "name": "Grab",
-        "type": "мерчанты",
-        "url": "https://www.grab.com",
-        "note": ""
-      },
-      {
-        "name": "Careem",
-        "type": "мерчанты",
-        "url": "https://www.careem.com",
-        "note": ""
-      }
-    ]
+    "partners": []
   },
   "mollie.com": {
     "name": "Mollie",

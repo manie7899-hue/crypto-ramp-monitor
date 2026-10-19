@@ -986,7 +986,7 @@ KYC: Да — KYC через Stripe
   - KYC при интеграции (US)
 Примечание: Stripe Crypto: онрамп для бизнесов (US). Не для физлиц напрямую.
 
-Прокладки (13):
+Прокладки (4):
 
   [кошелёк]
   - MetaMask — https://metamask.io  [Stripe в провайдерах MetaMask для США]
@@ -995,17 +995,6 @@ KYC: Да — KYC через Stripe
   - Privy — https://privy.io  [Stripe onramp в Privy]
   [шлюз]
   - Onramper — https://onramper.com  [Stripe в агрегаторе Onramper]
-  [DeFi]
-  - Jupiter — https://jup.ag  [встроенный buy-виджет]
-  [мерчанты]
-  - Shopify (Shopify Payments) — https://www.shopify.com  [Shopify Payments построен на Stripe]
-  - Amazon — https://www.amazon.com  [Stripe процессит часть платежей Amazon]
-  - Lyft — https://www.lyft.com
-  - Slack — https://slack.com
-  - Zoom — https://zoom.us
-  - Notion — https://www.notion.so
-  - DoorDash — https://www.doordash.com
-  - Substack — https://substack.com
 
 ----------------------------------------------------------------
 
@@ -4399,10 +4388,8 @@ KYC: зависит от выбранного провайдера
   - KYC шлюза при покупке картой
 Примечание: Покупка/обмен крипты внутри — через шлюзы: Bridge.
 
-Прокладки (1):
+Прокладки (0):
 
-  [шлюз]
-  - Bridge — https://bridge.xyz  [встроенный провайдер покупки]
 
 ----------------------------------------------------------------
 
@@ -5440,11 +5427,8 @@ KYC: зависит от выбранного провайдера
   - KYC шлюза при покупке картой
 Примечание: Покупка/обмен крипты внутри — через шлюзы: MoonPay, Paybis.
 
-Прокладки (2):
+Прокладки (0):
 
-  [шлюз]
-  - MoonPay — https://moonpay.com  [встроенный провайдер покупки]
-  - Paybis — https://paybis.com  [встроенный провайдер покупки]
 
 ----------------------------------------------------------------
 
@@ -8700,15 +8684,8 @@ KYC: Да (KYB мерчанта)
   - KYC покупателя по юрисдикции
 Примечание: Глобальный процессинг (ЕС, листинг AMS). Карты, APM, payouts.
 
-Прокладки (6):
+Прокладки (0):
 
-  [мерчанты]
-  - eBay — https://www.ebay.com  [основной процессинг eBay]
-  - Spotify — https://www.spotify.com
-  - Uber — https://www.uber.com
-  - SHEIN — https://www.shein.com
-  - Booking.com — https://www.booking.com
-  - McDonald's — https://www.mcdonalds.com
 
 ----------------------------------------------------------------
 
@@ -8721,11 +8698,8 @@ KYC: Да (KYB)
   - KYC покупателя по юрисдикции
 Примечание: Платёжная платформа PayPal для разработчиков.
 
-Прокладки (3):
+Прокладки (1):
 
-  [мерчанты]
-  - Airbnb — https://www.airbnb.com
-  - Uber — https://www.uber.com
   [платёжная система]
   - PayPal — https://www.paypal.com  [материнская компания]
 
@@ -8740,12 +8714,8 @@ KYC: Да (KYB)
   - KYC покупателя по юрисдикции
 Примечание: Британский процессинг: карты, APM, payouts, stablecoin-расчёты (USDC).
 
-Прокладки (3):
+Прокладки (0):
 
-  [мерчанты]
-  - Sony — https://www.sony.com
-  - Grab — https://www.grab.com
-  - Careem — https://www.careem.com
 
 ----------------------------------------------------------------
 
