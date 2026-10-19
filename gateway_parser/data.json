@@ -1240,12 +1240,6 @@
     "notes": "Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.",
     "partners": [
       {
-        "name": "Decentraland",
-        "type": "метавселенная",
-        "url": "https://decentraland.org",
-        "note": "интеграция в Marketplace API"
-      },
-      {
         "name": "Mintable",
         "type": "NFT",
         "url": "https://mintable.app",
@@ -1276,12 +1270,6 @@
         "note": "вино-NFT; клиент с отзывом на wert.io"
       },
       {
-        "name": "Jockiz",
-        "type": "гейминг",
-        "url": "https://www.jockiz.com",
-        "note": "скачки PMU; клиент с отзывом на wert.io"
-      },
-      {
         "name": "Bitcoin Hyper",
         "type": "биржа",
         "url": "https://bitcoinhyper.io",
@@ -1291,12 +1279,6 @@
         "name": "Rarible",
         "type": "NFT",
         "url": "https://rarible.com",
-        "note": "карточные платежи"
-      },
-      {
-        "name": "The Sandbox",
-        "type": "метавселенная",
-        "url": "https://www.sandbox.game",
         "note": "карточные платежи"
       },
       {

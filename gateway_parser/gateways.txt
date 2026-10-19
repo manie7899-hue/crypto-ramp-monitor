@@ -340,11 +340,8 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (22):
+Прокладки (19):
 
-  [метавселенная]
-  - Decentraland — https://decentraland.org  [интеграция в Marketplace API]
-  - The Sandbox — https://www.sandbox.game  [карточные платежи]
   [NFT]
   - Mintable — https://mintable.app  [карточные платежи через Wert]
   - Intercellar — https://www.intercellar.io  [вино-NFT; клиент с отзывом на wert.io]
@@ -364,8 +361,6 @@ KYC: Да — ID для покупок
   - Chronara — https://chronara.io  [zero-fee покупки картой через Wert]
   - Tezos Foundation — https://tezos.foundation  [инвестор seed-раунда, интеграция в NFT-проекты]
   - Avata — https://www.avata.gg  [страхование NFT-покупок поверх checkout Wert]
-  [гейминг]
-  - Jockiz — https://www.jockiz.com  [скачки PMU; клиент с отзывом на wert.io]
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
   [DeFi]
