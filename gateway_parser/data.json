@@ -1454,6 +1454,36 @@
         "type": "сайт",
         "url": "https://livlive.com",
         "note": "RWA-платформа с AR-дропами; Wert = карта, NOWPayments = крипто (кейс Wavect)"
+      },
+      {
+        "name": "Pepenode",
+        "type": "сайт",
+        "url": "https://pepenode.io",
+        "note": "мемкоин-пресейл; Wert Widget в HTML"
+      },
+      {
+        "name": "Solaxy",
+        "type": "сайт",
+        "url": "https://solaxy.io",
+        "note": "мемкоин-пресейл Solana L2; Wert Widget в HTML"
+      },
+      {
+        "name": "Oracle Meme",
+        "type": "сайт",
+        "url": "https://oraclememe.com",
+        "note": "мемкоин OMEME; main.js → widget.wert.io"
+      },
+      {
+        "name": "Ruvi AI",
+        "type": "сайт",
+        "url": "https://ruvi.io",
+        "note": "AI-суперапп-пресейл; JS: banxa/transak/wert/kado (Wert-виджет, частичное подтверждение)"
+      },
+      {
+        "name": "Pepescape",
+        "type": "сайт",
+        "url": "https://pepescape.io",
+        "note": "мем-пресейл PESC; Wert подтверждён Trustpilot/поддержкой Wert; домен сейчас не резолвится"
       }
     ]
   },

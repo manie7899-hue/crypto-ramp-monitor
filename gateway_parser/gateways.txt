@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (36):
+Прокладки (41):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -371,6 +371,11 @@ KYC: Да — ID для покупок
   - Oh Whale — https://ohwhale.io  [мемкоин-пресейл; @wert-io/widget-initializer в JS]
   - Green Bitcoin — https://greenbitcoin.xyz  [эко-стейкинг; wertOrigin=widget.wert.io]
   - LivLive — https://livlive.com  [RWA-платформа с AR-дропами; Wert = карта, NOWPayments = крипто (кейс Wavect)]
+  - Pepenode — https://pepenode.io  [мемкоин-пресейл; Wert Widget в HTML]
+  - Solaxy — https://solaxy.io  [мемкоин-пресейл Solana L2; Wert Widget в HTML]
+  - Oracle Meme — https://oraclememe.com  [мемкоин OMEME; main.js → widget.wert.io]
+  - Ruvi AI — https://ruvi.io  [AI-суперапп-пресейл; JS: banxa/transak/wert/kado (Wert-виджет, частичное подтверждение)]
+  - Pepescape — https://pepescape.io  [мем-пресейл PESC; Wert подтверждён Trustpilot/поддержкой Wert; домен сейчас не резолвится]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
