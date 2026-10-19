@@ -96,6 +96,11 @@ ul.lv li::before{content:"▸";position:absolute;left:2px;color:var(--accent2)}
 .prow .note{font-size:11.5px}
 .prow.hit{background:rgba(46,204,113,.08);border-radius:6px;padding:2px 4px}
 .pcount{font-size:11.5px;color:var(--muted)}
+.tchips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tchip{display:inline-flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--line);
+  border-radius:999px;padding:6px 13px;font-size:13px;cursor:pointer;user-select:none;transition:.15s;color:var(--muted)}
+.tchip:hover{border-color:var(--accent2);color:var(--text)}
+.tchip.on{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff}
 .hint{color:var(--muted);font-size:12.5px;margin-top:16px;border-top:1px solid var(--line);padding-top:10px}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:60px 0}
 </style>
@@ -113,6 +118,7 @@ ul.lv li::before{content:"▸";position:absolute;left:2px;color:var(--accent2)}
     <input type="text" id="q" placeholder="🔍 Ищи платёжку или прокладку: wert, moonpay, metamask, bitcoinhyper...">
     <button class="btn ghost" id="btn-all" onclick="toggleAll()">📂 Раскрыть все менюшки</button>
   </div>
+  <div class="tchips" id="tchips"></div>
   <div class="grid" id="grid"></div>
   <div class="hint">Кликни «📂 Все прокладки» у платёжки — раскроется полный список кошельков и сайтов, где она встроена. Данные: data.json. Обновить: <b>python3 build_panel.py</b>.</div>
 </main>
@@ -130,6 +136,28 @@ function toggleAll(){
   $("btn-all").textContent = allOpen ? "📁 Свернуть все менюшки" : "📂 Раскрыть все менюшки";
 }
 
+const TF = { tf: "all" };
+function catOf(g){
+  const t = (g.type || "").toLowerCase();
+  if(t.includes("гифт")) return "Гифты";
+  if(t.includes("биржа") || t.includes("cex") || t.includes("брокер") || t.includes("необанк")) return "Биржи";
+  if(t.includes("кошел")) return "Кошельки";
+  if(t.includes("обменник") || t.includes("swap")) return "Обменники";
+  if(t.includes("процессор") || t.includes("платёжная система") || t.includes("платеж")) return "Процессоры";
+  if(t.includes("шлюз") || t.includes("ramp") || t.includes("онрамп")) return "Шлюзы";
+  if(t.includes("стабилкоин") || t.includes("stablecoin")) return "Стабилкоины";
+  return "Прочее";
+}
+const TICONS = {"Гифты":"🎁","Биржи":"🏦","Кошельки":"👛","Обменники":"🔁","Процессоры":"💳","Шлюзы":"🔌","Стабилкоины":"💵","Прочее":"📦"};
+function chips(){
+  const m = {};
+  Object.values(DATA).forEach(g => { const c = catOf(g); m[c] = (m[c]||0)+1; });
+  let html = `<span class="tchip ${TF.tf==="all"?"on":""}" data-c="all">Всё (${Object.keys(DATA).length})</span>`;
+  const order = ["Гифты","Шлюзы","Биржи","Кошельки","Обменники","Процессоры","Стабилкоины","Прочее"];
+  order.forEach(c => { if(m[c]) html += `<span class="tchip ${TF.tf===c?"on":""}" data-c="${c}">${TICONS[c]||""} ${c} (${m[c]})</span>`; });
+  $("tchips").innerHTML = html;
+  document.querySelectorAll(".tchip").forEach(el => el.onclick = () => { TF.tf = el.dataset.c; render($("q").value); });
+}
 function render(q){
   q = (q || "").trim().toLowerCase();
   const cards = Object.entries(DATA).map(([dom, g]) => {
@@ -156,6 +184,7 @@ function render(q){
         <div class="kv"><div class="k">Лимиты</div><div class="v">${esc(g.kyc.лимиты)}</div></div>
         <ul class="lv">${lv}</ul>
       </details>`;
+    if(TF.tf !== "all" && catOf(g) !== TF.tf) return null;
     if(!hit && q && !glist.toLowerCase().includes(q)) return null;
     return `
     <div class="card">
@@ -175,6 +204,7 @@ function render(q){
   $("grid").innerHTML = cards.length ? cards.join("") : `<div class="empty">Ничего не найдено 🤷</div>`;
   $("st-gw").textContent = Object.keys(DATA).length;
   $("st-p").textContent = Object.values(DATA).reduce((a,g) => a + g.partners.length, 0);
+  chips();
   if(allOpen){
     document.querySelectorAll(".plist").forEach(el => el.classList.add("open"));
     document.querySelectorAll(".ptoggle").forEach(el => el.classList.add("on"));
