@@ -1484,6 +1484,18 @@
         "type": "сайт",
         "url": "https://pepescape.io",
         "note": "мем-пресейл PESC; Wert подтверждён Trustpilot/поддержкой Wert; домен сейчас не резолвится"
+      },
+      {
+        "name": "SUBBD",
+        "type": "сайт",
+        "url": "https://subbdtoken.com",
+        "note": "AI creator-подписки; маркеры Wert в HTML+JS, пресейл на Web3Payments"
+      },
+      {
+        "name": "DogLibre",
+        "type": "сайт",
+        "url": "https://doglibre.com",
+        "note": "мемкоин DOGL; маркеры Wert в main JS, пресейл на Web3Payments"
       }
     ]
   },
