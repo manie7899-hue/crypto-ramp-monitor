@@ -1346,6 +1346,42 @@
         "type": "DeFi",
         "url": "https://yldx.com",
         "note": "DeFiAI-платформа; виджет Wert в покупке; домен периодически недоступен"
+      },
+      {
+        "name": "Mind of Pepe",
+        "type": "сайт",
+        "url": "https://mindofpepe.com",
+        "note": "мемкоин-пресейл; Wert на сайте (grep HTML)"
+      },
+      {
+        "name": "BTC Bull Token",
+        "type": "сайт",
+        "url": "https://btcbulltoken.com",
+        "note": "мемкоин-пресейл; Wert на сайте"
+      },
+      {
+        "name": "Wall Street Pepe",
+        "type": "сайт",
+        "url": "https://wallstreetpepe.com",
+        "note": "мемкоин-пресейл; Wert на сайте"
+      },
+      {
+        "name": "Flockerz",
+        "type": "сайт",
+        "url": "https://flockerz.com",
+        "note": "мемкоин-пресейл; Wert на сайте"
+      },
+      {
+        "name": "Pepe Unchained",
+        "type": "сайт",
+        "url": "https://pepeunchained.com",
+        "note": "мемкоин-пресейл; Wert на сайте"
+      },
+      {
+        "name": "Crypto All-Stars",
+        "type": "сайт",
+        "url": "https://cryptoallstars.io",
+        "note": "мемкоин-пресейл; Wert на сайте"
       }
     ]
   },

@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (18):
+Прокладки (24):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -356,6 +356,12 @@ KYC: Да — ID для покупок
   - MMON — https://mmon.ai  [AI/крипто-проект, покупка через Wert]
   - FantasyPepe — https://fantasypepe.com  [мемкоин-проект, покупка через Wert]
   - Husky Inu — https://thehuskyinu.com  [мемкоин-пресейл HINU; карты через Wert (новости 2025); домен позже переиспользован]
+  - Mind of Pepe — https://mindofpepe.com  [мемкоин-пресейл; Wert на сайте (grep HTML)]
+  - BTC Bull Token — https://btcbulltoken.com  [мемкоин-пресейл; Wert на сайте]
+  - Wall Street Pepe — https://wallstreetpepe.com  [мемкоин-пресейл; Wert на сайте]
+  - Flockerz — https://flockerz.com  [мемкоин-пресейл; Wert на сайте]
+  - Pepe Unchained — https://pepeunchained.com  [мемкоин-пресейл; Wert на сайте]
+  - Crypto All-Stars — https://cryptoallstars.io  [мемкоин-пресейл; Wert на сайте]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
