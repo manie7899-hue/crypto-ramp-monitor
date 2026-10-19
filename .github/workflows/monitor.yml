@@ -1,0 +1,43 @@
+name: bg-monitor
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # каждые 30 минут
+  workflow_dispatch: {}       # ручной запуск
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Запустить фоновый монитор
+        run: python bg_monitor/monitor.py
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+
+      - name: Пересобрать панель
+        run: python gateway_parser/build_panel.py
+
+      - name: Панель в корень (для GitHub Pages)
+        run: cp gateway_parser/panel.html index.html
+
+      - name: Закоммитить изменения
+        run: |
+          git config user.name "bg-monitor-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "нет изменений"
+          else
+            git commit -m "auto: обновление каталога $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
