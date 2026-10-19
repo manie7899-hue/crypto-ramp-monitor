@@ -33,16 +33,26 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 
 QUERIES = [
-    "crypto onramp partnership announcement",
-    "new fiat onramp integrated wallet crypto",
-    "crypto payment gateway partnership 2026",
-    "instant swap exchange new partnership",
-    "site:x.com crypto onramp partnership",
-    "site:twitter.com onramp integrated crypto",
-    "site:reddit.com new crypto onramp provider",
-    "site:bitcointalk.org payment gateway partnership",
-    "обменник криптовалют новое партнёрство",
-    "купить криптовалюту картой новый сервис",
+    # общая охота
+    ("crypto onramp partnership announcement", "gen"),
+    ("new fiat onramp integrated wallet crypto", "gen"),
+    ("crypto payment gateway partnership 2026", "gen"),
+    ("instant swap exchange new partnership", "gen"),
+    ("site:x.com crypto onramp partnership", "gen"),
+    ("site:twitter.com onramp integrated crypto", "gen"),
+    ("site:reddit.com new crypto onramp provider", "gen"),
+    ("site:bitcointalk.org payment gateway partnership", "gen"),
+    ("обменник криптовалют новое партнёрство", "gen"),
+    ("купить криптовалюту картой новый сервис", "gen"),
+    # постоянная Wert-охота (такие как bitcoinhyper.io)
+    ("\"Wert\" crypto checkout partnership", "wert"),
+    ("\"powered by Wert\"", "wert"),
+    ("\"Wert\" NFT marketplace card payment", "wert"),
+    ("\"Wert\" buy crypto card bitcoin", "wert"),
+    ("site:x.com Wert partnership crypto", "wert"),
+    ("\"Wert\" onramp integrated 2026", "wert"),
+    ("\"Wert\" checkout L2 OR marketplace OR game", "wert"),
+    ("Wert payment provider new project", "wert"),
 ]
 
 RSS_FEEDS = [
@@ -274,7 +284,7 @@ def main() -> int:
     candidates = {}  # domain -> source
 
     # 1) поисковики
-    for q in QUERIES:
+    for q, tag in QUERIES:
         for name, fn in (("bing", search_bing), ("ddg", search_ddg), ("mojeek", search_mojeek)):
             try:
                 links = fn(q, 8)
@@ -283,7 +293,7 @@ def main() -> int:
             for l in links:
                 dom = domain_of(l)
                 if dom and not SKIP.search(dom):
-                    candidates.setdefault(dom, f"search:{name}:{q[:40]}")
+                    candidates.setdefault(dom, f"search:{tag}:{name}:{q[:40]}")
             time.sleep(0.8)
 
     # 2) RSS
@@ -303,9 +313,10 @@ def main() -> int:
         if dom in KNOWN_DOMAINS or dom in seen:
             continue
         info = verify(dom)
+        is_wert = "wert" in candidates[dom]
         strong_hit = any(k in (info.get("title", "") + " " + info.get("desc", "") + " " + dom).lower()
                          for k in STRONG)
-        if not info or info["score"] < 0.15 or not strong_hit:
+        if not info or info["score"] < (0.10 if is_wert else 0.15) or (not strong_hit and not is_wert):
             seen[dom] = time.strftime("%Y-%m-%d %H:%M")
             continue
         f = {"domain": dom, "url": info["url"], "title": info["title"],
