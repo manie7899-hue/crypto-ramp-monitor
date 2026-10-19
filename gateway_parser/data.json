@@ -1496,6 +1496,24 @@
         "type": "сайт",
         "url": "https://doglibre.com",
         "note": "мемкоин DOGL; маркеры Wert в main JS, пресейл на Web3Payments"
+      },
+      {
+        "name": "SeerDEX",
+        "type": "сайт",
+        "url": "https://seerdex.com",
+        "note": "Solana prediction-market пресейл; Wert Widget в HTML"
+      },
+      {
+        "name": "SpaceXRP",
+        "type": "сайт",
+        "url": "https://spacexrptoken.com",
+        "note": "XRP-мемкоин-пресейл; Wert Widget в HTML"
+      },
+      {
+        "name": "Gassed Token",
+        "type": "сайт",
+        "url": "https://gassedtoken.com",
+        "note": "Solana мемкоин-пресейл; Wert Widget в HTML"
       }
     ]
   },

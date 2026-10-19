@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (43):
+Прокладки (46):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -378,6 +378,9 @@ KYC: Да — ID для покупок
   - Pepescape — https://pepescape.io  [мем-пресейл PESC; Wert подтверждён Trustpilot/поддержкой Wert; домен сейчас не резолвится]
   - SUBBD — https://subbdtoken.com  [AI creator-подписки; маркеры Wert в HTML+JS, пресейл на Web3Payments]
   - DogLibre — https://doglibre.com  [мемкоин DOGL; маркеры Wert в main JS, пресейл на Web3Payments]
+  - SeerDEX — https://seerdex.com  [Solana prediction-market пресейл; Wert Widget в HTML]
+  - SpaceXRP — https://spacexrptoken.com  [XRP-мемкоин-пресейл; Wert Widget в HTML]
+  - Gassed Token — https://gassedtoken.com  [Solana мемкоин-пресейл; Wert Widget в HTML]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
