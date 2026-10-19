@@ -1382,6 +1382,18 @@
         "type": "сайт",
         "url": "https://cryptoallstars.io",
         "note": "мемкоин-пресейл; Wert на сайте"
+      },
+      {
+        "name": "DTX Exchange",
+        "type": "DeFi",
+        "url": "https://dtxexchange.com",
+        "note": "трейдинг-платформа/пресейл; Wert на сайте"
+      },
+      {
+        "name": "Digitap",
+        "type": "сайт",
+        "url": "https://digitap.app",
+        "note": "$TAP пресейл 2026; Wert на сайте"
       }
     ]
   },

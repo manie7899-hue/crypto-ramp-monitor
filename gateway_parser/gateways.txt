@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (24):
+Прокладки (26):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -362,6 +362,7 @@ KYC: Да — ID для покупок
   - Flockerz — https://flockerz.com  [мемкоин-пресейл; Wert на сайте]
   - Pepe Unchained — https://pepeunchained.com  [мемкоин-пресейл; Wert на сайте]
   - Crypto All-Stars — https://cryptoallstars.io  [мемкоин-пресейл; Wert на сайте]
+  - Digitap — https://digitap.app  [$TAP пресейл 2026; Wert на сайте]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
@@ -370,6 +371,7 @@ KYC: Да — ID для покупок
   - Remittix — https://app.remittix.io/dashboard  [PayFi-проект, покупка через Wert]
   - Zash — https://zash.space  [токен-соцсеть, пресейл $ZASH; виджет Wert (npm @wert-io/widget-initializer)]
   - YLDX — https://yldx.com  [DeFiAI-платформа; виджет Wert в покупке; домен периодически недоступен]
+  - DTX Exchange — https://dtxexchange.com  [трейдинг-платформа/пресейл; Wert на сайте]
 
 ----------------------------------------------------------------
 
