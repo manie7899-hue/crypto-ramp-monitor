@@ -1352,6 +1352,78 @@
         "type": "интеграция",
         "url": "https://www.avata.gg",
         "note": "страхование NFT-покупок поверх checkout Wert"
+      },
+      {
+        "name": "Changelly",
+        "type": "биржа",
+        "url": "https://changelly.com",
+        "note": "отзыв CEO на wert.io/fiat-onramp; Wert в buy-флоу Changelly"
+      },
+      {
+        "name": "LATOKEN",
+        "type": "биржа",
+        "url": "https://latoken.com",
+        "note": "отзыв CTO: Wert — предпочитаемый onramp LATOKEN"
+      },
+      {
+        "name": "Worldpay",
+        "type": "платёжный процессор",
+        "url": "https://worldpay.com",
+        "note": "карты JCB/Amex/Discover в чек-ауте Wert через Worldpay (2024)"
+      },
+      {
+        "name": "Nuvei",
+        "type": "платёжный процессор",
+        "url": "https://nuvei.com",
+        "note": "карточный эквайринг Wert (логотип на wert.io)"
+      },
+      {
+        "name": "Finery Markets",
+        "type": "брокер",
+        "url": "https://finerymarkets.com",
+        "note": "поставщик ликвидности для исполнения покупок Wert"
+      },
+      {
+        "name": "MNTR",
+        "type": "интеграция",
+        "url": "https://mntr.io",
+        "note": "виджет Wert в живом HTML (wert_partner_id)"
+      },
+      {
+        "name": "ArtForge",
+        "type": "NFT",
+        "url": "https://artforge.io",
+        "note": "генеративные NFT (Tezos), wertpartnerid в коде сайта"
+      },
+      {
+        "name": "LimeWire",
+        "type": "NFT",
+        "url": "https://limewire.com",
+        "note": "LMWR в таблице поддерживаемых токенов Wert"
+      },
+      {
+        "name": "Vyvo",
+        "type": "кошелёк",
+        "url": "https://vyvo.com",
+        "note": "VSC (Vyvo Smart Chain) в списке токенов Wert"
+      },
+      {
+        "name": "Atomex",
+        "type": "кошелёк",
+        "url": "https://wallet.atomex.me",
+        "note": "BuiltWith: сайты с Wert"
+      },
+      {
+        "name": "SpaceSeven",
+        "type": "NFT",
+        "url": "https://spaceseven.com",
+        "note": "BuiltWith: сайты с Wert; maintenance"
+      },
+      {
+        "name": "Wombat",
+        "type": "кошелёк",
+        "url": "https://wombat.app",
+        "note": "BuiltWith: mint.wombat.app использует Wert"
       }
     ]
   },
