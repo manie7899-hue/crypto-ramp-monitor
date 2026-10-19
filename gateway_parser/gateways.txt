@@ -340,17 +340,25 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (7):
+Прокладки (15):
 
   [интеграция]
   - Concordium — https://www.concordium.com  [покупка NFT]
   - Hemi — https://hemi.xyz  [модульный Bitcoin L2; фиат-онрамп через Wert]
   - Chronara — https://chronara.io  [zero-fee покупки картой через Wert]
   - MNTR — https://mntr.io  [виджет Wert в живом HTML (wert_partner_id)]
+  - Theta — https://thetatoken.org  [L1 видео-блокчейн; TFUEL в списке Wert]
+  - Stacks — https://stacks.co  [Bitcoin L2; STX в списке Wert]
+  - Rootstock — https://rootstock.io  [Bitcoin L2 (RSK); RBTC в списке Wert]
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
   [DeFi]
   - Shiba Inu (Shibarium) — https://shibatoken.com  [fiat onramp для BONE/USDC на Shibarium (2024)]
+  - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
+  - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
+  - OSIS — https://osiscrypto.com  [токен OSIS (Polygon) в списке Wert]
+  - LayerAI — https://layerai.org  [токен LAI/LPT в списке Wert (Ethereum/BNB)]
+  - Badger — https://badger.com  [BadgerDAO (Bitcoin-DeFi); токен в списке Wert]
   [сайт]
   - RiffCoin — https://riffcoin.ca  [партнёрство на сайте проекта]
 

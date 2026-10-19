@@ -1280,6 +1280,54 @@
         "type": "интеграция",
         "url": "https://mntr.io",
         "note": "виджет Wert в живом HTML (wert_partner_id)"
+      },
+      {
+        "name": "Vyvo",
+        "type": "DeFi",
+        "url": "https://vyvo.com",
+        "note": "Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert"
+      },
+      {
+        "name": "IPMB",
+        "type": "DeFi",
+        "url": "https://ipmb.com",
+        "note": "RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith"
+      },
+      {
+        "name": "OSIS",
+        "type": "DeFi",
+        "url": "https://osiscrypto.com",
+        "note": "токен OSIS (Polygon) в списке Wert"
+      },
+      {
+        "name": "LayerAI",
+        "type": "DeFi",
+        "url": "https://layerai.org",
+        "note": "токен LAI/LPT в списке Wert (Ethereum/BNB)"
+      },
+      {
+        "name": "Theta",
+        "type": "интеграция",
+        "url": "https://thetatoken.org",
+        "note": "L1 видео-блокчейн; TFUEL в списке Wert"
+      },
+      {
+        "name": "Badger",
+        "type": "DeFi",
+        "url": "https://badger.com",
+        "note": "BadgerDAO (Bitcoin-DeFi); токен в списке Wert"
+      },
+      {
+        "name": "Stacks",
+        "type": "интеграция",
+        "url": "https://stacks.co",
+        "note": "Bitcoin L2; STX в списке Wert"
+      },
+      {
+        "name": "Rootstock",
+        "type": "интеграция",
+        "url": "https://rootstock.io",
+        "note": "Bitcoin L2 (RSK); RBTC в списке Wert"
       }
     ]
   },
