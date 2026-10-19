@@ -1240,12 +1240,6 @@
     "notes": "Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.",
     "partners": [
       {
-        "name": "Concordium",
-        "type": "интеграция",
-        "url": "https://www.concordium.com",
-        "note": "покупка NFT"
-      },
-      {
         "name": "Bitcoin Hyper",
         "type": "биржа",
         "url": "https://bitcoinhyper.io",
@@ -1262,12 +1256,6 @@
         "type": "интеграция",
         "url": "https://chronara.io",
         "note": "zero-fee покупки картой через Wert"
-      },
-      {
-        "name": "Shiba Inu (Shibarium)",
-        "type": "DeFi",
-        "url": "https://shibatoken.com",
-        "note": "fiat onramp для BONE/USDC на Shibarium (2024)"
       },
       {
         "name": "RiffCoin",
@@ -1304,30 +1292,6 @@
         "type": "DeFi",
         "url": "https://layerai.org",
         "note": "токен LAI/LPT в списке Wert (Ethereum/BNB)"
-      },
-      {
-        "name": "Theta",
-        "type": "интеграция",
-        "url": "https://thetatoken.org",
-        "note": "L1 видео-блокчейн; TFUEL в списке Wert"
-      },
-      {
-        "name": "Badger",
-        "type": "DeFi",
-        "url": "https://badger.com",
-        "note": "BadgerDAO (Bitcoin-DeFi); токен в списке Wert"
-      },
-      {
-        "name": "Stacks",
-        "type": "интеграция",
-        "url": "https://stacks.co",
-        "note": "Bitcoin L2; STX в списке Wert"
-      },
-      {
-        "name": "Rootstock",
-        "type": "интеграция",
-        "url": "https://rootstock.io",
-        "note": "Bitcoin L2 (RSK); RBTC в списке Wert"
       }
     ]
   },
