@@ -1514,6 +1514,18 @@
         "type": "сайт",
         "url": "https://gassedtoken.com",
         "note": "Solana мемкоин-пресейл; Wert Widget в HTML"
+      },
+      {
+        "name": "Doge2014",
+        "type": "сайт",
+        "url": "https://doge2014.io",
+        "note": "пресейл к 10-летию Dogecoin; wertOrigin=widget.wert.io в JS-бандле (архив)"
+      },
+      {
+        "name": "Bull Guess",
+        "type": "сайт",
+        "url": "https://bullguess.com",
+        "note": "W3P-пресейл; Wert Widget в архиве (wertId 01JTT…); сайт сейчас не отвечает"
       }
     ]
   },
