@@ -3246,6 +3246,54 @@
         "type": "DeFi",
         "url": "https://jup.ag",
         "note": "встроенный buy-виджет"
+      },
+      {
+        "name": "Shopify (Shopify Payments)",
+        "type": "мерчанты",
+        "url": "https://www.shopify.com",
+        "note": "Shopify Payments построен на Stripe"
+      },
+      {
+        "name": "Amazon",
+        "type": "мерчанты",
+        "url": "https://www.amazon.com",
+        "note": "Stripe процессит часть платежей Amazon"
+      },
+      {
+        "name": "Lyft",
+        "type": "мерчанты",
+        "url": "https://www.lyft.com",
+        "note": ""
+      },
+      {
+        "name": "Slack",
+        "type": "мерчанты",
+        "url": "https://slack.com",
+        "note": ""
+      },
+      {
+        "name": "Zoom",
+        "type": "мерчанты",
+        "url": "https://zoom.us",
+        "note": ""
+      },
+      {
+        "name": "Notion",
+        "type": "мерчанты",
+        "url": "https://www.notion.so",
+        "note": ""
+      },
+      {
+        "name": "DoorDash",
+        "type": "мерчанты",
+        "url": "https://www.doordash.com",
+        "note": ""
+      },
+      {
+        "name": "Substack",
+        "type": "мерчанты",
+        "url": "https://substack.com",
+        "note": ""
       }
     ]
   },
@@ -15521,6 +15569,339 @@
       ]
     },
     "notes": "Гифт-карты и игровые предметы; карта/PayPal/крипта.",
+    "partners": []
+  },
+  "adyen.com": {
+    "name": "Adyen",
+    "type": "Платёжный процессор",
+    "fees": "по договору (~€0.10 + 0.3–0.9%)",
+    "kyc": {
+      "обязателен": "Да (KYB мерчанта)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Глобальный процессинг (ЕС, листинг AMS). Карты, APM, payouts.",
+    "partners": [
+      {
+        "name": "eBay",
+        "type": "мерчанты",
+        "url": "https://www.ebay.com",
+        "note": "основной процессинг eBay"
+      },
+      {
+        "name": "Spotify",
+        "type": "мерчанты",
+        "url": "https://www.spotify.com",
+        "note": ""
+      },
+      {
+        "name": "Uber",
+        "type": "мерчанты",
+        "url": "https://www.uber.com",
+        "note": ""
+      },
+      {
+        "name": "SHEIN",
+        "type": "мерчанты",
+        "url": "https://www.shein.com",
+        "note": ""
+      },
+      {
+        "name": "Booking.com",
+        "type": "мерчанты",
+        "url": "https://www.booking.com",
+        "note": ""
+      },
+      {
+        "name": "McDonald's",
+        "type": "мерчанты",
+        "url": "https://www.mcdonalds.com",
+        "note": ""
+      }
+    ]
+  },
+  "braintreepayments.com": {
+    "name": "Braintree (PayPal)",
+    "type": "Платёжный процессор",
+    "fees": "2.59% + $0.49",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Платёжная платформа PayPal для разработчиков.",
+    "partners": [
+      {
+        "name": "Airbnb",
+        "type": "мерчанты",
+        "url": "https://www.airbnb.com",
+        "note": ""
+      },
+      {
+        "name": "Uber",
+        "type": "мерчанты",
+        "url": "https://www.uber.com",
+        "note": ""
+      },
+      {
+        "name": "PayPal",
+        "type": "платёжная система",
+        "url": "https://www.paypal.com",
+        "note": "материнская компания"
+      }
+    ]
+  },
+  "checkout.com": {
+    "name": "Checkout.com",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Британский процессинг: карты, APM, payouts, stablecoin-расчёты (USDC).",
+    "partners": [
+      {
+        "name": "Sony",
+        "type": "мерчанты",
+        "url": "https://www.sony.com",
+        "note": ""
+      },
+      {
+        "name": "Grab",
+        "type": "мерчанты",
+        "url": "https://www.grab.com",
+        "note": ""
+      },
+      {
+        "name": "Careem",
+        "type": "мерчанты",
+        "url": "https://www.careem.com",
+        "note": ""
+      }
+    ]
+  },
+  "mollie.com": {
+    "name": "Mollie",
+    "type": "Платёжный процессор",
+    "fees": "~1.2% + €0.25",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Европейский процессинг для SME: карты, iDEAL, SEPA, Klarna.",
+    "partners": []
+  },
+  "worldpay.com": {
+    "name": "Worldpay",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Старейший процессинг (ex-Vantiv/FIS).",
+    "partners": []
+  },
+  "paysafe.com": {
+    "name": "Paysafe",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Владелец Skrill и NETELLER; eCash (paysafecard).",
+    "partners": [
+      {
+        "name": "Skrill",
+        "type": "платёжная система",
+        "url": "https://www.skrill.com",
+        "note": "дочка"
+      },
+      {
+        "name": "NETELLER",
+        "type": "платёжная система",
+        "url": "https://www.neteller.com",
+        "note": "дочка"
+      },
+      {
+        "name": "Alchemy Pay",
+        "type": "шлюз",
+        "url": "https://alchemypay.org",
+        "note": "Skrill/NETELLER как методы оплаты"
+      }
+    ]
+  },
+  "nuvei.com": {
+    "name": "Nuvei",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Глобальный процессинг, владелец Simplex (крипто-онрамп).",
+    "partners": [
+      {
+        "name": "Simplex",
+        "type": "шлюз",
+        "url": "https://simplex.com",
+        "note": "дочка Nuvei"
+      }
+    ]
+  },
+  "payu.com": {
+    "name": "PayU",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Процессинг Латам/Африка/Индия/Европа (Prosus).",
+    "partners": []
+  },
+  "verifone.com": {
+    "name": "2Checkout (Verifone)",
+    "type": "Платёжный процессор",
+    "fees": "3.5% + $0.35",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Платежи для SaaS и digital-товаров.",
+    "partners": []
+  },
+  "bluesnap.com": {
+    "name": "BlueSnap",
+    "type": "Платёжный процессор",
+    "fees": "2.9% + $0.30",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Глобальный процессинг + маркетплейс-платежи.",
+    "partners": []
+  },
+  "squareup.com": {
+    "name": "Square (Block)",
+    "type": "Платёжный процессор",
+    "fees": "2.6% + $0.10",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "POS и онлайн-платежи США; Cash App — та же компания (Block).",
+    "partners": [
+      {
+        "name": "Cash App",
+        "type": "платёжная система",
+        "url": "https://cash.app",
+        "note": "та же компания Block"
+      }
+    ]
+  },
+  "airwallex.com": {
+    "name": "Airwallex",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Глобальные счета и платежи для бизнеса (Азия/мир).",
+    "partners": []
+  },
+  "rapyd.net": {
+    "name": "Rapyd",
+    "type": "Платёжный процессор",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Fintech-as-a-service: карты, APM, выплаты в 190+ странах.",
+    "partners": []
+  },
+  "paddle.com": {
+    "name": "Paddle",
+    "type": "Платёжный процессор",
+    "fees": "5% + $0.50 (MoR)",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "Merchant of Record для SaaS/цифровых товаров.",
+    "partners": []
+  },
+  "lemonsqueezy.com": {
+    "name": "Lemon Squeezy",
+    "type": "Платёжный процессор",
+    "fees": "5% + $0.50 (MoR)",
+    "kyc": {
+      "обязателен": "Да (KYB)",
+      "лимиты": "по договору/аккаунту",
+      "уровни": [
+        "KYB для мерчантов",
+        "KYC покупателя по юрисдикции"
+      ]
+    },
+    "notes": "MoR для цифровых товаров (куплен Stripe).",
     "partners": []
   }
 }
