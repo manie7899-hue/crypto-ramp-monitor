@@ -1448,6 +1448,12 @@
         "type": "DeFi",
         "url": "https://mirrorchain.io",
         "note": "экосистема $MIRROR (Base); Wert Widget"
+      },
+      {
+        "name": "LivLive",
+        "type": "сайт",
+        "url": "https://livlive.com",
+        "note": "RWA-платформа с AR-дропами; Wert = карта, NOWPayments = крипто (кейс Wavect)"
       }
     ]
   },
