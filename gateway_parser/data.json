@@ -3240,6 +3240,12 @@
         "type": "шлюз",
         "url": "https://onramper.com",
         "note": "Stripe в агрегаторе Onramper"
+      },
+      {
+        "name": "SwiftRecharge",
+        "type": "Гифт-карты (маркетплейс)",
+        "url": "https://swiftrecharge.com",
+        "note": "оплата через Stripe"
       }
     ]
   },
@@ -3579,7 +3585,7 @@
   },
   "coingate.com": {
     "name": "CoinGate",
-    "type": "Платёжный процессор",
+    "type": "Гифт-карты (крипто)",
     "fees": "1% процессинг",
     "kyc": {
       "обязателен": "Нет для крипта-платежей; для фиата — да",
@@ -15760,6 +15766,342 @@
       ]
     },
     "notes": "MoR для цифровых товаров (куплен Stripe).",
+    "partners": []
+  },
+  "startselect.com": {
+    "name": "Startselect",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Razer, Steam, PSN, Xbox, Nintendo, Google Play, Apple, Roblox, Blizzard, Riot, Twitch, Discord. Оплата: карта/PayPal. Официальный канал Razer Gold (ЕС).",
+    "partners": []
+  },
+  "giftmint.io": {
+    "name": "GiftMint",
+    "type": "Гифт-карты (крипто)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, Steam, Nintendo, Netflix, Google Play, Roblox, Apple, PSN, Xbox, Spotify. Оплата: крипта (8 монет, вкл. XMR). 257 брендов, без KYC, доставка ~11 мин.",
+    "partners": []
+  },
+  "coinsbee.com": {
+    "name": "CoinsBee",
+    "type": "Гифт-карты (крипто)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, Steam, PSN, Xbox, Nintendo, Netflix, Spotify, iTunes, Walmart, Airbnb. Оплата: крипта (200+) / карта / Binance Pay. 5000+ брендов.",
+    "partners": []
+  },
+  "pcgamesupply.com": {
+    "name": "PCGameSupply",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: PSN, Xbox, Nintendo, Steam, Apple, Google Play, Amazon. Оплата: карта/PayPal. US-магазин цифровых кодов.",
+    "partners": []
+  },
+  "recharge.com": {
+    "name": "Recharge.com",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, iTunes, Steam, Netflix, Google Play, Spotify, Xbox. Оплата: карта/PayPal. 500+ брендов, ЕС.",
+    "partners": []
+  },
+  "uquid.com": {
+    "name": "Uquid Digital Shop",
+    "type": "Гифт-карты (крипто)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Steam, Google Play, PSN, Xbox, Netflix. Оплата: USDT, Binance Pay, 100+ крипто. Цифровые товары и гифт-карты по странам.",
+    "partners": []
+  },
+  "gamsgo.com": {
+    "name": "GamsGo",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Apple, PSN, Xbox, Nintendo, Roblox, Valorant, Razer, Google Play, Nexon. Оплата: карта/PayPal/крипта (USDT). + топ-апы игр.",
+    "partners": []
+  },
+  "bittopup.com": {
+    "name": "BitTopup",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Steam, Google Play, Razer, PUBG, Genshin, Free Fire. Оплата: карта/PayPal/Alipay/WeChat. Работает с 2016.",
+    "partners": []
+  },
+  "ding.com": {
+    "name": "Ding",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Razer, Amazon, Netflix + мобильные топ-апы. Оплата: карта/PayPal. По странам (Razer Gold PK, GCash PH и др.).",
+    "partners": []
+  },
+  "swiftrecharge.com": {
+    "name": "SwiftRecharge",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Razer, Google Play, Steam, Prepaid Visa. Оплата: карта/PayPal (Stripe), есть crypto OnRamp. Оплата через Stripe.",
+    "partners": []
+  },
+  "wizzgift.com": {
+    "name": "WizzGift",
+    "type": "Гифт-карты (крипто)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Binance Gift Card, Razer, Rewarble Visa, Amazon, Steam, Netflix. Оплата: крипта. Продаёт Binance Gift Card и Razer Gold за крипту.",
+    "partners": []
+  },
+  "giftchill.co.uk": {
+    "name": "GiftChill",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, iTunes, PSN, Xbox, Steam, Google Play, Netflix. Оплата: карта/PayPal. UK-магазин.",
+    "partners": []
+  },
+  "mtcgame.com": {
+    "name": "MTCGAME",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Steam, PSN, Xbox, Nintendo, Roblox. Оплата: карта/PayPal. Ключи + гифт-карты и топ-апы.",
+    "partners": []
+  },
+  "cardyard.co.uk": {
+    "name": "Cardyard",
+    "type": "Гифт-карты (обмен/перепродажа)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, PlayStation, Argos, Just Eat, Costa. Оплата: карта/PayPal. UK-биржа со скидками (Amazon −3%, PSN −17%).",
+    "partners": []
+  },
+  "prestmit.io": {
+    "name": "Prestmit",
+    "type": "Гифт-карты (обмен/перепродажа)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, Steam, iTunes, Google Play, Sephora. Оплата: Naira/Cedis/BTC/стейблы. Африка (NG/GH), есть API.",
+    "partners": []
+  },
+  "cardcash.com": {
+    "name": "CardCash",
+    "type": "Гифт-карты (обмен/перепродажа)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Walmart, Amazon, Target, iTunes, Netflix, Best Buy. Оплата: карта. US-маркетплейс дисконтных карт.",
+    "partners": []
+  },
+  "giftcardgranny.com": {
+    "name": "GiftCardGranny",
+    "type": "Гифт-карты (агрегатор)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, Walmart, Target, Netflix, iTunes, Best Buy. Оплата: карта. US-агрегатор скидочных карт.",
+    "partners": []
+  },
+  "play-asia.com": {
+    "name": "Playasia",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: PSN, Nintendo eShop, iTunes, Steam, Xbox. Оплата: карта/PayPal. HK-ритейлер, карты JP/HK/US.",
+    "partners": []
+  },
+  "unipin.com": {
+    "name": "UniPin",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Steam, Google Play, PSN, Nintendo, Razer, Free Fire. Оплата: карта/PayPal. Крупный SEA-маркетплейс ваучеров.",
+    "partners": []
+  },
+  "itemku.com": {
+    "name": "Itemku",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Steam, Google Play, Free Fire, MLBB, Roblox, PSN. Оплата: местные способы. Индонезия.",
+    "partners": []
+  },
+  "rewarble.com": {
+    "name": "Rewarble",
+    "type": "Предоплаченные карты",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Visa Prepaid, Mastercard Prepaid, Razer, Steam, Amazon. Оплата: крипта/карта. Rewarble prepaid за крипту (каталог CoinGate).",
+    "partners": []
+  },
+  "xpgift.com": {
+    "name": "XPGift",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, iTunes, PSN, Xbox, Steam, Google Play, Netflix. Оплата: карта/PayPal. Trustpilot 3.7/5.",
+    "partners": []
+  },
+  "giftcards.com": {
+    "name": "GiftCards.com",
+    "type": "Гифт-карты (маркетплейс)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Нет",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Без KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, Walmart, Netflix, iTunes, Visa Prepaid. Оплата: карта/PayPal. 450+ брендов, кастомные Visa (Blackhawk).",
+    "partners": []
+  },
+  "cardswap.ca": {
+    "name": "CardSwap",
+    "type": "Гифт-карты (обмен/перепродажа)",
+    "fees": "наценка/дисконт",
+    "kyc": {
+      "обязателен": "Да (лёгкий)",
+      "лимиты": "по суммам",
+      "уровни": [
+        "Лёгкий KYC"
+      ]
+    },
+    "notes": "Бренды: Amazon, Walmart, Tim Hortons, Best Buy. Оплата: карта/PayPal. Канадская биржа дисконтных карт.",
     "partners": []
   }
 }
