@@ -167,7 +167,7 @@ def cat_page(d, key, page=0):
     pages = max(1, -(-len(items) // PAGE_SIZE))
     page = min(max(page, 0), pages - 1)
     chunk = items[page * PAGE_SIZE:(page + 1) * PAGE_SIZE]
-    label = dict(CATS).get(key, "📦 Прочее")
+    label = {k: l for k, l, _ in CATS}.get(key, "📦 Прочее")
     kb = {"inline_keyboard": []}
     row = []
     for dom, g in chunk:
