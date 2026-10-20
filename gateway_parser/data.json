@@ -4213,7 +4213,7 @@
         "sharing Sumsub для партнёров"
       ]
     },
-    "notes": "Swapped Ramp: iframe-виджет on-ramp/off-ramp для гейминга (казино, скин-сайты, DEX). KYC Sumsub с шарингом. EU/EEA обслуживает Northstake ApS (CASP, Danish FSA, FTID 10905). HMAC-подпись, sandbox, вебхуки.",
+    "notes": "Swapped Ramp: iframe-виджет on-ramp/off-ramp для гейминга (казино, скин-сайты, DEX). KYC Sumsub с шарингом. EU/EEA обслуживает Northstake ApS (CASP, Danish FSA, FTID 10905). HMAC-подпись, sandbox, вебхуки. Вывод: bank transfer (EUR/DKK/GBP), Skrill, PIX (BRL), Interac (CAD). Пополнение: карты Visa/Mastercard через iframe-виджет.",
     "docs": "https://docs.swapped.com",
     "api": "https://docs.swapped.com/swapped-ramp/readme-1.md",
     "partners": [
@@ -4264,7 +4264,59 @@
       "Danish FSA (CASP)",
       "Northstake ApS"
     ],
-    "tds": true
+    "tds": true,
+    "pay_groups": {
+      "card": [
+        "Visa",
+        "Mastercard"
+      ],
+      "bank": [
+        "bank-transfer (EUR/DKK/GBP)",
+        "SEPA"
+      ],
+      "wallet": [
+        "Skrill"
+      ],
+      "local": [
+        "PIX (BRL, Бразилия)",
+        "Interac (CAD, Канада)"
+      ]
+    },
+    "fiat": [
+      "EUR",
+      "USD",
+      "GBP",
+      "DKK",
+      "PLN",
+      "SEK",
+      "SGD",
+      "RON",
+      "ZAR",
+      "HUF",
+      "BRL",
+      "MXN",
+      "IDR",
+      "JPY",
+      "AUD",
+      "HKD",
+      "NZD",
+      "THB",
+      "CZK",
+      "TRY",
+      "CHF",
+      "CAD",
+      "INR",
+      "BGN",
+      "ILS",
+      "NOK",
+      "PHP"
+    ],
+    "payouts": [
+      "bank-transfer: EUR, DKK, GBP",
+      "Skrill: EUR, DKK, GBP",
+      "PIX: BRL (Бразилия)",
+      "Interac: CAD (Канада)"
+    ]
   },
   "localramp.co": {
     "name": "Localramp",
@@ -18694,7 +18746,7 @@
         "KYB/AML"
       ]
     },
-    "notes": "Датская Northstake ApS: стейкинг ETH, Staking Vault Manager (Lido V3 stVaults), кастоди на MPC (50+ сетей), валидаторная инфраструктура. CASP-лицензия Danish FSA под MiCA (FTID 10905). Merchant of record для EU/EEA-клиентов Swapped.",
+    "notes": "Датская Northstake ApS: стейкинг ETH, Staking Vault Manager (Lido V3 stVaults), кастоди на MPC (50+ сетей), валидаторная инфраструктура. CASP-лицензия Danish FSA под MiCA (FTID 10905). Merchant of record для EU/EEA-клиентов Swapped. Розницы нет: пополнение картой и вывод для частных лиц недоступны — только институциональный онбординг; карточные платежи европейских клиентов идут через Swapped.",
     "licenses": [
       "Danish FSA (CASP/MiCA)"
     ],
