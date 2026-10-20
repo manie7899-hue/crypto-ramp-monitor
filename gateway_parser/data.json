@@ -1526,6 +1526,36 @@
         "type": "сайт",
         "url": "https://bullguess.com",
         "note": "W3P-пресейл; Wert Widget в архиве (wertId 01JTT…); сайт сейчас не отвечает"
+      },
+      {
+        "name": "Gruntle",
+        "type": "сайт",
+        "url": "https://gruntle.io",
+        "note": "мемкоин-пресейл; wertOrigin=widget.wert.io + partnerId в main.js"
+      },
+      {
+        "name": "Mutuum Finance",
+        "type": "DeFi",
+        "url": "https://mutuum.com",
+        "note": "DeFi-пресейл $MUTM; полный Wert SDK (partner_id 1K6ZG9…, wertNetwork)"
+      },
+      {
+        "name": "BMIC Token",
+        "type": "сайт",
+        "url": "https://bmic.ai",
+        "note": "post-quantum AI-сеть; Wert в чек-ауте (/buy, widget.wert.io)"
+      },
+      {
+        "name": "APEMARS",
+        "type": "интеграция",
+        "url": "https://www.apemars.com",
+        "note": "мемкоин-пресейл; WERT_SESSION эндпоинт в JS"
+      },
+      {
+        "name": "DexBoss",
+        "type": "DeFi",
+        "url": "https://dexboss.io",
+        "note": "DEX-пресейл $DEBO; buyTokensWert в ABI (архив); сайт сейчас paused"
       }
     ]
   },

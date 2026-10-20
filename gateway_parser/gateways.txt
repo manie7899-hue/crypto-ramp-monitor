@@ -340,7 +340,7 @@ KYC: Да — ID для покупок
   - ID-верификация
 Примечание: Специализация — NFT-платформы: карта прямо на странице минта. Ниша NFT-чекаутов; публичный список клиентов отсутствует. 95% approval, Worldpay. Клиенты: Intercellar, Jockiz.
 
-Прокладки (48):
+Прокладки (53):
 
   [биржа]
   - Bitcoin Hyper — https://bitcoinhyper.io  [SVM L2 для биткоина; карта через Wert]
@@ -349,6 +349,7 @@ KYC: Да — ID для покупок
   - Chronara — https://chronara.io  [zero-fee покупки картой через Wert]
   - MNTR — https://mntr.io  [виджет Wert в живом HTML (wert_partner_id)]
   - Launchpad XYZ — https://launchpad.xyz  [web3-платформа LPX; buyWithETHWert]
+  - APEMARS — https://www.apemars.com  [мемкоин-пресейл; WERT_SESSION эндпоинт в JS]
   [сайт]
   - RiffCoin — https://riffcoin.ca  [партнёрство на сайте проекта]
   - Snorter Token — https://snortertoken.com  [мемкоин-проект, покупка через Wert]
@@ -383,6 +384,8 @@ KYC: Да — ID для покупок
   - Gassed Token — https://gassedtoken.com  [Solana мемкоин-пресейл; Wert Widget в HTML]
   - Doge2014 — https://doge2014.io  [пресейл к 10-летию Dogecoin; wertOrigin=widget.wert.io в JS-бандле (архив)]
   - Bull Guess — https://bullguess.com  [W3P-пресейл; Wert Widget в архиве (wertId 01JTT…); сайт сейчас не отвечает]
+  - Gruntle — https://gruntle.io  [мемкоин-пресейл; wertOrigin=widget.wert.io + partnerId в main.js]
+  - BMIC Token — https://bmic.ai  [post-quantum AI-сеть; Wert в чек-ауте (/buy, widget.wert.io)]
   [DeFi]
   - Vyvo — https://vyvo.com  [Vyvo Smart Chain (VSC); логотип Wert + токен в списке Wert]
   - IPMB — https://ipmb.com  [RWA-токен золотом обеспеченный; wert-widget.min.js на сайте + BuiltWith]
@@ -394,6 +397,8 @@ KYC: Да — ID для покупок
   - DTX Exchange — https://dtxexchange.com  [трейдинг-платформа/пресейл; Wert на сайте]
   - LiquidChain — https://liquidchain.com  [L3 (BTC+ETH+SOL); Wert Widget, пресейл $LIQUID]
   - Mirror Chain — https://mirrorchain.io  [экосистема $MIRROR (Base); Wert Widget]
+  - Mutuum Finance — https://mutuum.com  [DeFi-пресейл $MUTM; полный Wert SDK (partner_id 1K6ZG9…, wertNetwork)]
+  - DexBoss — https://dexboss.io  [DEX-пресейл $DEBO; buyTokensWert в ABI (архив); сайт сейчас paused]
 
 ----------------------------------------------------------------
 
