@@ -4203,52 +4203,25 @@
   },
   "swapped.com": {
     "name": "Swapped",
-    "type": "Агрегатор онрампов",
-    "fees": "показывает лучший курс",
+    "type": "Фиат-шлюз (гейминг/скины, on-ramp/off-ramp)",
+    "fees": "по договору (B2B)",
     "kyc": {
-      "обязателен": "Зависит от выбранного провайдера",
-      "лимиты": "Зависит от провайдера",
+      "обязателен": "Да — Sumsub (шаринг верификации)",
+      "лимиты": "по договору",
       "уровни": [
-        "Виджет-агрегатор: карта/банк → крипта"
+        "Sumsub KYC",
+        "sharing Sumsub для партнёров"
       ]
     },
-    "notes": "Компаратор онрампов (как Onramper), виджет для сайтов. Агрегирует 40+ локальных платёжных методов напрямую.",
+    "notes": "Swapped Ramp: iframe-виджет, on-ramp и off-ramp, HMAC-подпись, sandbox, ордера + вебхуки. Используется гемблингом и скин-сайтами (Европа).",
+    "docs": "https://docs.swapped.com",
+    "api": "https://docs.swapped.com/swapped-ramp/readme-1.md",
     "partners": [
       {
-        "name": "Onramper",
-        "type": "шлюз",
-        "url": "https://onramper.com",
-        "note": "Swapped входит в агрегатор Onramper"
-      },
-      {
-        "name": "Freedx",
-        "type": "биржа",
-        "url": "https://www.freedx.com",
-        "note": "Swapped доступен как провайдер через Onramper на Freedx"
-      },
-      {
-        "name": "KuCoin Pay",
-        "type": "платёжная система",
-        "url": "https://www.kucoin.com/pay",
-        "note": "Swapped Connect: прямые CEX-платежи; 2025"
-      },
-      {
-        "name": "Fortune Box",
-        "type": "гейминг",
-        "url": "https://fortunebox.com",
-        "note": "депозиты через Swapped; 2025"
-      },
-      {
-        "name": "Rhinestone",
-        "type": "DeFi",
-        "url": "https://www.rhinestone.network",
-        "note": "депозит-виджет (ERC-7579)"
-      },
-      {
-        "name": "QuickNode",
-        "type": "интеграция",
-        "url": "https://www.quicknode.com",
-        "note": "Swapped Ramp в QuickNode Marketplace"
+        "name": "Shuffle",
+        "type": "казино",
+        "url": "https://shuffle.com",
+        "note": "acceptedPaymentMethod: cryptocurrencies, swapped.com, moonpay; блог «buy crypto with swapped»"
       }
     ]
   },
@@ -18628,6 +18601,21 @@
       ]
     },
     "notes": "казино (заблокирован UA)",
+    "partners": []
+  },
+  "shuffle.com": {
+    "name": "Shuffle",
+    "type": "Казино (крипто)",
+    "fees": "по правилам казино",
+    "kyc": {
+      "обязателен": "Да (при выводе)",
+      "лимиты": "по уровням",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "Крипто-казино. Принимает карты через Swapped и MoonPay (acceptedPaymentMethod в коде).",
     "partners": []
   }
 }

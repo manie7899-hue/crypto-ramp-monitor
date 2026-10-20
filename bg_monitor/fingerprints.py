@@ -24,6 +24,7 @@ PROVIDER_HOSTS = {
     "Alchemy Pay": [r"alchemypay\.org"],
     "Unlimit": [r"unlimit\.com"],
     "BridgerPay": [r"bridgerpay\.com"],
+    "Swapped": [r"swapped\.com", r"api\.swapped", r"swapped-ramp", r"swapped\.io", r"pay\.swapped"],
     "Apple Pay": [r"applepay", r"apple-pay"],
     "Google Pay": [r"google\.com/pay", r"pay\.google"],
 }
