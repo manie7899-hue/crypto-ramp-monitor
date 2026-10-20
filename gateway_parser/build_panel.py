@@ -21,6 +21,9 @@ HTML = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <title>Шлюзы и прокладки — Панель</title>
 <style>
 :root{
@@ -30,13 +33,16 @@ HTML = r"""<!DOCTYPE html>
   --radius:14px; --shadow:0 8px 24px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font:15px/1.45 "Segoe UI",system-ui,-apple-system,sans-serif;min-height:100vh}
+body{background:var(--bg);color:var(--text);
+  font:15.5px/1.55 "Inter","SF Pro Text","Segoe UI",system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  font-feature-settings:"cv02","cv03","cv04","ss01","tnum";min-height:100vh}
 a{color:var(--accent2);text-decoration:none}
 button{font:inherit;cursor:pointer}
 .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px;
   padding:14px 24px;background:linear-gradient(135deg,#1a232e 0%,#151c25 60%);
   border-bottom:1px solid var(--line);flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18.5px;letter-spacing:-.02em}
 .logo .mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
   background:linear-gradient(135deg,var(--accent),var(--accent2));font-size:17px}
 .stats{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
@@ -59,7 +65,10 @@ input:focus{border-color:var(--accent)}
 .card:hover{border-color:var(--accent)}
 .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .head h3{font-size:17px}
-.head .dom{color:var(--muted);font-size:13px}
+.head .dom{color:var(--muted);font-size:12.5px;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.card h3{font-weight:700;letter-spacing:-.015em}
+.stat b{font-variant-numeric:tabular-nums;font-weight:700}
 .type{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
   border-radius:999px;padding:3px 11px;font-size:12px;font-weight:700}
 .fee{background:var(--bg2);border:1px solid var(--line);border-radius:8px;
