@@ -93,8 +93,12 @@ def main():
     for dom, g in todo[:limit]:
         raw = fetch("https://" + dom) or fetch("http://" + dom)
         if not raw:
-            g["enriched"] = int(time.time())
+            g["fail"] = int(g.get("fail", 0)) + 1
+            if g["fail"] >= 2 and not g.get("trashed"):
+                g["trashed"] = {"reason": "сайт не отвечает (2 проверки)", "ts": int(time.time())}
+                g["enriched"] = int(time.time())
             continue
+        g.pop("fail", None)
         body = raw.lower()
         groups = {}
         for gk, mapping in GROUPS.items():

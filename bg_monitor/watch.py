@@ -55,13 +55,17 @@ def main():
         changes = json.loads(CHANGES.read_text(encoding="utf-8"))
     except Exception:
         changes = []
-    items = [(dom, g) for dom, g in d.items() if g.get("enriched")]
+    items = [(dom, g) for dom, g in d.items() if g.get("enriched") and not g.get("trashed")]
     items.sort(key=lambda kv: kv[1].get("enriched", 0))
     new_changes = 0
     for dom, g in items[:limit]:
         body = fetch("https://" + dom) or fetch("http://" + dom)
         if not body:
+            g["fail"] = int(g.get("fail", 0)) + 1
+            if g["fail"] >= 3 and not g.get("trashed"):
+                g["trashed"] = {"reason": "сайт не отвечает (3 проверки)", "ts": int(time.time())}
             continue
+        g.pop("fail", None)
         pays = {p for p in PAY if p in body}
         provs = {p for p in PROV if p in body}
         cur = {"pay": sorted(pays), "prov": sorted(provs)}

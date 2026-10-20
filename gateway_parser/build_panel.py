@@ -12,7 +12,8 @@ import json
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-DATA = json.loads((BASE / "data.json").read_text(encoding="utf-8"))
+_ALL = json.loads((BASE / "data.json").read_text(encoding="utf-8"))
+DATA = {k: v for k, v in _ALL.items() if not v.get("trashed")}
 OUT = BASE / "panel.html"
 OUT_TXT = BASE / "gateways.txt"
 

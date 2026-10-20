@@ -30,6 +30,14 @@ PE_PATH = BASE / "premium_emoji.json"
 FAV_PATH = BASE / "favorites.json"
 
 
+def is_trashed(g):
+    return bool(g.get("trashed"))
+
+
+def trashed_count(d):
+    return sum(1 for g in d.values() if is_trashed(g))
+
+
 def fav_load():
     try:
         return json.loads(FAV_PATH.read_text(encoding="utf-8"))
@@ -247,20 +255,23 @@ def main_menu(d, private=False):
     for i in range(0, len(CATS), 2):
         row = []
         for key, label, style in CATS[i:i + 2]:
-            cnt = sum(1 for g in d.values() if cat_of(g) == key)
+            cnt = sum(1 for g in d.values() if cat_of(g) == key and not is_trashed(g))
             if cnt:
                 emoji, title = label.split(" ", 1)
                 row.append(ebtn(emoji, f"{title} ({cnt})", cb=f"cat:{key}", style=style))
         if row:
             kb["inline_keyboard"].append(row)
     kb["inline_keyboard"].append([
-        ebtn("📂", f"Все платёжки ({len(d)})", cb="list:0", style="primary"),
+        ebtn("📂", f"Все платёжки ({sum(1 for g in d.values() if not is_trashed(g))})", cb="list:0", style="primary"),
     ])
     kb["inline_keyboard"].append([
         ebtn("🔍", "Поиск", cb="search", style="primary"),
         ebtn("❓", "Помощь", cb="help"),
     ])
     kb["inline_keyboard"].append([ebtn("⭐", "Избранное", cb="fav:0")])
+    tc = trashed_count(d)
+    if tc:
+        kb["inline_keyboard"].append([ebtn("🗑", f"Корзина ({tc})", cb="trash:0")])
     u = app_url()
     if u:
         if private:
@@ -271,7 +282,7 @@ def main_menu(d, private=False):
 
 
 def cat_page(d, key, page=0):
-    items = [(dom, g) for dom, g in d.items() if cat_of(g) == key]
+    items = [(dom, g) for dom, g in d.items() if cat_of(g) == key and not is_trashed(g)]
     items.sort(key=lambda kv: -len(kv[1].get("partners", [])))
     pages = max(1, -(-len(items) // PAGE_SIZE))
     page = min(max(page, 0), pages - 1)
@@ -354,6 +365,9 @@ def gateway_card_text(dom, g):
         lines.append(f"{pem('📚')} <a href=\"{g['docs']}\">Документация</a>")
     if g.get("api"):
         lines.append(f"{pem('🧩')} <a href=\"{g['api']}\">API</a>")
+    if is_trashed(g):
+        t = g.get("trashed") or {}
+        lines.append(f"🗑 <b>В корзине</b>: {t.get('reason', '—')}")
     if g.get("notes"):
         lines.append(f"{pem('📌')} <blockquote>{re.sub(r'\\s+', ' ', g['notes'])[:280]}</blockquote>")
     lines.append("")
@@ -386,9 +400,13 @@ def kb_url(partners, page, dom, cat):
         if page < pages - 1:
             nav.append(btn("Ещё ▶", cb=f"p:{dom}:{page + 1}:{cat}", style="success"))
         kb["inline_keyboard"].append(nav)
-    kb["inline_keyboard"].append([
-        btn("⭐ В избранное", cb=f"favadd:{dom}"),
-    ])
+    if is_trashed(g):
+        kb["inline_keyboard"].append([btn("♻️ Восстановить", cb=f"trashrestore:{dom}", style="success")])
+    else:
+        kb["inline_keyboard"].append([
+            btn("⭐ В избранное", cb=f"favadd:{dom}"),
+            btn("🗑 В корзину", cb=f"trash:{dom}", style="danger"),
+        ])
     kb["inline_keyboard"].append([
         btn("🔙 К разделу", cb=f"cat:{cat}"),
         btn("🏠 В меню", cb="menu", style="primary"),
@@ -505,6 +523,35 @@ def handle_update(upd):
                 kb["inline_keyboard"].append(row)
             kb["inline_keyboard"].append([btn("🏠 В меню", cb="menu", style="primary")])
             edit(chat, msg_id, f"⭐ <b>Избранное</b> — {len(lst)}:", kb)
+        elif data == "trash:0":
+            items = [(dom, g) for dom, g in d.items() if is_trashed(g)]
+            if not items:
+                edit(chat, msg_id, "🗑 <b>Корзина пуста</b> — всё чисто.", main_menu(d))
+                return
+            kb = {"inline_keyboard": []}
+            row = []
+            for dom, g in items[:48]:
+                row.append(btn((g.get("name") or dom)[:24], cb=f"gw:{dom}"))
+                if len(row) == 2:
+                    kb["inline_keyboard"].append(row); row = []
+            if row:
+                kb["inline_keyboard"].append(row)
+            kb["inline_keyboard"].append([btn("🏠 В меню", cb="menu", style="primary")])
+            edit(chat, msg_id, f"🗑 <b>Корзина</b> — {len(items)} (открой и восстанови):", kb)
+        elif data.startswith("trash:") and not data.startswith("trashrestore:"):
+            dom = data.split(":", 1)[1]
+            g = d.get(dom)
+            if g:
+                g["trashed"] = {"reason": "убрано вручную", "ts": int(time.time())}
+                json.dump(d, open(DATA_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+                edit(chat, msg_id, f"🗑 «{g.get('name', dom)}» убрано в корзину.", main_menu(d))
+        elif data.startswith("trashrestore:"):
+            dom = data.split(":", 1)[1]
+            g = d.get(dom)
+            if g:
+                g.pop("trashed", None)
+                json.dump(d, open(DATA_PATH, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+                edit(chat, msg_id, gateway_card_text(dom, g)[:3800], kb_url(g.get("partners", []), 0, dom, cat_of(g)))
         elif data.startswith("favadd:"):
             dom = data.split(":", 1)[1]
             uid = cb["from"]["id"]
@@ -535,7 +582,7 @@ def handle_update(upd):
 
 
 def list_page(d, page=0):
-    items = sorted(d.items(), key=lambda kv: -len(kv[1].get("partners", [])))
+    items = sorted([kv for kv in d.items() if not is_trashed(kv[1])], key=lambda kv: -len(kv[1].get("partners", [])))
     pages = max(1, -(-len(items) // PAGE_SIZE))
     page = min(max(page, 0), pages - 1)
     chunk = items[page * PAGE_SIZE:(page + 1) * PAGE_SIZE]
@@ -565,6 +612,8 @@ def search_results(d, q):
     ql = q.lower()
     hits = []
     for dom, g in d.items():
+        if is_trashed(g):
+            continue
         hay = " ".join([g.get("name", ""), dom, g.get("type", ""),
                         " ".join(p.get("name", "") for p in g.get("partners", []))]).lower()
         if ql in hay:
