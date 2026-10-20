@@ -4213,7 +4213,7 @@
         "sharing Sumsub для партнёров"
       ]
     },
-    "notes": "Swapped Ramp: iframe-виджет on-ramp/off-ramp для гейминга (казино, скин-сайты, DEX). KYC Sumsub с шарингом. EU/EEA обслуживает Northstake ApS (CASP, Danish FSA, FTID 10905). HMAC-подпись, sandbox, вебхуки. Вывод: bank transfer (EUR/DKK/GBP), Skrill, PIX (BRL), Interac (CAD). Пополнение: карты Visa/Mastercard через iframe-виджет.",
+    "notes": "Swapped Ramp: карта/банк/Apple Pay/Google Pay → крипта (buy), и обратно крипта → выплата (sell). KYC Sumsub. EU/EEA — Northstake ApS (CASP, Danish FSA). Рефанды на исходный метод (до 5 раб. дней), чарджбэки берёт на себя Swapped, ручной ревью до 30 мин.",
     "docs": "https://docs.swapped.com",
     "api": "https://docs.swapped.com/swapped-ramp/readme-1.md",
     "partners": [
@@ -4316,7 +4316,9 @@
       "Skrill: EUR, DKK, GBP",
       "PIX: BRL (Бразилия)",
       "Interac: CAD (Канада)"
-    ]
+    ],
+    "buy_url": "https://swapped.com/buy",
+    "sell_url": "https://swapped.com/sell"
   },
   "localramp.co": {
     "name": "Localramp",
