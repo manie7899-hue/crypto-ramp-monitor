@@ -67,10 +67,17 @@ def load_data():
         return {}
 
 
+TYPE_EMOJI = {"кошелёк":"👛","биржа":"🏦","NFT":"🖼","DeFi":"🔁","платёжная система":"💳",
+              "гейминг":"🎮","метавселенная":"🌐","брокер":"📈","платёжный процессор":"💸",
+              "шлюз":"🔌","интеграция":"🧩","мерчанты":"🏪","сайт":"🌐"}
+
+def type_emoji(t):
+    return TYPE_EMOJI.get(t, "📦")
+
 def gateway_card_text(dom, g):
     k = g.get("kyc", {})
     lines = [
-        f"🔌 {g.get('name', dom)}",
+        f"{type_emoji(g.get('type',''))} {g.get('name', dom)}",
         f"📍 {dom}",
         f"🏷 {g.get('type', '—')}",
         f"💸 Комиссии: {g.get('fees', '—')}",
@@ -96,7 +103,7 @@ def kb_url(partners, page, dom):
     kb = {"inline_keyboard": []}
     row = []
     for p in chunk:
-        label = (p.get("name") or "?")[:32]
+        label = ((type_emoji(p.get("type", "")) + " ") + (p.get("name") or "?"))[:34]
         url = p.get("url") or ("https://" + dom)
         if not url.startswith("http"):
             url = "https://" + url
@@ -135,6 +142,9 @@ def main_menu():
         kb["inline_keyboard"].append(row)
     kb["inline_keyboard"].append([
         {"text": f"📂 Все платёжки ({len(d)})", "callback_data": "list:0"},
+    ])
+    kb["inline_keyboard"].append([
+        {"text": "🎁 Гифты", "callback_data": "list:gift"},
     ])
     kb["inline_keyboard"].append([
         {"text": "🔍 Поиск — напиши слово", "callback_data": "search"},
@@ -231,6 +241,18 @@ def handle_update(upd):
             edit(chat, msg_id, "🔍 Напиши слово — найду платёжки и прокладки по нему.", main_menu())
         elif data == "noop":
             pass
+        elif data == "list:gift":
+            items = [(dom, g) for dom, g in d.items() if "гифт" in (g.get("type","").lower())]
+            items.sort(key=lambda kv: -len(kv[1].get("partners", [])))
+            kb = {"inline_keyboard": []}
+            row = []
+            for dom, g in items[:48]:
+                row.append({"text": f"🎁 {g.get('name', dom)[:24]}", "callback_data": f"gw:{dom}"})
+                if len(row) == 2:
+                    kb["inline_keyboard"].append(row); row = []
+            if row: kb["inline_keyboard"].append(row)
+            kb["inline_keyboard"].append([{"text": "🔙 К меню", "callback_data": "menu"}])
+            edit(chat, msg_id, f"🎁 Гифт-маркетплейсы ({len(items)}):", kb)
         elif data.startswith("list:"):
             page = int(data.split(":")[1])
             edit(chat, msg_id, "Все платёжки (по числу прокладок):", list_page(page))
