@@ -218,7 +218,7 @@ def gateway_card_text(dom, g):
     k = g.get("kyc", {})
     lines = [
         f"{pem(type_emoji(g.get('type','')))} <b>{g.get('name', dom)}</b>",
-        f"{pem('📍')} {dom}",
+        f"{pem('📍')} <code>{dom}</code>",
         f"{pem('🏷')} {g.get('type', '—')}",
         f"{pem('💸')} Комиссии: {g.get('fees', '—')}",
         f"{pem('🛂')} KYC: {k.get('обязателен', '—')}",
@@ -226,7 +226,7 @@ def gateway_card_text(dom, g):
     if k.get("лимиты"):
         lines.append(f"{pem('📊')} Лимиты: {k['лимиты']}")
     if g.get("notes"):
-        lines.append(f"{pem('📌')} <i>{re.sub(r'\\s+', ' ', g['notes'])[:300]}</i>")
+        lines.append(f"{pem('📌')} <blockquote>{re.sub(r'\\s+', ' ', g['notes'])[:280]}</blockquote>")
     lines.append("")
     lines.append(f"{pem('🔗')} Прокладки — {len(g.get('partners', []))}:")
     return "\n".join(lines)
