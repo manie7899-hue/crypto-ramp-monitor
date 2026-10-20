@@ -25,6 +25,30 @@ API = f"https://api.telegram.org/bot{TOKEN}"
 PAGE_SIZE = 24
 PART_PAGE = 36
 
+# ---- премиум (кастомные) эмодзи: emoji -> emoji_id ----
+PE_PATH = BASE / "premium_emoji.json"
+try:
+    PREMIUM = json.loads(PE_PATH.read_text(encoding="utf-8"))
+except Exception:
+    PREMIUM = {}
+
+
+def save_premium():
+    PE_PATH.write_text(json.dumps(PREMIUM, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def pem(emoji):
+    """Оборачивает эмодзи в tg-emoji, если для него сохранён премиум-ID."""
+    eid = PREMIUM.get(emoji)
+    if eid:
+        return f'<tg-emoji emoji-id="{eid}">{emoji}</tg-emoji>'
+    return emoji
+
+
+def utf16_slice(text, offset, length):
+    b = text.encode("utf-16-le")
+    return b[offset * 2:(offset + length) * 2].decode("utf-16-le", "ignore")
+
 # Bot API 9.4: цвета кнопок (style) и кастомные эмодзи-иконки (icon_custom_emoji_id)
 EMOJI_THUMB = "5285430309720966085"
 EMOJI_CHECK = "5310076249404621168"
@@ -193,18 +217,18 @@ def cat_page(d, key, page=0):
 def gateway_card_text(dom, g):
     k = g.get("kyc", {})
     lines = [
-        f"{type_emoji(g.get('type',''))} {g.get('name', dom)}",
-        f"📍 {dom}",
-        f"🏷 {g.get('type', '—')}",
-        f"💸 Комиссии: {g.get('fees', '—')}",
-        f"🛂 KYC: {k.get('обязателен', '—')}",
+        f"{pem(type_emoji(g.get('type','')))} <b>{g.get('name', dom)}</b>",
+        f"{pem('📍')} {dom}",
+        f"{pem('🏷')} {g.get('type', '—')}",
+        f"{pem('💸')} Комиссии: {g.get('fees', '—')}",
+        f"{pem('🛂')} KYC: {k.get('обязателен', '—')}",
     ]
     if k.get("лимиты"):
-        lines.append(f"📊 Лимиты: {k['лимиты']}")
+        lines.append(f"{pem('📊')} Лимиты: {k['лимиты']}")
     if g.get("notes"):
-        lines.append(f"📌 {re.sub(r'\\s+', ' ', g['notes'])[:300]}")
+        lines.append(f"{pem('📌')} <i>{re.sub(r'\\s+', ' ', g['notes'])[:300]}</i>")
     lines.append("")
-    lines.append(f"🔗 Прокладки — {len(g.get('partners', []))}:")
+    lines.append(f"{pem('🔗')} Прокладки — {len(g.get('partners', []))}:")
     return "\n".join(lines)
 
 
@@ -257,6 +281,20 @@ def handle_update(upd):
         msg = upd["message"]
         chat = msg["chat"]["id"]
         text = (msg.get("text") or "").strip()
+        # сбор кастомных (премиум) эмодзи из сообщения
+        got = 0
+        for ent in (msg.get("entities") or []):
+            if ent.get("type") == "custom_emoji" and ent.get("custom_emoji_id"):
+                e = utf16_slice(text, ent["offset"], ent["length"])
+                if e and e not in PREMIUM:
+                    PREMIUM[e] = ent["custom_emoji_id"]
+                    got += 1
+        if got:
+            save_premium()
+            send(chat, f"✅ Запомнил {got} премиум-эмодзи (всего {len(PREMIUM)}). "
+                       "Теперь они будут в карточках: " + "".join(
+                           f'<tg-emoji emoji-id="{v}">{k}</tg-emoji>' for k, v in list(PREMIUM.items())[-got:]),
+                 )
         d = load_data()
         if text.startswith("/"):
             cmd = text.split()[0].split("@")[0]
@@ -268,6 +306,14 @@ def handle_update(upd):
                 send(chat, "🏠 <b>Меню</b>:", main_menu(d))
             elif cmd == "/all":
                 send(chat, "📂 Все платёжки (по числу прокладок):", list_page(d, 0))
+            elif cmd == "/emoji":
+                if PREMIUM:
+                    preview = "".join(f'<tg-emoji emoji-id="{v}">{k}</tg-emoji>' for k, v in PREMIUM.items())
+                    send(chat, f"🎨 Премиум-эмодзи в базе ({len(PREMIUM)}):\n{preview}\n\n"
+                               "Чтобы добавить — просто отправь нужные премиум-эмодзи (можно несколько).")
+                else:
+                    send(chat, "🎨 Пока пусто. Отправь мне премиум-эмодзи (🎁🔥💎🚀...), "
+                               "я запомню их ID и подставлю в карточки.")
             elif cmd == "/help":
                 send(chat, HELP_TEXT.format(n=len(d)), main_menu(d))
             else:
