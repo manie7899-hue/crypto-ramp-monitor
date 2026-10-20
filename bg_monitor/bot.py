@@ -309,10 +309,36 @@ def gateway_card_text(dom, g):
     ]
     if k.get("лимиты"):
         lines.append(f"{pem('📊')} Лимиты: {k['лимиты']}")
-    if g.get("pay"):
+    pg = g.get("pay_groups") or {}
+    if pg.get("card"):
+        lines.append(f"{pem('💳')} Карты: {', '.join(pg['card'][:7])}")
+    if pg.get("wallet"):
+        lines.append(f"{pem('👛')} Кошельки: {', '.join(pg['wallet'][:6])}")
+    if pg.get("bank"):
+        lines.append(f"{pem('🏦')} Банк: {', '.join(pg['bank'][:6])}")
+    if pg.get("crypto"):
+        lines.append(f"{pem('🪙')} Крипта: {', '.join(pg['crypto'][:6])}")
+    if pg.get("local"):
+        lines.append(f"{pem('🏪')} Локальные: {', '.join(pg['local'][:6])}")
+    if not pg and g.get("pay"):
         lines.append(f"{pem('💳')} Оплата: {', '.join(g['pay'][:8])}")
     if g.get("providers"):
         lines.append(f"{pem('🔌')} Шлюзы на сайте: {', '.join(g['providers'][:8])}")
+    if g.get("regions"):
+        lines.append(f"{pem('🌍')} Регионы: {', '.join(g['regions'][:5])}")
+    if g.get("licenses"):
+        lines.append(f"{pem('🛡')} Лицензии: {', '.join(g['licenses'][:5])}")
+    extra = []
+    if g.get("fee_note"):
+        extra.append(f"комиссия {g['fee_note']}")
+    if g.get("kyc_note"):
+        extra.append(g["kyc_note"])
+    if g.get("api_kind"):
+        extra.append(f"API {g['api_kind']}")
+    if g.get("sandbox"):
+        extra.append("есть sandbox")
+    if extra:
+        lines.append(f"{pem('🧪')} " + " · ".join(extra))
     if g.get("docs"):
         lines.append(f"{pem('📚')} <a href=\"{g['docs']}\">Документация</a>")
     if g.get("api"):
