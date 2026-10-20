@@ -747,7 +747,7 @@ KYC: Да — ID + селфи
   - Повышенные лимиты
 Примечание: $5.4B lifetime объёма, 180+ стран, ~$2B/год; SiGMA Best Crypto Payment Provider 2026. Travel Rule >$1K. React Native SDK. Paybis Send — массовые выплаты. Большинство B2B-партнёров white-label и не публикуются.
 
-Прокладки (18):
+Прокладки (19):
 
   [кошелёк]
   - Gem Wallet — https://gemwallet.com  [Paybis как провайдер покупок]
@@ -773,6 +773,7 @@ KYC: Да — ID + селфи
   - Simplex (Nuvei) — https://www.simplex.com  [карточный процессинг Paybis]
   [платёжный процессор]
   - Wellfield Technologies — https://www.wellfield.io  [усиление Coinmama]
+  - BridgerPay — https://bridgerpay.com  [Paybis обрабатывает платежи через BridgerPay (кейс-стади)]
 
 ----------------------------------------------------------------
 

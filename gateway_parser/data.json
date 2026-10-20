@@ -2796,6 +2796,12 @@
         "type": "платёжная система",
         "url": "https://venmo.com",
         "note": "для US-партнёров"
+      },
+      {
+        "name": "BridgerPay",
+        "type": "платёжный процессор",
+        "url": "https://bridgerpay.com",
+        "note": "Paybis обрабатывает платежи через BridgerPay (кейс-стади)"
       }
     ]
   },
