@@ -322,8 +322,14 @@ def gateway_card_text(dom, g):
         lines.append(f"{pem('🏪')} Локальные: {', '.join(pg['local'][:6])}")
     if not pg and g.get("pay"):
         lines.append(f"{pem('💳')} Оплата: {', '.join(g['pay'][:8])}")
-    if g.get("providers"):
+    gd = g.get("gateways_detected") or []
+    if gd:
+        lines.append(f"{pem('🔌')} Шлюз (по коду): " + ", ".join(x["name"] for x in gd[:6]))
+    elif g.get("providers"):
         lines.append(f"{pem('🔌')} Шлюзы на сайте: {', '.join(g['providers'][:8])}")
+    if g.get("tds"):
+        ev = g.get("tds_evidence", "")
+        lines.append(f"{pem('🔐')} 3D-Secure: да" + (f" ({ev})" if ev else ""))
     if g.get("regions"):
         lines.append(f"{pem('🌍')} Регионы: {', '.join(g['regions'][:5])}")
     if g.get("licenses"):

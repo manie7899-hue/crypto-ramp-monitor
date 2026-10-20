@@ -8,6 +8,13 @@ import time
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from fingerprints import detect, CHECKOUT_PATHS
+except Exception:
+    detect = None
+    CHECKOUT_PATHS = []
+
 BASE = Path(__file__).resolve().parent
 DATA = BASE.parent / "gateway_parser" / "data.json"
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
@@ -80,7 +87,7 @@ def find_docs(dom, body):
 def main():
     limit = int(sys.argv[1]) if len(sys.argv) > 1 else 25
     d = json.loads(DATA.read_text(encoding="utf-8"))
-    todo = [(dom, g) for dom, g in d.items() if not g.get("pay_groups")]
+    todo = [(dom, g) for dom, g in d.items() if not g.get("gateways_detected")]
     todo.sort(key=lambda kv: -len(kv[1].get("partners", [])))
     done = 0
     for dom, g in todo[:limit]:
@@ -131,6 +138,26 @@ def main():
                     docs = u
             if api and docs:
                 break
+        if detect:
+            gws, tds, tds_ev = {}, False, ""
+            fp = detect(raw)
+            gws.update(fp["gateways"])
+            tds = fp["3ds"]; tds_ev = fp["3ds_evidence"]
+            for path in CHECKOUT_PATHS:
+                if gws and tds:
+                    break
+                page = fetch(f"https://{dom}{path}", 150000)
+                if not page:
+                    continue
+                fp2 = detect(page)
+                for k, v in fp2["gateways"].items():
+                    gws.setdefault(k, path + ":" + v)
+                if fp2["3ds"] and not tds:
+                    tds = True; tds_ev = path + ":" + fp2["3ds_evidence"]
+            g["gateways_detected"] = [{"name": k, "evidence": v} for k, v in gws.items()][:8]
+            g["tds"] = tds
+            if tds_ev:
+                g["tds_evidence"] = tds_ev
         g["pay_groups"] = groups
         g["pay"] = sorted({v for vs in groups.values() for v in vs})[:14]
         g["providers"] = provs[:10]
