@@ -12,8 +12,12 @@ if [ -z "$TG_BOT_TOKEN" ] || [ -z "$TG_CHAT_ID" ] || [ -z "$GITHUB_PAT" ]; then
   echo "Использование: bash install.sh <TG_BOT_TOKEN> <TG_CHAT_ID> <GITHUB_PAT>"; exit 1
 fi
 
-echo "[1/6] Ставим пакеты..."
+echo "[1/6] Ставим пакеты (ждём освобождения apt-lock)..."
 export DEBIAN_FRONTEND=noninteractive
+while pgrep -x "apt-get" >/dev/null 2>&1 || pgrep -x "dpkg" >/dev/null 2>&1; do
+  echo "  apt занят, жду 10с..."
+  sleep 10
+done
 apt-get update -y -qq
 apt-get install -y -qq git python3 nginx curl >/dev/null
 
