@@ -27,6 +27,32 @@ PART_PAGE = 36
 
 # ---- премиум (кастомные) эмодзи: emoji -> emoji_id ----
 PE_PATH = BASE / "premium_emoji.json"
+FAV_PATH = BASE / "favorites.json"
+
+
+def fav_load():
+    try:
+        return json.loads(FAV_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def fav_save(f):
+    FAV_PATH.write_text(json.dumps(f, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def fav_toggle(uid, dom):
+    f = fav_load()
+    lst = f.setdefault(str(uid), [])
+    if dom in lst:
+        lst.remove(dom)
+        act = "убрал"
+    else:
+        lst.insert(0, dom)
+        act = "добавил"
+    fav_save(f)
+    return act, lst
+
 APP_URL_PATH = BASE / "miniapp_url.txt"
 
 
@@ -234,6 +260,7 @@ def main_menu(d, private=False):
         ebtn("🔍", "Поиск", cb="search", style="primary"),
         ebtn("❓", "Помощь", cb="help"),
     ])
+    kb["inline_keyboard"].append([ebtn("⭐", "Избранное", cb="fav:0")])
     u = app_url()
     if u:
         if private:
@@ -282,6 +309,14 @@ def gateway_card_text(dom, g):
     ]
     if k.get("лимиты"):
         lines.append(f"{pem('📊')} Лимиты: {k['лимиты']}")
+    if g.get("pay"):
+        lines.append(f"{pem('💳')} Оплата: {', '.join(g['pay'][:8])}")
+    if g.get("providers"):
+        lines.append(f"{pem('🔌')} Шлюзы на сайте: {', '.join(g['providers'][:8])}")
+    if g.get("docs"):
+        lines.append(f"{pem('📚')} <a href=\"{g['docs']}\">Документация</a>")
+    if g.get("api"):
+        lines.append(f"{pem('🧩')} <a href=\"{g['api']}\">API</a>")
     if g.get("notes"):
         lines.append(f"{pem('📌')} <blockquote>{re.sub(r'\\s+', ' ', g['notes'])[:280]}</blockquote>")
     lines.append("")
@@ -314,6 +349,9 @@ def kb_url(partners, page, dom, cat):
         if page < pages - 1:
             nav.append(btn("Ещё ▶", cb=f"p:{dom}:{page + 1}:{cat}", style="success"))
         kb["inline_keyboard"].append(nav)
+    kb["inline_keyboard"].append([
+        btn("⭐ В избранное", cb=f"favadd:{dom}"),
+    ])
     kb["inline_keyboard"].append([
         btn("🔙 К разделу", cb=f"cat:{cat}"),
         btn("🏠 В меню", cb="menu", style="primary"),
@@ -411,6 +449,32 @@ def handle_update(upd):
         elif data.startswith("list:"):
             page = int(data.split(":")[1])
             edit(chat, msg_id, "📂 Все платёжки (по числу прокладок):", list_page(d, page))
+        elif data == "fav:0" or data.startswith("fav:"):
+            uid = cb["from"]["id"]
+            lst = fav_load().get(str(uid), [])
+            if not lst:
+                edit(chat, msg_id, "⭐ <b>Избранное</b>\n\nПока пусто. Открой любую платёжку и нажми «⭐ В избранное».",
+                     main_menu(d))
+                return
+            kb = {"inline_keyboard": []}
+            row = []
+            for dom in lst[:48]:
+                g = d.get(dom) or {"name": dom}
+                row.append(ebtn(type_emoji(g.get("type", "")), (g.get("name") or dom)[:24], cb=f"gw:{dom}"))
+                if len(row) == 2:
+                    kb["inline_keyboard"].append(row)
+                    row = []
+            if row:
+                kb["inline_keyboard"].append(row)
+            kb["inline_keyboard"].append([btn("🏠 В меню", cb="menu", style="primary")])
+            edit(chat, msg_id, f"⭐ <b>Избранное</b> — {len(lst)}:", kb)
+        elif data.startswith("favadd:"):
+            dom = data.split(":", 1)[1]
+            uid = cb["from"]["id"]
+            act, lst = fav_toggle(uid, dom)
+            g = d.get(dom, {})
+            edit(chat, msg_id, f"⭐ {act} «{g.get('name', dom)}» в избранное ({len(lst)}).",
+                 kb_url(g.get("partners", []), 0, dom, cat_of(g)))
         elif data.startswith("cat:"):
             parts = data.split(":")
             key = parts[1]
