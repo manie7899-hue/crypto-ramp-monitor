@@ -356,61 +356,7 @@
         "url": "https://kamino.com",
         "note": "по данным анонса"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "PayPal",
-      "Polygon",
-      "Solana",
-      "USDC",
-      "Visa",
-      "XRP"
-    ],
-    "providers": [
-      "MoonPay"
-    ],
-    "api": "",
-    "docs": "https://docs.moonpay.com",
-    "enriched": 1792523928,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay",
-        "PayPal"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Polygon",
-        "Solana",
-        "USDC",
-        "XRP"
-      ]
-    },
-    "regions": [
-      "Весь мир",
-      "Европа",
-      "США"
-    ],
-    "licenses": [],
-    "gateways_detected": [
-      {
-        "name": "MoonPay",
-        "evidence": "moonpay\\.com"
-      }
-    ],
-    "tds": false
+    ]
   },
   "transak.com": {
     "name": "Transak",
@@ -623,59 +569,7 @@
         "url": "https://chromia.com",
         "note": "по данным анонса"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "Mastercard",
-      "SEPA",
-      "USDC",
-      "USDT",
-      "Visa"
-    ],
-    "providers": [
-      "Ramp",
-      "Transak"
-    ],
-    "api": "https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap",
-    "docs": "https://docs.transak.com/products/on-ramp",
-    "enriched": 1792523938,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay"
-      ],
-      "bank": [
-        "SEPA"
-      ],
-      "crypto": [
-        "USDC",
-        "USDT"
-      ]
-    },
-    "regions": [
-      "Весь мир",
-      "США"
-    ],
-    "licenses": [
-      "FCA (UK)"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Transak",
-        "evidence": "transak\\.com"
-      }
-    ],
-    "kyc_vendors": [
-      {
-        "name": "Sumsub",
-        "evidence": "sumsub"
-      }
-    ],
-    "tds": false
+    ]
   },
   "ramp.network": {
     "name": "Ramp Network",
@@ -830,72 +724,7 @@
         "url": "https://zengo.com",
         "note": "встроенный buy-виджет"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "PIX",
-      "PayPal",
-      "SEPA",
-      "Solana",
-      "USDC",
-      "USDT"
-    ],
-    "providers": [
-      "Ramp"
-    ],
-    "api": "https://app.rampnetwork.com/landing?defaultFlow=ONRAMP&amp;enabledFlows=ONRAMP,OFFRAMP,SWAP&amp;hostApiKey=wn25y7nx6cyb4oqutc5obnnywwwt4gz36yw5fypw",
-    "docs": "https://docs.rampnetwork.com/",
-    "enriched": 1792523962,
-    "sandbox": false,
-    "pay_groups": {
-      "wallet": [
-        "Apple Pay",
-        "Google Pay",
-        "PayPal"
-      ],
-      "bank": [
-        "PIX",
-        "SEPA"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Ethereum",
-        "Litecoin",
-        "Solana",
-        "USDC",
-        "USDT"
-      ],
-      "local": [
-        "PIX"
-      ]
-    },
-    "regions": [
-      "UK",
-      "Весь мир",
-      "ЕС",
-      "США"
-    ],
-    "licenses": [
-      "FCA (UK)",
-      "MiCA (ЕС)"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Ramp",
-        "evidence": "ramp\\.network"
-      },
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "tds": false
+    ]
   },
   "mercuryo.io": {
     "name": "Mercuryo",
@@ -1038,71 +867,7 @@
         "url": "https://www.visa.com",
         "note": "Visa Direct off-ramp"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Ethereum",
-      "Google Pay",
-      "Mastercard",
-      "SEPA",
-      "Solana",
-      "TON",
-      "TRON",
-      "USDC",
-      "USDT",
-      "Visa",
-      "XRP"
-    ],
-    "providers": [
-      "Mercuryo",
-      "Ramp"
-    ],
-    "api": "",
-    "docs": "https://widget.docs.mercuryo.io",
-    "enriched": 1792523969,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "bank": [
-        "SEPA"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Ethereum",
-        "Solana",
-        "TON",
-        "TRON",
-        "USDC",
-        "USDT",
-        "XRP"
-      ]
-    },
-    "regions": [
-      "UK",
-      "Весь мир",
-      "США"
-    ],
-    "licenses": [],
-    "gateways_detected": [
-      {
-        "name": "Mercuryo",
-        "evidence": "mercuryo\\.io"
-      }
-    ],
-    "kyc_words": [
-      "identity verification"
-    ],
-    "tds": false
+    ]
   },
   "simplex.com": {
     "name": "Simplex (Nuvei)",
@@ -1268,76 +1033,7 @@
         "url": "https://www.ballet.com",
         "note": "логотип Trusted By"
       }
-    ],
-    "pay": [
-      "ACH",
-      "Apple Pay",
-      "Bitcoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "Mastercard",
-      "PIX",
-      "Polygon",
-      "SEPA",
-      "SWIFT",
-      "USDC",
-      "USDT",
-      "Visa"
-    ],
-    "providers": [
-      "Nuvei",
-      "Paybis",
-      "Ramp",
-      "Simplex"
-    ],
-    "api": "https://integrations.simplex.com/docs/iframe",
-    "docs": "https://integrations.simplex.com/docs/iframe",
-    "enriched": 1792523958,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "bank": [
-        "ACH",
-        "PIX",
-        "SEPA",
-        "SWIFT"
-      ],
-      "crypto": [
-        "Bitcoin",
-        "Ethereum",
-        "Litecoin",
-        "Polygon",
-        "USDC",
-        "USDT",
-        "XRP"
-      ],
-      "local": [
-        "PIX"
-      ]
-    },
-    "regions": [
-      "Азия",
-      "Весь мир",
-      "ЕС"
-    ],
-    "licenses": [
-      "Литва (лицензия)"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Simplex",
-        "evidence": "simplex\\.com"
-      }
-    ],
-    "tds": false
+    ]
   },
   "banxa.com": {
     "name": "Banxa",
@@ -1527,49 +1223,7 @@
         "url": "https://crystalintelligence.com",
         "note": "комплаенс/AML"
       }
-    ],
-    "pay": [
-      "Bitcoin",
-      "SEPA",
-      "Visa",
-      "iDEAL"
-    ],
-    "providers": [
-      "Banxa",
-      "Checkout.com",
-      "Ramp",
-      "Worldpay"
-    ],
-    "api": "https://banxa.com/features/tools/apis/",
-    "docs": "https://docs.banxa.com",
-    "enriched": 1792523948,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Visa"
-      ],
-      "bank": [
-        "SEPA",
-        "iDEAL"
-      ],
-      "crypto": [
-        "Bitcoin"
-      ]
-    },
-    "regions": [
-      "Весь мир",
-      "США"
-    ],
-    "licenses": [
-      "MiCA (ЕС)"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Banxa",
-        "evidence": "banxa\\.com"
-      }
-    ],
-    "tds": false
+    ]
   },
   "wert.io": {
     "name": "Wert",
@@ -1903,29 +1557,7 @@
         "url": "https://dexboss.io",
         "note": "DEX-пресейл $DEBO; buyTokensWert в ABI (архив); сайт сейчас paused"
       }
-    ],
-    "pay": [],
-    "providers": [
-      "Nuvei",
-      "Wert",
-      "Worldpay"
-    ],
-    "api": "",
-    "docs": "https://docs.wert.io/docs",
-    "enriched": 1792523930,
-    "sandbox": false,
-    "pay_groups": {},
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "gateways_detected": [
-      {
-        "name": "Wert",
-        "evidence": "wert\\.io"
-      }
-    ],
-    "tds": false
+    ]
   },
   "kado.money": {
     "name": "Kado",
@@ -2058,74 +1690,7 @@
         "url": "https://www.circle.com",
         "note": "USDC-платежи на Solana"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "Bitcoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "Polygon",
-      "Solana",
-      "TRON",
-      "USDC",
-      "XRP"
-    ],
-    "providers": [
-      "MoonPay",
-      "Onramper",
-      "Paybis",
-      "Ramp",
-      "Transak"
-    ],
-    "api": "https://kado.money/api",
-    "docs": "https://kado.money/docs",
-    "enriched": 1792523980,
-    "sandbox": false,
-    "pay_groups": {
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "crypto": [
-        "Bitcoin",
-        "Ethereum",
-        "Litecoin",
-        "Polygon",
-        "Solana",
-        "TRON",
-        "USDC",
-        "XRP"
-      ]
-    },
-    "regions": [
-      "Весь мир",
-      "ЕЭЗ"
-    ],
-    "licenses": [
-      "ASIC (AU)",
-      "FINTRAC (CA)",
-      "MSB"
-    ],
-    "gateways_detected": [
-      {
-        "name": "MoonPay",
-        "evidence": "moonpay\\.com"
-      },
-      {
-        "name": "Transak",
-        "evidence": "transak\\.com"
-      },
-      {
-        "name": "Paybis",
-        "evidence": "paybis\\.com"
-      },
-      {
-        "name": "Apple Pay",
-        "evidence": "buy:apple-pay"
-      }
-    ],
-    "tds": false
+    ]
   },
   "changelly.com": {
     "name": "Changelly",
@@ -2333,66 +1898,7 @@
         "type": "DeFi",
         "url": "https://veil.exchange"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "Mastercard",
-      "SEPA",
-      "Solana",
-      "TON",
-      "TRON",
-      "USDC",
-      "USDT"
-    ],
-    "providers": [
-      "MoonPay",
-      "Ramp",
-      "Simplex"
-    ],
-    "api": "https://changelly.com/business/exchange-api",
-    "docs": "https://docs.changelly.com",
-    "enriched": 1792527304,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "bank": [
-        "SEPA"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Litecoin",
-        "Solana",
-        "TON",
-        "TRON",
-        "USDC",
-        "USDT"
-      ]
-    },
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [
-      "FCA (UK)"
-    ],
-    "fee_note": "0.25%",
-    "gateways_detected": [],
-    "tds": false
+    ]
   },
   "alchemypay.org": {
     "name": "Alchemy Pay",
@@ -2573,22 +2079,7 @@
         "url": "https://ab.org",
         "note": "по данным анонса"
       }
-    ],
-    "pay": [],
-    "providers": [
-      "Alchemy Pay"
-    ],
-    "api": "https://alchemypay.org/api",
-    "docs": "https://alchemypay.org/docs",
-    "enriched": 1792527308,
-    "sandbox": false,
-    "pay_groups": {},
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "gateways_detected": [],
-    "tds": false
+    ]
   },
   "sardine.ai": {
     "name": "Sardine",
@@ -2706,37 +2197,6 @@
         "url": "https://www.bunq.com",
         "note": "клиент fraud-платформы"
       }
-    ],
-    "pay": [
-      "ACH",
-      "SEPA"
-    ],
-    "providers": [],
-    "api": "https://sardine.ai/api",
-    "docs": "https://docs.sardine.ai",
-    "enriched": 1792527317,
-    "sandbox": false,
-    "pay_groups": {
-      "bank": [
-        "ACH",
-        "SEPA"
-      ]
-    },
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "gateways_detected": [],
-    "tds": false,
-    "kyc_vendors": [
-      {
-        "name": "Sardine",
-        "evidence": "sardine\\.ai"
-      }
-    ],
-    "kyc_words": [
-      "document verification",
-      "identity verification"
     ]
   },
   "mtpelerin.com": {
@@ -2938,75 +2398,7 @@
         "url": "https://walletnow.app",
         "note": "встроенный buy-виджет"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "Mastercard",
-      "SEPA",
-      "Solana",
-      "TON",
-      "TRON",
-      "USDC",
-      "USDT"
-    ],
-    "providers": [
-      "Guardarian",
-      "Onramper",
-      "Ramp"
-    ],
-    "api": "https://guardarian.com/api-doc",
-    "docs": "https://guardarian.com/api-doc",
-    "enriched": 1792523972,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "bank": [
-        "SEPA"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Litecoin",
-        "Solana",
-        "TON",
-        "TRON",
-        "USDC",
-        "USDT"
-      ]
-    },
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [
-      "FINTRAC (CA)",
-      "MSB"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Onramper",
-        "evidence": "onramper\\.com"
-      },
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "tds": false
+    ]
   },
   "onramper.com": {
     "name": "Onramper",
@@ -3281,44 +2673,7 @@
         "url": "https://ult.trade",
         "note": "по данным анонса"
       }
-    ],
-    "pay": [
-      "Bitcoin",
-      "Lightning",
-      "SEPA"
-    ],
-    "providers": [
-      "Banxa",
-      "MoonPay",
-      "Onramper",
-      "Ramp",
-      "Stripe",
-      "Transak"
-    ],
-    "api": "",
-    "docs": "https://docs.onramper.com/docs/supported-payment-methods",
-    "enriched": 1792523934,
-    "sandbox": false,
-    "pay_groups": {
-      "bank": [
-        "SEPA"
-      ],
-      "crypto": [
-        "Bitcoin",
-        "Lightning"
-      ]
-    },
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "gateways_detected": [
-      {
-        "name": "Onramper",
-        "evidence": "onramper\\.com"
-      }
-    ],
-    "tds": false
+    ]
   },
   "paybis.com": {
     "name": "Paybis",
@@ -3448,92 +2803,7 @@
         "url": "https://bridgerpay.com",
         "note": "Paybis обрабатывает платежи через BridgerPay (кейс-стади)"
       }
-    ],
-    "pay": [
-      "ACH",
-      "Apple Pay",
-      "BLIK",
-      "BNB",
-      "Bitcoin",
-      "Ethereum",
-      "Google Pay",
-      "Klarna",
-      "Neteller",
-      "PIX",
-      "PayPal",
-      "Polygon",
-      "SEPA",
-      "SWIFT"
-    ],
-    "providers": [
-      "Checkout.com",
-      "Paybis",
-      "Ramp",
-      "Worldpay"
-    ],
-    "api": "https://sdk.nsureapi.com",
-    "docs": "",
-    "enriched": 1792523982,
-    "sandbox": false,
-    "pay_groups": {
-      "wallet": [
-        "Apple Pay",
-        "Google Pay",
-        "Neteller",
-        "PayPal",
-        "Skrill"
-      ],
-      "bank": [
-        "ACH",
-        "Klarna",
-        "PIX",
-        "SEPA",
-        "SWIFT",
-        "Trustly"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Ethereum",
-        "Polygon",
-        "TRON",
-        "USDC",
-        "USDT",
-        "XRP"
-      ],
-      "local": [
-        "BLIK",
-        "PIX",
-        "paysafecard"
-      ]
-    },
-    "regions": [
-      "180+ стран",
-      "Весь мир",
-      "США"
-    ],
-    "licenses": [
-      "MiCA (ЕС)"
-    ],
-    "kyc_note": "KYC обязателен",
-    "gateways_detected": [
-      {
-        "name": "Paybis",
-        "evidence": "paybis\\.com"
-      },
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "kyc_vendors": [
-      {
-        "name": "Sumsub",
-        "evidence": "sumsub\\.com"
-      }
-    ],
-    "tds": true,
-    "tds_evidence": "3ds"
+    ]
   },
   "utorg.io": {
     "name": "Utorg",
@@ -3615,87 +2885,7 @@
         "url": "https://corefy.com/connectors/utorg",
         "note": "коннектор Utorg в Corefy"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BLIK",
-      "BNB",
-      "Bancontact",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "Mastercard",
-      "Neteller",
-      "Przelewy24",
-      "SWIFT",
-      "Skrill"
-    ],
-    "providers": [
-      "Ramp",
-      "Utorg"
-    ],
-    "api": "http://utorg.com/blog/agustin-tapia-becomes-utorgs-first-global-ambassador",
-    "docs": "",
-    "enriched": 1792524038,
-    "sandbox": true,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa",
-        "МИР"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay",
-        "Neteller",
-        "Skrill"
-      ],
-      "bank": [
-        "Bancontact",
-        "Przelewy24",
-        "SWIFT",
-        "Trustly",
-        "iDEAL"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Litecoin",
-        "Solana",
-        "TRON",
-        "USDC",
-        "USDT",
-        "XRP"
-      ],
-      "local": [
-        "BLIK",
-        "paysafecard"
-      ]
-    },
-    "regions": [
-      "Азия",
-      "Африка",
-      "Весь мир",
-      "ЕЭЗ",
-      "Европа",
-      "Россия"
-    ],
-    "licenses": [
-      "MiCA (ЕС)",
-      "PCI DSS"
-    ],
-    "fee_note": "0%",
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "applepay"
-      }
-    ],
-    "tds": false
+    ]
   },
   "topperpay.com": {
     "name": "Topper (Uphold)",
@@ -3849,64 +3039,7 @@
         "url": "https://www.dlocal.com",
         "note": "локальные платежи emerging markets"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "Bitcoin",
-      "Google Pay",
-      "Mastercard",
-      "PIX",
-      "PayPal",
-      "SEPA",
-      "Solana",
-      "Visa"
-    ],
-    "providers": [
-      "Ramp",
-      "Topper"
-    ],
-    "api": "",
-    "docs": "https://docs.topperpay.com/intro/",
-    "enriched": 1792523966,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay",
-        "PayPal"
-      ],
-      "bank": [
-        "PIX",
-        "SEPA"
-      ],
-      "crypto": [
-        "Bitcoin",
-        "Solana"
-      ],
-      "local": [
-        "PIX"
-      ]
-    },
-    "regions": [
-      "Бразилия",
-      "Весь мир",
-      "ЕЭЗ",
-      "США"
-    ],
-    "licenses": [
-      "FCA (UK)"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "tds": false
+    ]
   },
   "btcdirect.eu": {
     "name": "BTC Direct",
@@ -4088,41 +3221,7 @@
         "url": "https://www.mastercard.com",
         "note": "Mastercard Engage"
       }
-    ],
-    "pay": [
-      "SEPA",
-      "SWIFT"
-    ],
-    "providers": [
-      "Ramp",
-      "Unlimit"
-    ],
-    "api": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-    "docs": "https://www.accounts.unlimit.com/legal-documents/",
-    "enriched": 1792523992,
-    "sandbox": false,
-    "pay_groups": {
-      "bank": [
-        "SEPA",
-        "SWIFT"
-      ]
-    },
-    "regions": [
-      "UK",
-      "Африка",
-      "Бразилия",
-      "Весь мир",
-      "Европа",
-      "Индия"
-    ],
-    "licenses": [],
-    "gateways_detected": [
-      {
-        "name": "Unlimit",
-        "evidence": "unlimit\\.com"
-      }
-    ],
-    "tds": false
+    ]
   },
   "onramp.money": {
     "name": "Onramp.Money",
@@ -4210,74 +3309,6 @@
         "url": "https://spacebeltksa.com",
         "note": "по данным анонса"
       }
-    ],
-    "pay": [
-      "ACH",
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "Lightning",
-      "PIX",
-      "Polygon",
-      "SEPA",
-      "Solana",
-      "TON",
-      "TRON",
-      "UPI"
-    ],
-    "providers": [
-      "Onramper",
-      "Ramp"
-    ],
-    "api": "https://api.onramp.money",
-    "docs": "https://docs.onramp.money",
-    "enriched": 1792527348,
-    "sandbox": false,
-    "pay_groups": {
-      "wallet": [
-        "Google Pay"
-      ],
-      "bank": [
-        "ACH",
-        "PIX",
-        "SEPA",
-        "UPI"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Lightning",
-        "Polygon",
-        "Solana",
-        "TON",
-        "TRON",
-        "USDT"
-      ],
-      "local": [
-        "PIX"
-      ]
-    },
-    "regions": [
-      "UK",
-      "Азия",
-      "Африка",
-      "Бразилия",
-      "Весь мир",
-      "ЕС"
-    ],
-    "licenses": [
-      "Литва (лицензия)",
-      "Эстония (лицензия)"
-    ],
-    "kyc_note": "KYC обязателен",
-    "gateways_detected": [],
-    "tds": false,
-    "kyc_words": [
-      "identity verification"
     ]
   },
   "onmeta.in": {
@@ -4444,29 +3475,7 @@
         "url": "https://kick.com",
         "note": "payout-партнёр Stripe (help.kick.com)"
       }
-    ],
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "/checkout:applepay"
-      }
-    ],
-    "tds": false,
-    "pay_groups": {},
-    "pay": [],
-    "providers": [
-      "Stripe",
-      "Wert"
-    ],
-    "regions": [
-      "Весь мир",
-      "Индия"
-    ],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://docs.stripe.com",
-    "api": "https://stripe.com/api",
-    "enriched": 1792527366
+    ]
   },
   "yellowcard.io": {
     "name": "Yellow Card",
@@ -4599,60 +3608,6 @@
         "url": "https://www.volt.io",
         "note": "real-time payments"
       }
-    ],
-    "pay": [
-      "Alipay",
-      "BLIK",
-      "BNB",
-      "Bitcoin",
-      "Mobile Money",
-      "PIX",
-      "SEPA",
-      "SWIFT",
-      "USDC",
-      "USDT",
-      "XRP"
-    ],
-    "providers": [
-      "Ramp"
-    ],
-    "api": "https://docs.transfi.com/docs/welcome-to-transfi-developer-hub",
-    "docs": "https://docs.transfi.com/docs/welcome-to-transfi-developer-hub",
-    "enriched": 1792527321,
-    "sandbox": false,
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "bank": [
-        "PIX",
-        "SEPA",
-        "SWIFT"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "USDC",
-        "USDT",
-        "XRP"
-      ],
-      "local": [
-        "Alipay",
-        "BLIK",
-        "Mobile Money",
-        "PIX"
-      ]
-    },
-    "regions": [
-      "Азия",
-      "Африка",
-      "Ближний Восток",
-      "Бразилия",
-      "Весь мир",
-      "Европа"
-    ],
-    "licenses": [
-      "Литва (лицензия)",
-      "Эстония (лицензия)"
     ]
   },
   "revolut.com": {
@@ -4854,24 +3809,7 @@
         "url": "https://transak.com",
         "note": "провайдер покупки в приложении"
       }
-    ],
-    "pay": [
-      "Lightning"
-    ],
-    "providers": [],
-    "api": "https://bitpay.com/api",
-    "docs": "https://bitpay.com/docs",
-    "enriched": 1792527338,
-    "sandbox": false,
-    "pay_groups": {
-      "crypto": [
-        "Lightning"
-      ]
-    },
-    "regions": [],
-    "licenses": [],
-    "gateways_detected": [],
-    "tds": false
+    ]
   },
   "coingate.com": {
     "name": "CoinGate",
@@ -4947,33 +3885,7 @@
         "url": "https://www.circle.com",
         "note": "Circle Alliance Program"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "crypto": [
-        "Bitcoin",
-        "USDC"
-      ]
-    },
-    "pay": [
-      "Bitcoin",
-      "USDC"
-    ],
-    "providers": [
-      "Simplex",
-      "Transak"
-    ],
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [
-      "MiCA (ЕС)"
-    ],
-    "sandbox": true,
-    "docs": "https://developer.coingate.com",
-    "api": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,200&display=swap",
-    "enriched": 1792527372
+    ]
   },
   "nowpayments.io": {
     "name": "NOWPayments",
@@ -5664,30 +4576,7 @@
         "url": "https://atoms.com",
         "note": "обувной бренд, Bitcoin/Lightning"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "crypto": [
-        "Bitcoin",
-        "Lightning"
-      ]
-    },
-    "pay": [
-      "Bitcoin",
-      "Lightning"
-    ],
-    "providers": [
-      "Stripe"
-    ],
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://opennode.com/assets/images/icons/Menu/Developers/integration.svg",
-    "api": "https://opennode.com/assets/images/icons/Menu/bitcoin-api.svg",
-    "enriched": 1792527422
+    ]
   },
   "bvnk.com": {
     "name": "BVNK",
@@ -5811,28 +4700,7 @@
         "url": "https://eskimo.travel",
         "note": "eSIM-мерчант, стейблкоины"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {},
-    "pay": [],
-    "providers": [],
-    "regions": [
-      "Африка",
-      "Весь мир",
-      "ЕС",
-      "Нигерия",
-      "США"
-    ],
-    "licenses": [
-      "FINTRAC (CA)",
-      "MAS (Сингапур)",
-      "MSB"
-    ],
-    "sandbox": false,
-    "docs": "https://developers.triple-a.io/",
-    "api": "https://developers.triple-a.io/",
-    "enriched": 1792527429
+    ]
   },
   "monerium.com": {
     "name": "Monerium",
@@ -5895,40 +4763,7 @@
         "url": "https://tangem.com",
         "note": "старый продукт EUR e-money; проверь"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "card": [
-        "Visa"
-      ],
-      "bank": [
-        "SEPA"
-      ],
-      "crypto": [
-        "Ethereum",
-        "Polygon",
-        "USDC"
-      ]
-    },
-    "pay": [
-      "Ethereum",
-      "Polygon",
-      "SEPA",
-      "USDC",
-      "Visa"
-    ],
-    "providers": [],
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [
-      "MiCA (ЕС)"
-    ],
-    "sandbox": true,
-    "docs": "https://docs.monerium.com/api",
-    "api": "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap",
-    "enriched": 1792527431
+    ]
   },
   "stably.io": {
     "name": "Stably",
@@ -6172,70 +5007,7 @@
         "url": "https://qastle.com",
         "note": "Fast-Track Program; проверь"
       }
-    ],
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "tds": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "bank": [
-        "ACH",
-        "PIX",
-        "SEPA",
-        "SWIFT"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Lightning",
-        "Litecoin",
-        "Polygon",
-        "Solana",
-        "TON",
-        "TRON"
-      ],
-      "local": [
-        "PIX"
-      ]
-    },
-    "pay": [
-      "ACH",
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "Lightning",
-      "Litecoin",
-      "Mastercard",
-      "PIX",
-      "Polygon",
-      "SEPA",
-      "SWIFT"
-    ],
-    "providers": [],
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "sandbox": true,
-    "docs": "",
-    "api": "https://vip-api.changenow.io",
-    "enriched": 1792527434
+    ]
   },
   "simpleswap.io": {
     "name": "SimpleSwap",
@@ -6369,69 +5141,7 @@
         "type": "интеграция",
         "url": "https://exchangeflow.co"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Google Pay",
-      "Litecoin",
-      "Mastercard",
-      "SWIFT",
-      "Solana",
-      "TRON",
-      "USDC",
-      "USDT",
-      "Visa"
-    ],
-    "providers": [],
-    "api": "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&amp;display=swap",
-    "docs": "https://stealthex.io/blog/top-solana-api-providers-for-developers-and-ai-agents/",
-    "enriched": 1792524016,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay"
-      ],
-      "bank": [
-        "SWIFT",
-        "iDEAL"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Litecoin",
-        "Solana",
-        "TRON",
-        "USDC",
-        "USDT",
-        "XRP"
-      ]
-    },
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [],
-    "kyc_note": "без KYC",
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "kyc_words": [
-      "identity verification"
-    ],
-    "tds": false
+    ]
   },
   "swapzone.io": {
     "name": "Swapzone",
@@ -6807,49 +5517,6 @@
         "url": "https://onda.finance",
         "note": "Латам"
       }
-    ],
-    "pay": [
-      "Apple Pay",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "PayPal",
-      "Solana",
-      "USDT",
-      "Visa",
-      "XRP"
-    ],
-    "providers": [],
-    "api": "https://www.bitpanda.com/de/fusion/api",
-    "docs": "https://docs.bitpanda.com",
-    "enriched": 1792527341,
-    "sandbox": false,
-    "pay_groups": {
-      "card": [
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "PayPal"
-      ],
-      "crypto": [
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Solana",
-        "USDT",
-        "XRP"
-      ]
-    },
-    "regions": [
-      "Весь мир",
-      "Европа"
-    ],
-    "licenses": [],
-    "gateways_detected": [],
-    "tds": false,
-    "kyc_words": [
-      "liveness"
     ]
   },
   "bybit.eu": {
@@ -6921,41 +5588,7 @@
         "url": "https://www.ethena.fi",
         "note": "USDe как обеспечение"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "crypto": [
-        "Bitcoin",
-        "Ethereum",
-        "USDT",
-        "XRP"
-      ],
-      "local": [
-        "WeChat Pay"
-      ]
-    },
-    "pay": [
-      "Bitcoin",
-      "Ethereum",
-      "USDT",
-      "WeChat Pay",
-      "XRP"
-    ],
-    "providers": [
-      "Banxa"
-    ],
-    "regions": [
-      "Весь мир",
-      "США"
-    ],
-    "licenses": [
-      "FCA (UK)"
-    ],
-    "sandbox": false,
-    "docs": "https://bybit.eu/docs",
-    "api": "https://bybit.eu/api",
-    "enriched": 1792527374
+    ]
   },
   "dokwallet.com": {
     "name": "DOK Wallet",
@@ -8405,42 +7038,7 @@
         "url": "https://kryptonim.com",
         "note": "провайдер покупки в приложении"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Lightning",
-        "Litecoin",
-        "Polygon",
-        "Solana",
-        "TRON",
-        "USDT"
-      ]
-    },
-    "pay": [
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Lightning",
-      "Litecoin",
-      "Polygon",
-      "Solana",
-      "TRON",
-      "USDT"
-    ],
-    "providers": [],
-    "regions": [],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://docs.cakewallet.com/",
-    "api": "https://docs.cakewallet.com/",
-    "enriched": 1792527377
+    ]
   },
   "camino.network": {
     "name": "Camino Network",
@@ -8664,31 +7262,7 @@
         "url": "https://unlimit.com",
         "note": "встроенный провайдер покупки"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "crypto": [
-        "Solana",
-        "USDC"
-      ]
-    },
-    "pay": [
-      "Solana",
-      "USDC"
-    ],
-    "providers": [
-      "Stripe"
-    ],
-    "regions": [
-      "Весь мир",
-      "ЕЭЗ"
-    ],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://circle.com/developer",
-    "api": "https://developers.circle.com/api-reference/wallets/common/ping",
-    "enriched": 1792527439
+    ]
   },
   "clover.com": {
     "name": "Clover",
@@ -8942,21 +7516,7 @@
         "url": "https://t.me",
         "note": "Payment Bot"
       }
-    ],
-    "pay": [],
-    "providers": [],
-    "api": "https://docs.coinpayments.net/knowledge/integration-guide/",
-    "docs": "https://docs.coinpayments.net/knowledge/integration-guide/",
-    "enriched": 1792527350,
-    "sandbox": false,
-    "pay_groups": {},
-    "regions": [
-      "Весь мир",
-      "США"
-    ],
-    "licenses": [],
-    "gateways_detected": [],
-    "tds": false
+    ]
   },
   "coinw.com": {
     "name": "CoinW",
@@ -9142,8 +7702,7 @@
         "url": "https://t.me",
         "note": "TG-бот приёма платежей"
       }
-    ],
-    "fail": 1
+    ]
   },
   "cryptomate.me": {
     "name": "CryptoMate",
@@ -9215,11 +7774,7 @@
         "url": "https://alchemypay.org",
         "note": "встроенный провайдер покупки"
       }
-    ],
-    "trashed": {
-      "reason": "убрано вручную",
-      "ts": 1792526469
-    }
+    ]
   },
   "debifi.com": {
     "name": "Debifi",
@@ -9477,24 +8032,7 @@
         "url": "https://libertyx.com",
         "note": "провайдер покупки в приложении"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "crypto": [
-        "Polygon"
-      ]
-    },
-    "pay": [
-      "Polygon"
-    ],
-    "providers": [],
-    "regions": [],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://edge.app/docs",
-    "api": "https://edge.app/api",
-    "enriched": 1792527402
+    ]
   },
   "elementwallet.com": {
     "name": "Element Wallet",
@@ -10992,45 +9530,7 @@
         "url": "https://transak.com",
         "note": "встроенный провайдер покупки"
       }
-    ],
-    "pay": [
-      "BNB",
-      "Bitcoin",
-      "Dogecoin",
-      "Ethereum",
-      "Litecoin",
-      "Polygon",
-      "Solana",
-      "TRON",
-      "XRP"
-    ],
-    "providers": [
-      "MoonPay"
-    ],
-    "api": "",
-    "docs": "https://developers.ledger.com",
-    "enriched": 1792527359,
-    "sandbox": false,
-    "pay_groups": {
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Dogecoin",
-        "Ethereum",
-        "Litecoin",
-        "Polygon",
-        "Solana",
-        "TRON",
-        "XRP"
-      ]
-    },
-    "regions": [
-      "Бразилия",
-      "Весь мир"
-    ],
-    "licenses": [],
-    "gateways_detected": [],
-    "tds": false
+    ]
   },
   "levex.com": {
     "name": "LeveX",
@@ -11486,42 +9986,7 @@
         "url": "https://transfi.com",
         "note": "встроенный провайдер покупки"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Ethereum",
-        "Solana",
-        "USDC",
-        "USDT"
-      ]
-    },
-    "pay": [
-      "BNB",
-      "Bitcoin",
-      "Ethereum",
-      "Mastercard",
-      "Solana",
-      "USDC",
-      "USDT"
-    ],
-    "providers": [],
-    "regions": [
-      "190+ стран",
-      "UK",
-      "Весь мир"
-    ],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://metamask.io/developer",
-    "api": "https://developer.metamask.io/login",
-    "enriched": 1792527408
+    ]
   },
   "minepi.com": {
     "name": "Pi Network",
@@ -13807,86 +12272,7 @@
         "url": "https://woocommerce.com",
         "note": "плагин Switchere Gateway"
       }
-    ],
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "kyc_vendors": [
-      {
-        "name": "Sumsub",
-        "evidence": "sumsub"
-      }
-    ],
-    "tds": true,
-    "tds_evidence": "3d secure",
-    "pay_groups": {
-      "card": [
-        "Mastercard",
-        "Visa"
-      ],
-      "wallet": [
-        "Apple Pay",
-        "Google Pay",
-        "Neteller",
-        "PayPal",
-        "Skrill"
-      ],
-      "bank": [
-        "Klarna",
-        "PIX",
-        "Trustly"
-      ],
-      "crypto": [
-        "BNB",
-        "Bitcoin",
-        "Ethereum",
-        "Litecoin",
-        "Polygon",
-        "Solana",
-        "TRON",
-        "USDC",
-        "USDT",
-        "XRP"
-      ],
-      "local": [
-        "PIX"
-      ]
-    },
-    "pay": [
-      "Apple Pay",
-      "BNB",
-      "Bitcoin",
-      "Ethereum",
-      "Google Pay",
-      "Klarna",
-      "Litecoin",
-      "Mastercard",
-      "Neteller",
-      "PIX",
-      "PayPal",
-      "Polygon",
-      "Skrill",
-      "Solana"
-    ],
-    "providers": [
-      "Nuvei",
-      "Paybis",
-      "Ramp"
-    ],
-    "regions": [
-      "Весь мир",
-      "Европа"
-    ],
-    "licenses": [
-      "Литва (лицензия)"
-    ],
-    "sandbox": false,
-    "docs": "",
-    "api": "",
-    "enriched": 1792527409
+    ]
   },
   "swyftx.com": {
     "name": "Swyftx",
@@ -15882,8 +14268,7 @@
         "url": "https://unlimit.com",
         "note": "провайдер покупки в приложении"
       }
-    ],
-    "fail": 1
+    ]
   },
   "zerion.io": {
     "name": "Zerion",
@@ -16120,30 +14505,7 @@
         "url": "https://arthera.org",
         "note": "лоялти 10K+ юзеров"
       }
-    ],
-    "pay": [],
-    "providers": [
-      "Ramp",
-      "Swipelux"
-    ],
-    "api": "",
-    "docs": "https://docs.swipelux.com/",
-    "enriched": 1792524034,
-    "sandbox": false,
-    "pay_groups": {},
-    "regions": [
-      "Весь мир"
-    ],
-    "licenses": [
-      "MiCA (ЕС)"
-    ],
-    "gateways_detected": [
-      {
-        "name": "Apple Pay",
-        "evidence": "apple-pay"
-      }
-    ],
-    "tds": false
+    ]
   },
   "indacoin.com": {
     "name": "Indacoin",
@@ -16305,18 +14667,7 @@
         "url": "https://www.houseofdoge.org",
         "note": "казна Dogecoin"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {},
-    "pay": [],
-    "providers": [],
-    "regions": [],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "",
-    "api": "",
-    "enriched": 1792527412
+    ]
   },
   "gemini.com": {
     "name": "Gemini",
@@ -16386,43 +14737,7 @@
         "url": "https://ripple.com",
         "note": "кредитная карта на XRP"
       }
-    ],
-    "gateways_detected": [],
-    "tds": false,
-    "pay_groups": {
-      "card": [
-        "Mastercard"
-      ],
-      "crypto": [
-        "Bitcoin",
-        "Ethereum",
-        "Polygon",
-        "Solana",
-        "XRP"
-      ]
-    },
-    "pay": [
-      "Bitcoin",
-      "Ethereum",
-      "Mastercard",
-      "Polygon",
-      "Solana",
-      "XRP"
-    ],
-    "providers": [],
-    "regions": [
-      "UK",
-      "Азия",
-      "Африка",
-      "Весь мир",
-      "ЕЭЗ",
-      "Европа"
-    ],
-    "licenses": [],
-    "sandbox": false,
-    "docs": "https://developer.gemini.com/",
-    "api": "https://developer.gemini.com/",
-    "enriched": 1792527418
+    ]
   },
   "commerce.coinbase.com": {
     "name": "Coinbase Commerce",
@@ -19970,36 +18285,349 @@
     "notes": "Регион: Аргентина. аргентинская биржа",
     "partners": []
   },
-  "bitcoin.org": {
-    "name": "bitcoin - open source p2p money",
-    "type": "сайт (находка Mini App)",
-    "fees": "—",
+  "skins.com": {
+    "name": "Skins.com",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
     "kyc": {
-      "обязателен": "уточняется",
-      "лимиты": "—",
-      "уровни": []
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
     },
-    "notes": "Найдено охотником по теме: bitcoin l2",
-    "partners": [],
-    "trashed": {
-      "reason": "тестовая запись (проверка корзины)",
-      "ts": 0
-    }
+    "notes": "маркетплейс скинов CS2; покупка/продажа, вывод",
+    "partners": []
   },
-  "dexscreener.com": {
-    "name": "DEX Screener",
-    "type": "сайт",
-    "fees": "—",
+  "csgoroll.com": {
+    "name": "CSGORoll",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
     "kyc": {
-      "обязателен": "уточняется",
-      "лимиты": "—",
-      "уровни": []
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
     },
-    "notes": "Добавлено через Mini App",
-    "partners": [],
-    "trashed": {
-      "reason": "тестовая запись (проверка корзины)",
-      "ts": 0
-    }
+    "notes": "кейсы/рулетка CS2",
+    "partners": []
+  },
+  "keydrop.com": {
+    "name": "KeyDrop",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "кейсы, апгрейды, рулетка",
+    "partners": []
+  },
+  "hellcase.com": {
+    "name": "HellCase",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "кейсы CS2",
+    "partners": []
+  },
+  "cases.gg": {
+    "name": "Cases.gg",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "кейсы/апгрейды",
+    "partners": []
+  },
+  "skin.land": {
+    "name": "Skin.Land",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "маркетплейс скинов",
+    "partners": []
+  },
+  "skinswap.com": {
+    "name": "SkinSwap",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "обмен скинов",
+    "partners": []
+  },
+  "skinsmonkey.com": {
+    "name": "SkinsMonkey",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "обмен скинов",
+    "partners": []
+  },
+  "cs.money": {
+    "name": "CS.MONEY",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "обмен/маркетплейс скинов",
+    "partners": []
+  },
+  "dmarket.com": {
+    "name": "DMarket",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "маркетплейс игровых предметов",
+    "partners": []
+  },
+  "tradeit.gg": {
+    "name": "Tradeit.gg",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "обмен скинов",
+    "partners": []
+  },
+  "swap.gg": {
+    "name": "Swap.gg",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "обмен скинов",
+    "partners": []
+  },
+  "skinbaron.de": {
+    "name": "SkinBaron",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "немецкий маркетплейс скинов",
+    "partners": []
+  },
+  "bitskins.com": {
+    "name": "BitSkins",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "маркетплейс скинов",
+    "partners": []
+  },
+  "buff.163.com": {
+    "name": "BUFF163",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "китайский маркетплейс скинов",
+    "partners": []
+  },
+  "csgofast.com": {
+    "name": "CSGOFast",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "кейсы/рулетка",
+    "partners": []
+  },
+  "bloxflip.com": {
+    "name": "Bloxflip",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "Roblox-казино",
+    "partners": []
+  },
+  "stake.com": {
+    "name": "Stake",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "казино/крипта (заблокирован у провайдера UA)",
+    "partners": []
+  },
+  "rollbit.com": {
+    "name": "Rollbit",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "казино/фьючерсы (заблокирован UA)",
+    "partners": []
+  },
+  "bc.game": {
+    "name": "BC.Game",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "казино (заблокирован UA)",
+    "partners": []
+  },
+  "csgoempire.com": {
+    "name": "CSGOEmpire",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "рулетка/кейсы (заблокирован UA)",
+    "partners": []
+  },
+  "duelbits.com": {
+    "name": "Duelbits",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "казино (заблокирован UA)",
+    "partners": []
+  },
+  "roobet.com": {
+    "name": "Roobet",
+    "type": "Скины/Кейсы (гемблинг)",
+    "fees": "комиссия площадки",
+    "kyc": {
+      "обязателен": "Обычно да при выводе",
+      "лимиты": "по правилам площадки",
+      "уровни": [
+        "Email",
+        "KYC при выводе"
+      ]
+    },
+    "notes": "казино (заблокирован UA)",
+    "partners": []
   }
 }

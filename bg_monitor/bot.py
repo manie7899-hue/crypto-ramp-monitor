@@ -141,6 +141,7 @@ CATS = [
     ("nft", "🖼 NFT", None),
     ("game", "🎮 Гейминг", None),
     ("site", "🌐 Сайты", None),
+    ("skins", "🎲 Скины/Казино", None),
     ("merch", "🏪 Мерчанты", None),
     ("integ", "🔗 Интеграции", None),
     ("other", "📦 Прочее", None),
@@ -202,6 +203,8 @@ def cat_of(g):
         return "nft"
     if "гейминг" in t or "метавселен" in t or "game" in t:
         return "game"
+    if "скин" in t or "казино" in t or "кейс" in t or "гемблинг" in t:
+        return "skins"
     if "мерчант" in t:
         return "merch"
     if "интеграц" in t:

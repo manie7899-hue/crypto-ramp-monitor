@@ -172,9 +172,10 @@ function catOf(g){
   if(t.includes("процессор") || t.includes("платёжная система") || t.includes("платеж")) return "Процессоры";
   if(t.includes("шлюз") || t.includes("ramp") || t.includes("онрамп")) return "Шлюзы";
   if(t.includes("стабилкоин") || t.includes("stablecoin")) return "Стабилкоины";
+  if(t.includes("скин") || t.includes("казино") || t.includes("кейс") || t.includes("гемблинг")) return "Скины";
   return "Прочее";
 }
-const TICONS = {"Гифты":"🎁","Биржи":"🏦","Кошельки":"👛","Обменники":"🔁","Процессоры":"💳","Шлюзы":"🔌","Стабилкоины":"💵","Прочее":"📦"};
+const TICONS = {"Гифты":"🎁","Биржи":"🏦","Кошельки":"👛","Обменники":"🔁","Процессоры":"💳","Шлюзы":"🔌","Стабилкоины":"💵","Скины":"🎲","Прочее":"📦"};
 function chips(){
   const m = {};
   Object.values(DATA).forEach(g => { const c = catOf(g); m[c] = (m[c]||0)+1; });
