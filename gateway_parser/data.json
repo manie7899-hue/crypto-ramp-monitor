@@ -1222,6 +1222,12 @@
         "type": "интеграция",
         "url": "https://crystalintelligence.com",
         "note": "комплаенс/AML"
+      },
+      {
+        "name": "Coinmama",
+        "type": "биржа",
+        "url": "https://coinmama.com",
+        "note": "Terms: провайдеры Paybis и Banxa"
       }
     ]
   },
@@ -2688,7 +2694,7 @@
         "Повышенные лимиты"
       ]
     },
-    "notes": "$5.4B lifetime объёма, 180+ стран, ~$2B/год; SiGMA Best Crypto Payment Provider 2026. Travel Rule >$1K. React Native SDK. Paybis Send — массовые выплаты. Большинство B2B-партнёров white-label и не публикуются.",
+    "notes": "$5.4B lifetime объёма, 180+ стран, ~$2B/год; SiGMA Best Crypto Payment Provider 2026. Travel Rule >$1K. React Native SDK. Paybis Send — массовые выплаты. Embedded Mode (JS-виджет), whitelabel, Apple Pay one-click, no-KYC flow для партнёров. Доки: docs.payb.is. Большинство B2B-клиентов white-label и не публикуются.",
     "partners": [
       {
         "name": "Gem Wallet",
@@ -2803,7 +2809,11 @@
         "url": "https://bridgerpay.com",
         "note": "Paybis обрабатывает платежи через BridgerPay (кейс-стади)"
       }
-    ]
+    ],
+    "docs": "https://docs.payb.is",
+    "api": "https://docs.payb.is/docs/embedded-mode",
+    "sdk": "widget.paybis.com / widget.sandbox.paybis.com (partner-exchange-widget.js)",
+    "tds": true
   },
   "utorg.io": {
     "name": "Utorg",

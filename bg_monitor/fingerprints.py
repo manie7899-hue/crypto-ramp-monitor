@@ -25,6 +25,7 @@ PROVIDER_HOSTS = {
     "Unlimit": [r"unlimit\.com"],
     "BridgerPay": [r"bridgerpay\.com"],
     "Swapped": [r"swapped\.com", r"api\.swapped", r"swapped-ramp", r"swapped\.io", r"pay\.swapped"],
+    "Paybis": [r"widget\.paybis\.com", r"payb\.is", r"partner-exchange-widget", r"paybis\.com"],
     "Apple Pay": [r"applepay", r"apple-pay"],
     "Google Pay": [r"google\.com/pay", r"pay\.google"],
 }
