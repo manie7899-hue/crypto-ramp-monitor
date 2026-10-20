@@ -14,8 +14,8 @@ UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit
 
 GROUPS = {
     "card": {"visa": "Visa", "mastercard": "Mastercard", "maestro": "Maestro", "amex": "Amex",
-             "american express": "Amex", "unionpay": "UnionPay", "jcb": "JCB", "discover": "Discover",
-             "diners": "Diners", "мир": "МИР", "mir ": "МИР"},
+             "american express": "Amex", "unionpay": "UnionPay", "jcb": "JCB",
+             "diners": "Diners", "мир": "МИР"},
     "wallet": {"apple pay": "Apple Pay", "google pay": "Google Pay", "paypal": "PayPal", "skrill": "Skrill",
                "neteller": "Neteller", "юmoney": "ЮMoney", "yoomoney": "ЮMoney", "payoneer": "Payoneer",
                "perfect money": "Perfect Money", "payeer": "Payeer"},
@@ -25,9 +25,9 @@ GROUPS = {
              "paysera": "Paysera", "klarna": "Klarna", "trustly": "Trustly"},
     "crypto": {"bitcoin": "Bitcoin", "ethereum": "Ethereum", "usdt": "USDT", "usdc": "USDC", "lightning": "Lightning",
                "litecoin": "Litecoin", "tron": "TRON", "ton": "TON", "solana": "Solana", "bnb": "BNB",
-               "polygon": "Polygon", "xrp": "XRP", "dogecoin": "Dogecoin", "crypto": "Криптовалюта"},
+               "polygon": "Polygon", "xrp": "XRP", "dogecoin": "Dogecoin"},
     "local": {"alipay": "Alipay", "wechat": "WeChat Pay", "paysafecard": "paysafecard", "neosurf": "Neosurf",
-              "cash": "Наличные", "mobile money": "Mobile Money", "m-pesa": "M-Pesa", "pix ": "PIX",
+              "mobile money": "Mobile Money", "m-pesa": "M-Pesa", "pix": "PIX",
               "blik": "BLIK", "boleto": "Boleto", "qiwi": "QIWI", "elecsnet": "Элекснет"},
 }
 PROVIDERS = {"stripe": "Stripe", "adyen": "Adyen", "braintree": "Braintree", "checkout.com": "Checkout.com",
@@ -44,6 +44,15 @@ REGIONS = {"europe": "Европа", "european union": "ЕС", "eea": "ЕЭЗ", 
 LICENSES = {"fca": "FCA (UK)", "finCEN": "FinCEN (US)", "fintrac": "FINTRAC (CA)", "mica": "MiCA (ЕС)",
             "vasp": "VASP", "msb": "MSB", "pci dss": "PCI DSS", "pci-dss": "PCI DSS", "estonia": "Эстония (лицензия)",
             "lithuania": "Литва (лицензия)", "cysec": "CySEC", "mas": "MAS (Сингапур)", "asic": "ASIC (AU)"}
+
+
+def has_kw(body, kw):
+    kw = kw.strip()
+    if not kw:
+        return False
+    if re.search(r"[а-яё]", kw):
+        return kw in body
+    return re.search(r"(?<![a-z0-9])" + re.escape(kw) + r"(?![a-z0-9])", body) is not None
 
 
 def fetch(url, limit=250000):
@@ -82,17 +91,22 @@ def main():
         body = raw.lower()
         groups = {}
         for gk, mapping in GROUPS.items():
-            vals = sorted({v for k, v in mapping.items() if k in body})
+            vals = sorted({v for k, v in mapping.items() if has_kw(body, k)})
             if vals:
                 groups[gk] = vals[:10]
-        provs = sorted({v for k, v in PROVIDERS.items() if k in body})
-        regions = sorted({v for k, v in REGIONS.items() if k in body})
-        lic = sorted({v for k, v in LICENSES.items() if k in body})
+        provs = sorted({v for k, v in PROVIDERS.items() if has_kw(body, k)})
+        regions = sorted({v for k, v in REGIONS.items() if has_kw(body, k)})
+        lic = sorted({v for k, v in LICENSES.items() if has_kw(body, k)})
         # комиссия
         fee = ""
-        m = re.search(r"(?:fee|комисси\w*)[^\d%]{0,25}(\d+(?:[.,]\d+)?\s?%)", body)
-        if m:
-            fee = m.group(1).replace(" ", "")
+        for m in re.finditer(r"(?:fee|комисси\w*)[^\d%]{0,30}(\d+(?:[.,]\d+)?)\s?%", body):
+            try:
+                val = float(m.group(1).replace(",", "."))
+            except Exception:
+                continue
+            if 0 <= val <= 25:
+                fee = f"{val:g}%"
+                break
         # kyc
         kyc_note = ""
         if re.search(r"(no kyc|without kyc|без kyc|без верификаци)", body):
