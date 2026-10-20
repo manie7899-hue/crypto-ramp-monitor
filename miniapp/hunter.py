@@ -85,6 +85,11 @@ def main():
         m = re.search(r"<title[^>]*>(.*?)</title>", body, re.S | re.I)
         if m:
             title = re.sub(r"\s+", " ", m.group(1)).strip()[:60]
+        words = [w for w in re.findall(r"[a-zа-я]{4,}", topic.lower()) if w not in ("сайт", "review", "best")]
+        if words and not any(w in body for w in words):
+            continue
+        if len(body) < 1200:
+            continue
         d[dom] = d.get(dom) or {
             "name": title or dom, "type": "сайт (находка Mini App)", "fees": "—",
             "kyc": {"обязателен": "уточняется", "лимиты": "—", "уровни": []},
