@@ -92,7 +92,7 @@ def ai_chat(text):
         reply = ai_mod.complete([
             {"role": "system", "content": ai_mod.SYSTEM + "\n\n" + ctx},
             {"role": "user", "content": text},
-        ])
+        ], timeout=30)
     except Exception as e:
         return None
     act = ai_mod.parse_action(reply)

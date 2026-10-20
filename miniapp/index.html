@@ -172,12 +172,16 @@ async function chatSend(text){
   if(!text.trim()) return;
   addMsg(esc(text), "me");
   $("#ci").value = "";
+  const typing = document.createElement("div");
+  typing.className = "msg bot"; typing.id = "typing"; typing.textContent = "печатает…";
+  $("#chat").appendChild(typing); typing.scrollIntoView({block:"end"});
   try {
     const r = await fetch("/api/chat", {method:"POST", headers:{"Content-Type":"application/json"},
       body: JSON.stringify({text, user: WA?.initDataUnsafe?.user?.username || "web"})});
     const j = await r.json();
+    document.getElementById("typing")?.remove();
     addMsg(j.reply || "…", "bot");
-  } catch(e){ addMsg("⚠️ Ошибка связи с сервером", "bot"); }
+  } catch(e){ document.getElementById("typing")?.remove(); addMsg("⚠️ Ошибка связи с сервером", "bot"); }
 }
 
 document.querySelectorAll(".tabbar button").forEach(b => b.onclick = () => {
