@@ -1375,27 +1375,26 @@ KYC: Да — KYC через платформу
 ----------------------------------------------------------------
 
 ### Swapped — swapped.com
-Тип: Агрегатор онрампов
-Комиссии: показывает лучший курс
-KYC: Зависит от выбранного провайдера
-Лимиты: Зависит от провайдера
-  - Виджет-агрегатор: карта/банк → крипта
-Примечание: Компаратор онрампов (как Onramper), виджет для сайтов. Агрегирует 40+ локальных платёжных методов напрямую.
+Тип: Фиат-шлюз (гейминг/скины, on-ramp/off-ramp)
+Комиссии: по договору (B2B)
+KYC: Да — Sumsub (шаринг верификации)
+Лимиты: по договору
+  - Sumsub KYC
+  - sharing Sumsub для партнёров
+Примечание: Swapped Ramp: iframe-виджет on-ramp/off-ramp для гейминга (казино, скин-сайты, DEX). KYC Sumsub с шарингом. EU/EEA обслуживает Northstake ApS (CASP, Danish FSA, FTID 10905). HMAC-подпись, sandbox, вебхуки.
 
-Прокладки (6):
+Прокладки (7):
 
-  [шлюз]
-  - Onramper — https://onramper.com  [Swapped входит в агрегатор Onramper]
-  [биржа]
-  - Freedx — https://www.freedx.com  [Swapped доступен как провайдер через Onramper на Freedx]
-  [платёжная система]
-  - KuCoin Pay — https://www.kucoin.com/pay  [Swapped Connect: прямые CEX-платежи; 2025]
-  [гейминг]
-  - Fortune Box — https://fortunebox.com  [депозиты через Swapped; 2025]
-  [DeFi]
-  - Rhinestone — https://www.rhinestone.network  [депозит-виджет (ERC-7579)]
-  [интеграция]
-  - QuickNode — https://www.quicknode.com  [Swapped Ramp в QuickNode Marketplace]
+  [казино]
+  - Shuffle — https://shuffle.com  [acceptedPaymentMethod: cryptocurrencies, swapped.com, moonpay; блог «buy crypto with swapped»]
+  - Fortune Box — https://fortunebox.com  [help-центр: «Alternative Deposit Methods — Swapped»]
+  - Roobet — https://roobet.com  [help.roobet.com: «How to Deposit Using Swapped» — Swapped.com trusted partner]
+  - Stake — https://stake.com  [help.stake.com: «Purchasing Crypto with Moonpay or Swapped»]
+  - Gamdom — https://gamdom.com  [help-центр: «Visa cards are securely processed through Swapped», «Bank transfers via Swapped»]
+  [DEX]
+  - Hyperliquid — https://app.hyperliquid.xyz  [«Fiat on-ramp is powered by Swapped.com» (офиц. FAQ)]
+  [кошелёк]
+  - Phantom — https://phantom.app  [список онрамп-провайдеров Phantom: Swapped]
 
 ----------------------------------------------------------------
 
@@ -11269,6 +11268,44 @@ KYC: Обычно да при выводе
   - Email
   - KYC при выводе
 Примечание: казино (заблокирован UA)
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
+
+### Shuffle — shuffle.com
+Тип: Казино (крипто)
+Комиссии: по правилам казино
+KYC: Да (при выводе)
+Лимиты: по уровням
+  - Email
+  - KYC при выводе
+Примечание: Крипто-казино. Принимает карты через Swapped и MoonPay (acceptedPaymentMethod в коде).
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
+
+### Hyperliquid — app.hyperliquid.xyz
+Тип: DEX (перпы)
+Комиссии: —
+KYC: по провайдеру
+Лимиты: —
+Примечание: фиатный онрамп через Swapped.com
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
+
+### Gamdom — gamdom.com
+Тип: Казино (крипто)
+Комиссии: —
+KYC: по провайдеру
+Лимиты: —
+Примечание: Карточные депозиты и банковские переводы — через Swapped.
 
 Прокладки (0):
 
