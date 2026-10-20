@@ -4,6 +4,7 @@
 import json
 import re
 import subprocess
+import sys
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -11,6 +12,95 @@ from pathlib import Path
 ROOT = Path("/var/www/html/app")
 DATA = Path("/opt/crypto-ramp-monitor/gateway_parser/data.json")
 REPO = Path("/opt/crypto-ramp-monitor")
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    import ai as ai_mod
+except Exception:
+    ai_mod = None
+
+
+def esc(s):
+    return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def run_hunt(topic):
+    try:
+        proc = subprocess.run(["/usr/bin/python3", str(REPO / "miniapp" / "hunter.py"), topic],
+                              capture_output=True, timeout=240)
+        out = proc.stdout.decode("utf-8", "ignore").strip().splitlines()
+        res = json.loads(out[-1]) if out else {}
+        added = res.get("added", [])
+        if not added:
+            return f"🕵️ Охота по «{esc(topic)}»: проверил {res.get('checked', 0)} — новых не нашёл."
+        return (f"🕵️ Охота по «{esc(topic)}»: добавил {len(added)}:\n" +
+                "\n".join(f"• {esc(a)}" for a in added))
+    except subprocess.TimeoutExpired:
+        return f"🕵️ Охота по «{esc(topic)}» долгая — идёт в фоне."
+    except Exception as e:
+        return f"⚠️ Охотник упал: {esc(str(e))}"
+
+
+def do_action(act):
+    d = load()
+    a = act.get("action")
+    if a == "add":
+        dom = (act.get("domain") or "").lower().strip()
+        if not dom or "." not in dom:
+            return "🤔 Не понял домен."
+        if dom in d:
+            return f"Уже есть: {esc(dom)}"
+        name = (act.get("name") or dom)[:40]
+        d[dom] = {"name": name, "type": "сайт", "fees": "—",
+                  "kyc": {"обязателен": "уточняется", "лимиты": "—", "уровни": []},
+                  "notes": "Добавлено через AI-чат Mini App", "partners": []}
+        save(d)
+        git_push(f"ai: +{dom}")
+        return f"✅ Добавил <b>{esc(name)}</b> ({esc(dom)}) и запушил."
+    if a == "hunt":
+        return run_hunt(act.get("topic") or "crypto payment gateway")
+    if a == "search":
+        return handle("найди " + (act.get("query") or ""))
+    if a == "stats":
+        return handle("статистика")
+    if a == "list":
+        return handle(act.get("category") or "гифты")
+    if a == "answer":
+        return esc(act.get("text") or "")
+    return None
+
+
+def git_push(msg):
+    try:
+        subprocess.run(["git", "-C", str(REPO), "add", "-A"], capture_output=True, timeout=20)
+        subprocess.run(["git", "-C", str(REPO), "-c", "user.name=miniapp", "-c", "user.email=miniapp@local",
+                        "commit", "-qm", msg], capture_output=True, timeout=20)
+        subprocess.run(["git", "-C", str(REPO), "push", "-q", "origin", "main"], capture_output=True, timeout=40)
+    except Exception:
+        pass
+
+
+def ai_chat(text):
+    if not ai_mod:
+        return None
+    d = load()
+    top = sorted(d.items(), key=lambda kv: -len(kv[1].get("partners", [])))[:8]
+    ctx = "Каталог: %d карточек. Топ по прокладкам: %s." % (
+        len(d), ", ".join(f"{g.get('name', dom)} ({len(g.get('partners', []))})" for dom, g in top))
+    try:
+        reply = ai_mod.complete([
+            {"role": "system", "content": ai_mod.SYSTEM + "\n\n" + ctx},
+            {"role": "user", "content": text},
+        ])
+    except Exception as e:
+        return None
+    act = ai_mod.parse_action(reply)
+    if act:
+        res = do_action(act)
+        if res:
+            return res
+    return esc(reply).replace("\n", "<br>")
 
 
 def load():
@@ -185,7 +275,7 @@ class H(BaseHTTPRequestHandler):
             payload = {}
         text = (payload.get("text") or "")[:500]
         try:
-            reply = handle(text)
+            reply = ai_chat(text) or handle(text)
         except Exception as e:
             reply = f"⚠️ Ошибка: {e}"
         self._send(200, json.dumps({"reply": reply}, ensure_ascii=False))
