@@ -56,6 +56,18 @@ EMOJI_TRASH = "5310169226856644648"
 EMOJI_STAR = "5285032475490273112"
 
 
+def cat_emoji(key):
+    return {k: l.split()[0] for k, l, _ in CATS}.get(key, "📦")
+
+
+def ebtn(emoji, text, cb=None, url=None, style=None):
+    """Кнопка: если для эмодзи есть премиум-ID — иконка, иначе эмодзи в тексте."""
+    eid = PREMIUM.get(emoji)
+    if eid:
+        return btn(text, cb=cb, url=url, style=style, icon=eid)
+    return btn(f"{emoji} {text}", cb=cb, url=url, style=style)
+
+
 def btn(text, cb=None, url=None, style=None, icon=None):
     b = {"text": text}
     if cb:
@@ -92,7 +104,36 @@ CATS = [
 
 
 def type_emoji(t):
-    return TYPE_EMOJI.get(t, "📦")
+    if t in TYPE_EMOJI:
+        return TYPE_EMOJI[t]
+    s = (t or "").lower()
+    if "гифт" in s or "ключ" in s:
+        return "🎁"
+    if "обменник" in s or "swap" in s:
+        return "🔁"
+    if "биржа" in s or "cex" in s or "брокер" in s:
+        return "🏦"
+    if "кошел" in s:
+        return "👛"
+    if "процессор" in s or "платёжная система" in s or "платеж" in s:
+        return "💳"
+    if "стабилкоин" in s:
+        return "💵"
+    if "шлюз" in s or "ramp" in s or "онрамп" in s:
+        return "🔌"
+    if "defi" in s:
+        return "🧩"
+    if "nft" in s:
+        return "🖼"
+    if "гейминг" in s or "метавселен" in s:
+        return "🎮"
+    if "мерчант" in s:
+        return "🏪"
+    if "интеграц" in s:
+        return "🔗"
+    if "сайт" in s:
+        return "🌐"
+    return "📦"
 
 
 def cat_of(g):
@@ -172,15 +213,16 @@ def main_menu(d):
         for key, label, style in CATS[i:i + 2]:
             cnt = sum(1 for g in d.values() if cat_of(g) == key)
             if cnt:
-                row.append(btn(f"{label} ({cnt})", cb=f"cat:{key}", style=style))
+                emoji, title = label.split(" ", 1)
+                row.append(ebtn(emoji, f"{title} ({cnt})", cb=f"cat:{key}", style=style))
         if row:
             kb["inline_keyboard"].append(row)
     kb["inline_keyboard"].append([
-        btn(f"📂 Все платёжки ({len(d)})", cb="list:0", style="primary", icon=EMOJI_STAR),
+        ebtn("📂", f"Все платёжки ({len(d)})", cb="list:0", style="primary"),
     ])
     kb["inline_keyboard"].append([
-        btn("🔍 Поиск", cb="search", style="primary"),
-        btn("❓ Помощь", cb="help"),
+        ebtn("🔍", "Поиск", cb="search", style="primary"),
+        ebtn("❓", "Помощь", cb="help"),
     ])
     return kb
 
@@ -195,8 +237,7 @@ def cat_page(d, key, page=0):
     kb = {"inline_keyboard": []}
     row = []
     for dom, g in chunk:
-        row.append(btn(f"{type_emoji(g.get('type',''))} {g.get('name', dom)[:22]}",
-                       cb=f"gw:{dom}"))
+        row.append(ebtn(cat_emoji(key), (g.get('name', dom))[:24], cb=f"gw:{dom}"))
         if len(row) == 2:
             kb["inline_keyboard"].append(row)
             row = []
@@ -240,11 +281,10 @@ def kb_url(partners, page, dom, cat):
     kb = {"inline_keyboard": []}
     row = []
     for p in chunk:
-        label = ((type_emoji(p.get("type", "")) + " ") + (p.get("name") or "?"))[:34]
         url = p.get("url") or ("https://" + dom)
         if not url.startswith("http"):
             url = "https://" + url
-        row.append(btn(label, url=url))
+        row.append(ebtn(type_emoji(p.get("type", "")), (p.get("name") or "?")[:32], url=url))
         if len(row) == 2:
             kb["inline_keyboard"].append(row)
             row = []
@@ -327,8 +367,8 @@ def handle_update(upd):
             kb = {"inline_keyboard": []}
             row = []
             for dom, g in hits:
-                row.append(btn(f"{type_emoji(g.get('type',''))} {(g.get('name') or dom)[:24]}",
-                               cb=f"gw:{dom}"))
+                row.append(ebtn(type_emoji(g.get('type','')), (g.get('name') or dom)[:24],
+                                cb=f"gw:{dom}"))
                 if len(row) == 2:
                     kb["inline_keyboard"].append(row)
                     row = []
@@ -384,8 +424,9 @@ def list_page(d, page=0):
     kb = {"inline_keyboard": []}
     row = []
     for dom, g in chunk:
-        row.append(btn(f"{type_emoji(g.get('type',''))} {g.get('name', dom)[:20]} ({len(g.get('partners', []))})",
-                       cb=f"gw:{dom}"))
+        row.append(ebtn(type_emoji(g.get('type','')),
+                        f"{g.get('name', dom)[:20]} ({len(g.get('partners', []))})",
+                        cb=f"gw:{dom}"))
         if len(row) == 2:
             kb["inline_keyboard"].append(row)
             row = []
