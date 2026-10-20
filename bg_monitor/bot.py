@@ -375,7 +375,7 @@ def gateway_card_text(dom, g):
     return "\n".join(lines)
 
 
-def kb_url(partners, page, dom, cat):
+def kb_url(partners, page, dom, cat, trashed=False):
     total = len(partners)
     pages = max(1, -(-total // PART_PAGE))
     page = min(max(page, 0), pages - 1)
@@ -400,7 +400,7 @@ def kb_url(partners, page, dom, cat):
         if page < pages - 1:
             nav.append(btn("Ещё ▶", cb=f"p:{dom}:{page + 1}:{cat}", style="success"))
         kb["inline_keyboard"].append(nav)
-    if is_trashed(g):
+    if trashed:
         kb["inline_keyboard"].append([btn("♻️ Восстановить", cb=f"trashrestore:{dom}", style="success")])
     else:
         kb["inline_keyboard"].append([
@@ -558,7 +558,7 @@ def handle_update(upd):
             act, lst = fav_toggle(uid, dom)
             g = d.get(dom, {})
             edit(chat, msg_id, f"⭐ {act} «{g.get('name', dom)}» в избранное ({len(lst)}).",
-                 kb_url(g.get("partners", []), 0, dom, cat_of(g)))
+                 kb_url(g.get("partners", []), 0, dom, cat_of(g), is_trashed(g)))
         elif data.startswith("cat:"):
             parts = data.split(":")
             key = parts[1]
@@ -571,14 +571,14 @@ def handle_update(upd):
             if not g:
                 return
             edit(chat, msg_id, gateway_card_text(dom, g)[:3800],
-                 kb_url(g.get("partners", []), 0, dom, cat_of(g)))
+                 kb_url(g.get("partners", []), 0, dom, cat_of(g), is_trashed(g)))
         elif data.startswith("p:"):
             _, dom, page, cat = data.split(":")
             g = d.get(dom)
             if not g:
                 return
             edit(chat, msg_id, gateway_card_text(dom, g)[:3800],
-                 kb_url(g.get("partners", []), int(page), dom, cat))
+                 kb_url(g.get("partners", []), int(page), dom, cat, is_trashed(g)))
 
 
 def list_page(d, page=0):
