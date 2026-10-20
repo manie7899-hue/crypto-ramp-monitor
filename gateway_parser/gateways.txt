@@ -289,7 +289,7 @@ KYC: Да (2 уровня)
   - Full: ID + селфи + PoA
 Примечание: Карта/банк/местные платежи. Off-ramp в части стран. Крупная сеть партнёров; страница banxa.com/partners гео-заблокирована.
 
-Прокладки (29):
+Прокладки (30):
 
   [кошелёк]
   - Argent X — https://www.argent.xyz  [покупка за фиат в Argent X]
@@ -326,6 +326,7 @@ KYC: Да (2 уровня)
   - Swyftx — https://swyftx.com  [AUD/NZD депозиты через Banxa]
   - Kinesis — https://kinesis.money  [по данным анонса/твита]
   - WonderFi — https://wonder.fi  [Канада]
+  - Coinmama — https://coinmama.com  [Terms: провайдеры Paybis и Banxa]
   [метавселенная]
   - Somnia — https://somnia.network  [Buy SOMI через Banxa Checkout]
 
@@ -745,7 +746,7 @@ KYC: Да — ID + селфи
   - Email + телефон
   - ID + селфи
   - Повышенные лимиты
-Примечание: $5.4B lifetime объёма, 180+ стран, ~$2B/год; SiGMA Best Crypto Payment Provider 2026. Travel Rule >$1K. React Native SDK. Paybis Send — массовые выплаты. Большинство B2B-партнёров white-label и не публикуются.
+Примечание: $5.4B lifetime объёма, 180+ стран, ~$2B/год; SiGMA Best Crypto Payment Provider 2026. Travel Rule >$1K. React Native SDK. Paybis Send — массовые выплаты. Embedded Mode (JS-виджет), whitelabel, Apple Pay one-click, no-KYC flow для партнёров. Доки: docs.payb.is. Большинство B2B-клиентов white-label и не публикуются.
 
 Прокладки (19):
 
@@ -1381,16 +1382,16 @@ KYC: Да — Sumsub (шаринг верификации)
 Лимиты: по договору
   - Sumsub KYC
   - sharing Sumsub для партнёров
-Примечание: Swapped Ramp: iframe-виджет on-ramp/off-ramp для гейминга (казино, скин-сайты, DEX). KYC Sumsub с шарингом. EU/EEA обслуживает Northstake ApS (CASP, Danish FSA, FTID 10905). HMAC-подпись, sandbox, вебхуки.
+Примечание: Swapped Ramp: карта/банк/Apple Pay/Google Pay → крипта (buy), и обратно крипта → выплата (sell). KYC Sumsub. EU/EEA — Northstake ApS (CASP, Danish FSA). Рефанды на исходный метод (до 5 раб. дней), чарджбэки берёт на себя Swapped, ручной ревью до 30 мин.
 
 Прокладки (7):
 
   [казино]
   - Shuffle — https://shuffle.com  [acceptedPaymentMethod: cryptocurrencies, swapped.com, moonpay; блог «buy crypto with swapped»]
-  - Fortune Box — https://fortunebox.com  [help-центр: «Alternative Deposit Methods — Swapped»]
+  - Fortune Box — https://fortunebox.com  [help-центр: «Alternative Deposit Methods — Swapped» · ПОДТВЕРЖДЕНО пользователем (работает)]
   - Roobet — https://roobet.com  [help.roobet.com: «How to Deposit Using Swapped» — Swapped.com trusted partner]
   - Stake — https://stake.com  [help.stake.com: «Purchasing Crypto with Moonpay or Swapped»]
-  - Gamdom — https://gamdom.com  [help-центр: «Visa cards are securely processed through Swapped», «Bank transfers via Swapped»]
+  - Gamdom — https://gamdom.com  [help-центр: «Visa cards are securely processed through Swapped», «Bank transfers via Swapped» · ПОДТВЕРЖДЕНО пользователем (работает)]
   [DEX]
   - Hyperliquid — https://app.hyperliquid.xyz  [«Fiat on-ramp is powered by Swapped.com» (офиц. FAQ)]
   [кошелёк]
@@ -11309,5 +11310,20 @@ KYC: по провайдеру
 
 Прокладки (0):
 
+
+----------------------------------------------------------------
+
+### Northstake — northstake.dk
+Тип: Стейкинг/кастоди (институциональный)
+Комиссии: по договору
+KYC: Да — B2B/институциональный онбординг
+Лимиты: по договору
+  - KYB/AML
+Примечание: Датская Northstake ApS: стейкинг ETH, Staking Vault Manager (Lido V3 stVaults), кастоди на MPC (50+ сетей), валидаторная инфраструктура. CASP-лицензия Danish FSA под MiCA (FTID 10905). Merchant of record для EU/EEA-клиентов Swapped. Розницы нет: пополнение картой и вывод для частных лиц недоступны — только институциональный онбординг; карточные платежи европейских клиентов идут через Swapped.
+
+Прокладки (1):
+
+  [платёжный процессор]
+  - Swapped (merchant of record EU/EEA) — https://swapped.com  [EU/EEA-клиенты Swapped обслуживаются Northstake ApS]
 
 ----------------------------------------------------------------
