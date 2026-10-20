@@ -37,6 +37,7 @@ input:focus{border-color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:16px 18px;display:flex;flex-direction:column;gap:10px;transition:.18s}
+.hero{font-size:26px;line-height:1;filter:drop-shadow(0 2px 6px rgba(255,122,92,.35))}
 .card:hover{border-color:var(--accent)}
 .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .head h3{font-size:17px}
@@ -91,8 +92,9 @@ ul.lv li::before{content:"▸";position:absolute;left:2px;color:var(--accent2)}
 <div class="topbar">
   <div class="logo"><span class="mark">🔌</span> Шлюзы и прокладки</div>
   <div class="stats">
-    <span class="stat">Платёжек <b id="st-gw">0</b></span>
-    <span class="stat">Прокладок <b id="st-p">0</b></span>
+    <span class="stat">🏷 Платёжек <b id="st-gw">0</b></span>
+    <span class="stat">🔗 Прокладок <b id="st-p">0</b></span>
+    <span class="stat">🎁 Гифты <b id="st-gift">0</b></span>
   </div>
 </div>
 <main>
@@ -109,6 +111,20 @@ const DATA = {"moonpay.com": {"name": "MoonPay", "type": "Фиат-шлюз (on-
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const TYPES = { "кошелёк":"👛","биржа":"🏦","NFT":"🖼","DeFi":"🔁","платёжная система":"💳","гейминг":"🎮","метавселенная":"🌐","гейминг/NFT":"🎮","брокер":"📈","платёжный процессор":"💸","шлюз":"🔌","интеграция":"🧩","мерчанты":"🏪","сайт":"🌐" };
+const BIG = { "Гифты":"🎁","Шлюзы":"🔌","Биржи":"🏦","Кошельки":"👛","Обменники":"🔁","Процессоры":"💳","Стабилкоины":"💵","Прочее":"📦" };
+function bigEmoji(g){
+  const t = (g.type||"").toLowerCase();
+  if(t.includes("гифт")) return "🎁";
+  if(t.includes("обменник")) return "🔁";
+  if(t.includes("биржа")) return "🏦";
+  if(t.includes("кошел")) return "👛";
+  if(t.includes("процессор")) return "💳";
+  if(t.includes("стабилкоин")) return "💵";
+  if(t.includes("шлюз")||t.includes("ramp")||t.includes("on-ramp")) return "🔌";
+  if(t.includes("defi")) return "🔁";
+  if(t.includes("nft")) return "🖼";
+  return "📦";
+}
 let allOpen = false;
 
 function toggleAll(){
@@ -170,7 +186,7 @@ function render(q){
     if(!hit && q && !glist.toLowerCase().includes(q)) return null;
     return `
     <div class="card">
-      <div class="head"><h3>${esc(g.name)}</h3><span class="dom">${esc(dom)}</span></div>
+      <div class="head"><span class="hero">${bigEmoji(g)}</span><h3>${esc(g.name)}</h3><span class="dom">${esc(dom)}</span></div>
       <div class="head"><span class="type">${esc(g.type)}</span></div>
       <div class="fee">💸 ${esc(g.fees)}</div>
       ${kyc}
@@ -186,6 +202,7 @@ function render(q){
   $("grid").innerHTML = cards.length ? cards.join("") : `<div class="empty">Ничего не найдено 🤷</div>`;
   $("st-gw").textContent = Object.keys(DATA).length;
   $("st-p").textContent = Object.values(DATA).reduce((a,g) => a + g.partners.length, 0);
+  try { $("st-gift").textContent = Object.values(DATA).filter(g => catOf(g) === "Гифты").length; } catch(e) {}
   chips();
   if(allOpen){
     document.querySelectorAll(".plist").forEach(el => el.classList.add("open"));
