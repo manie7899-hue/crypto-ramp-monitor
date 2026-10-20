@@ -11327,3 +11327,25 @@ KYC: Да — B2B/институциональный онбординг
   - Swapped (merchant of record EU/EEA) — https://swapped.com  [EU/EEA-клиенты Swapped обслуживаются Northstake ApS]
 
 ----------------------------------------------------------------
+
+### BTCC — btcc.com
+Тип: Биржа (CEX, фьючерсы)
+Комиссии: спот/фьючерсы — по тарифам
+KYC: Да
+Лимиты: по уровням
+  - Email/телефон
+  - ID + селфи
+  - адрес
+Примечание: Fiat Deposit (0 комиссии за пополнение): Visa/Mastercard, Simplex, Payoneer, Skrill. VASP в Польше (реестр KNF/Directorate).
+
+Прокладки (5):
+
+  [платёжная система]
+  - Visa — https://www.visa.com  [логотип на странице Fiat Deposit]
+  - Mastercard — https://www.mastercard.com  [логотип на странице Fiat Deposit]
+  - Payoneer — https://www.payoneer.com  [payoneer.svg на странице Fiat Deposit]
+  - Skrill — https://www.skrill.com  [skrill.svg на странице Fiat Deposit]
+  [шлюз]
+  - Simplex — https://www.simplex.com  [логотип simplex.svg на странице Fiat Deposit]
+
+----------------------------------------------------------------
