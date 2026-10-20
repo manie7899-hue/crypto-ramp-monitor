@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Прокладки — Mini App</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+:root{--bg:#0e1319;--bg2:#151c25;--card:#1a232e;--line:#2b3846;--text:#e8edf3;--muted:#8fa1b3;
+  --accent:#ff7a5c;--accent2:#ff4d6d;--green:#2ecc71;--blue:#3d9be9}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--text);font:15px/1.5 Inter,-apple-system,"SF Pro Text",system-ui,sans-serif;
+  min-height:100vh;padding-bottom:78px}
+.hdr{padding:14px 16px 8px;display:flex;align-items:center;gap:10px}
+.hdr h1{font-size:20px;font-weight:800;letter-spacing:-.02em;background:linear-gradient(90deg,#ffb08a,#ff4d6d);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hdr .cnt{margin-left:auto;font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:5px 10px}
+.search{margin:0 16px 10px;display:flex;gap:8px}
+.search input{flex:1;background:var(--bg2);border:1px solid var(--line);color:var(--text);border-radius:12px;
+  padding:11px 14px;font:inherit;outline:none}
+.search input:focus{border-color:var(--accent)}
+.chips{display:flex;gap:7px;overflow-x:auto;padding:0 16px 12px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;background:var(--bg2);border:1px solid var(--line);color:var(--muted);border-radius:999px;
+  padding:7px 13px;font-size:13px;transition:.15s}
+.chip.on{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;font-weight:600}
+.list{padding:0 16px;display:flex;flex-direction:column;gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px}
+.card .top{display:flex;align-items:center;gap:9px}
+.card .em{font-size:20px;line-height:1}
+.card .nm{font-weight:700;font-size:15.5px;letter-spacing:-.01em}
+.card .dom{color:var(--muted);font-size:12px;font-family:ui-monospace,Menlo,monospace;background:var(--bg2);
+  border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+.card .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.badge{font-size:11.5px;color:var(--muted);background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+.badge.kyc{color:#ffd166;border-color:#4a3d1e}
+.card details{margin-top:9px}
+.card summary{cursor:pointer;color:var(--accent);font-size:13px;font-weight:600}
+.pt{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.pt a{color:var(--text);text-decoration:none;font-size:13.5px;padding:6px 8px;border-radius:8px;background:var(--bg2);
+  display:flex;gap:8px;align-items:center}
+.pt a .t{color:var(--muted);font-size:11px;margin-left:auto;text-transform:uppercase;letter-spacing:.4px}
+.tabbar{position:fixed;left:0;right:0;bottom:0;display:flex;background:rgba(21,28,37,.96);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px;z-index:20}
+.tabbar button{flex:1;background:transparent;border:none;color:var(--muted);font:inherit;font-weight:600;
+  padding:9px 6px;border-radius:11px;transition:.15s}
+.tabbar button.on{background:var(--card);color:var(--text)}
+.view{display:none}.view.on{display:block}
+#chat{padding:0 16px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:88%;padding:9px 13px;border-radius:14px;font-size:14px;line-height:1.45;white-space:pre-wrap;word-break:break-word}
+.msg.me{align-self:flex-end;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-bottom-right-radius:5px}
+.msg.bot{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:5px}
+.msg.bot a{color:var(--accent)}
+.msg.sys{align-self:center;background:var(--bg2);color:var(--muted);font-size:12px;border-radius:999px;padding:5px 12px}
+.chatin{position:fixed;bottom:70px;left:0;right:0;display:flex;gap:8px;padding:8px 12px;background:rgba(14,19,25,.96);
+  border-top:1px solid var(--line);backdrop-filter:blur(10px);z-index:19}
+.chatin input{flex:1;background:var(--bg2);border:1px solid var(--line);color:var(--text);border-radius:12px;
+  padding:10px 13px;font:inherit;outline:none}
+.chatin button{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#fff;font-weight:700;
+  border-radius:12px;padding:0 16px}
+.empty{color:var(--muted);text-align:center;padding:30px 20px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="hdr"><h1>🔌 Прокладки</h1><span class="cnt" id="cnt">—</span></div>
+
+<div class="view on" id="v-cat">
+  <div class="search"><input id="q" placeholder="Поиск: paybis, wert, гифты…"></div>
+  <div class="chips" id="chips"></div>
+  <div class="list" id="list"></div>
+</div>
+
+<div class="view" id="v-chat">
+  <div id="chat" style="padding-top:12px"></div>
+</div>
+
+<div class="chatin" id="chatin" style="display:none">
+  <input id="ci" placeholder="Напиши: найди wert, статистика, добавь site.com…" autocomplete="off">
+  <button id="cs">➤</button>
+</div>
+
+<div class="tabbar">
+  <button class="on" data-tab="cat">📂 Каталог</button>
+  <button data-tab="chat">💬 Чат</button>
+</div>
+
+<script>
+const CATS = [
+  ["all","Все"],["gift","🎁 Гифты"],["gateway","🔌 Шлюзы"],["exchange","🏦 Биржи"],["wallet","👛 Кошельки"],
+  ["swap","🔁 Обменники"],["processor","💳 Процессоры"],["stable","💵 Стабилкоины"],["defi","🧩 DeFi"],
+  ["nft","🖼 NFT"],["game","🎮 Гейминг"],["site","🌐 Сайты"],["merch","🏪 Мерчанты"],["integ","🔗 Интеграции"]
+];
+const TE = {"кошелёк":"👛","биржа":"🏦","NFT":"🖼","DeFi":"🧩","платёжная система":"💳","гейминг":"🎮",
+  "метавселенная":"🌐","брокер":"📈","платёжный процессор":"💸","шлюз":"🔌","интеграция":"🔗","мерчанты":"🏪","сайт":"🌐"};
+function tem(t){ if(TE[t]) return TE[t]; const s=(t||"").toLowerCase();
+  if(s.includes("гифт")||s.includes("ключ")) return "🎁";
+  if(s.includes("обменник")||s.includes("swap")) return "🔁";
+  if(s.includes("биржа")||s.includes("cex")) return "🏦";
+  if(s.includes("кошел")) return "👛";
+  if(s.includes("процессор")||s.includes("платёж")) return "💳";
+  if(s.includes("стабил")) return "💵";
+  if(s.includes("шлюз")||s.includes("ramp")) return "🔌";
+  if(s.includes("defi")) return "🧩";
+  if(s.includes("nft")) return "🖼";
+  if(s.includes("гейминг")||s.includes("метав")) return "🎮";
+  if(s.includes("интеграц")) return "🔗";
+  if(s.includes("сайт")) return "🌐";
+  return "📦"; }
+function catOf(g){ const t=(g.type||"").toLowerCase();
+  if(t.includes("гифт")||t.includes("ключ")) return "gift";
+  if(t.includes("обменник")||t.includes("swap")) return "swap";
+  if(t.includes("биржа")||t.includes("cex")||t.includes("брокер")) return "exchange";
+  if(t.includes("кошел")) return "wallet";
+  if(t.includes("процессор")||t.includes("платёж")) return "processor";
+  if(t.includes("стабил")) return "stable";
+  if(t.includes("шлюз")||t.includes("ramp")) return "gateway";
+  if(t.includes("defi")) return "defi";
+  if(t.includes("nft")) return "nft";
+  if(t.includes("гейминг")||t.includes("метав")) return "game";
+  if(t.includes("мерчант")) return "merch";
+  if(t.includes("интеграц")) return "integ";
+  if(t.includes("сайт")) return "site";
+  return "other"; }
+
+let DATA = {}, CAT = "all", Q = "";
+const $ = s => document.querySelector(s);
+const esc = s => (s??"").toString().replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function tg(){ try{ const w=window.Telegram?.WebApp; if(!w) return null; w.ready(); w.expand();
+  w.setHeaderColor?.("#0e1319"); w.setBackgroundColor?.("#0e1319"); return w; }catch(e){ return null; } }
+const WA = tg();
+
+function renderChips(){
+  $("#chips").innerHTML = CATS.map(([k,l]) => {
+    const n = k==="all" ? Object.keys(DATA).length : Object.values(DATA).filter(g => catOf(g)===k).length;
+    return `<button class="chip ${CAT===k?"on":""}" data-k="${k}">${l} ${n?`<span style="opacity:.65">${n}</span>`:""}</button>`;
+  }).join("");
+  document.querySelectorAll(".chip").forEach(b => b.onclick = () => { CAT = b.dataset.k; renderChips(); renderList(); });
+}
+
+function renderList(){
+  const items = Object.entries(DATA).filter(([d,g]) => {
+    if (CAT!=="all" && catOf(g)!==CAT) return false;
+    if (!Q) return true;
+    const hay = (g.name+" "+d+" "+(g.type||"")+" "+(g.partners||[]).map(p=>p.name).join(" ")).toLowerCase();
+    return hay.includes(Q);
+  }).sort((a,b) => (b[1].partners||[]).length - (a[1].partners||[]).length);
+
+  $("#cnt").textContent = items.length + " шт";
+  if (!items.length){ $("#list").innerHTML = '<div class="empty">Ничего не найдено 🤷</div>'; return; }
+  $("#list").innerHTML = items.map(([dom,g]) => {
+    const ps = (g.partners||[]);
+    return `<div class="card">
+      <div class="top"><span class="em">${tem(g.type)}</span><span class="nm">${esc(g.name||dom)}</span></div>
+      <div class="meta"><span class="dom">${esc(dom)}</span>
+        <span class="badge">${esc(g.type||"—")}</span>
+        ${g.fees?`<span class="badge">💸 ${esc(g.fees)}</span>`:""}
+        ${g.kyc?.обязателен?`<span class="badge kyc">🛂 KYC: ${esc(g.kyc.обязателен)}</span>`:""}
+      </div>
+      ${ps.length?`<details><summary>🔗 Прокладки — ${ps.length}</summary><div class="pt">`+
+        ps.map(p=>`<a href="${esc(p.url||"#")}" target="_blank" rel="noopener">${tem(p.type)} ${esc(p.name)}
+          <span class="t">${esc(p.type||"")}</span></a>`).join("")+`</div></details>`:""}
+    </div>`;
+  }).join("");
+}
+
+function addMsg(html, cls){ const d=document.createElement("div"); d.className="msg "+cls; d.innerHTML=html;
+  $("#chat").appendChild(d); d.scrollIntoView({block:"end"}); }
+
+async function chatSend(text){
+  if(!text.trim()) return;
+  addMsg(esc(text), "me");
+  $("#ci").value = "";
+  try {
+    const r = await fetch("/api/chat", {method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({text, user: WA?.initDataUnsafe?.user?.username || "web"})});
+    const j = await r.json();
+    addMsg(j.reply || "…", "bot");
+  } catch(e){ addMsg("⚠️ Ошибка связи с сервером", "bot"); }
+}
+
+document.querySelectorAll(".tabbar button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tabbar button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on");
+  const tab = b.dataset.tab;
+  $("#v-cat").classList.toggle("on", tab==="cat");
+  $("#v-chat").classList.toggle("on", tab==="chat");
+  $("#chatin").style.display = tab==="chat" ? "flex" : "none";
+  if (tab==="chat" && !$("#chat").children.length){
+    addMsg("Привет 👋 Я чат-панель каталога.\n\nПиши команды:\n• <b>найди wert</b> — поиск\n• <b>статистика</b> — цифры\n• <b>wert</b> — прокладки Wert\n• <b>добавь site.com</b> — добавить сайт\n• <b>помощь</b>", "bot");
+  }
+});
+$("#q").oninput = e => { Q = e.target.value.trim().toLowerCase(); renderList(); };
+$("#cs").onclick = () => chatSend($("#ci").value);
+$("#ci").onkeydown = e => { if (e.key === "Enter") chatSend($("#ci").value); };
+
+fetch("/data.json").then(r=>r.json()).then(d => { DATA = d; renderChips(); renderList(); })
+  .catch(()=>{ $("#list").innerHTML = '<div class="empty">Не удалось загрузить каталог</div>'; });
+</script>
+</body>
+</html>
