@@ -18296,5 +18296,17 @@
     },
     "notes": "Найдено охотником по теме: bitcoin l2",
     "partners": []
+  },
+  "dexscreener.com": {
+    "name": "DEX Screener",
+    "type": "сайт",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "уточняется",
+      "лимиты": "—",
+      "уровни": []
+    },
+    "notes": "Добавлено через Mini App",
+    "partners": []
   }
 }
