@@ -8933,7 +8933,11 @@
         "url": "https://alchemypay.org",
         "note": "встроенный провайдер покупки"
       }
-    ]
+    ],
+    "trashed": {
+      "reason": "убрано вручную",
+      "ts": 1792526469
+    }
   },
   "debifi.com": {
     "name": "Debifi",
