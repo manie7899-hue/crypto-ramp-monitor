@@ -6,6 +6,7 @@ export DATA_JSON="/opt/crypto-ramp-monitor/gateway_parser/data.json"
 python3 bg_monitor/monitor.py >> /var/log/crypto-monitor.log 2>&1 || true
 python3 gateway_parser/build_panel.py >> /var/log/crypto-monitor.log 2>&1 || true
 cp gateway_parser/panel.html index.html
+cp gateway_parser/panel.html /var/www/html/index.html
 git add -A
 if git diff --cached --quiet; then
   echo "[$(date -u +'%F %T')] изменений нет" >> /var/log/crypto-monitor.log
