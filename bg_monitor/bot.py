@@ -327,6 +327,11 @@ def gateway_card_text(dom, g):
         lines.append(f"{pem('🔌')} Шлюз (по коду): " + ", ".join(x["name"] for x in gd[:6]))
     elif g.get("providers"):
         lines.append(f"{pem('🔌')} Шлюзы на сайте: {', '.join(g['providers'][:8])}")
+    kv = g.get("kyc_vendors") or []
+    if kv:
+        lines.append(f"{pem('🛂')} Верификация: " + ", ".join(x["name"] for x in kv[:5]))
+    elif g.get("kyc_words"):
+        lines.append(f"{pem('🛂')} Верификация: " + ", ".join(g["kyc_words"][:3]))
     if g.get("tds"):
         ev = g.get("tds_evidence", "")
         lines.append(f"{pem('🔐')} 3D-Secure: да" + (f" ({ev})" if ev else ""))

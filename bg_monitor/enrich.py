@@ -173,6 +173,10 @@ def main():
                 if fp2["3ds"] and not tds:
                     tds = True; tds_ev = path + ":" + fp2["3ds_evidence"]
             g["gateways_detected"] = [{"name": k, "evidence": v} for k, v in gws.items()][:8]
+            if fp.get("kyc"):
+                g["kyc_vendors"] = [{"name": k, "evidence": v} for k, v in fp["kyc"].items()][:6]
+            if fp.get("kyc_words"):
+                g["kyc_words"] = fp["kyc_words"]
             g["tds"] = tds
             if tds_ev:
                 g["tds_evidence"] = tds_ev

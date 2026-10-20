@@ -28,6 +28,34 @@ PROVIDER_HOSTS = {
     "Google Pay": [r"google\.com/pay", r"pay\.google"],
 }
 
+KYC_HOSTS = {
+    "Sumsub": [r"sumsub\.com", r"api\.sumsub", r"static\.sumsub", r"sumsub"],
+    "Onfido": [r"onfido\.com", r"onfido-sdk", r"api\.onfido"],
+    "Jumio": [r"jumio\.com", r"netverify", r"jumio\.ai"],
+    "Veriff": [r"veriff\.com", r"veriff\.me", r"api\.veriff"],
+    "Persona": [r"withpersona\.com"],
+    "Trulioo": [r"trulioo\.com"],
+    "Shufti Pro": [r"shuftipro\.com"],
+    "IDnow": [r"idnow\.de", r"idnow\.io"],
+    "Yoti": [r"yoti\.com"],
+    "Mitek": [r"miteksystems\.com", r"mitek"],
+    "Synaps": [r"synaps\.io"],
+    "Fractal ID": [r"fractal\.id"],
+    "Blockpass": [r"blockpass\.org"],
+    "ComplyAdvantage": [r"complyadvantage\.com"],
+    "Sardine": [r"sardine\.ai"],
+    "Alloy": [r"alloy\.com"],
+    "Plaid": [r"plaid\.com"],
+    "Incode": [r"incode\.com", r"incodewd"],
+    "AU10TIX": [r"au10tix\.com"],
+    "Regula": [r"regulaforensics\.com"],
+    "ID.me": [r"id\.me"],
+    "Cognito": [r"cognito\.co"],
+}
+
+KYC_WORDS = [r"liveness", r"selfie", r"document verification", r"proof of address",
+             r"identity verification", r"verified by (?:sumsub|onfido|jumio|veriff)"]
+
 THREEDS = [r"3d[\s-]?secure", r"3ds2?", r"three[_\s-]?d[_\s-]?secure", r"pareq", r"creq",
            r"acs[_\s-]?url", r"acsurl", r"verified by visa", r"mastercard securecode",
            r"authentication\s*required", r"challenge\s*flow", r"threedsmethod"]
@@ -50,4 +78,16 @@ def detect(raw, domain=""):
         if m:
             tds = m.group(0)
             break
-    return {"gateways": gws, "3ds": bool(tds), "3ds_evidence": tds}
+    kyc = {}
+    for name, pats in KYC_HOSTS.items():
+        for p in pats:
+            if re.search(p, low):
+                kyc[name] = p
+                break
+    kyc_words = []
+    for p in KYC_WORDS:
+        m = re.search(p, low)
+        if m and m.group(0) not in kyc_words:
+            kyc_words.append(m.group(0))
+    return {"gateways": gws, "3ds": bool(tds), "3ds_evidence": tds,
+            "kyc": kyc, "kyc_words": kyc_words[:4]}
