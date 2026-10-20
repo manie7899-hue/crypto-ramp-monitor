@@ -143,6 +143,24 @@ def main():
             fp = detect(raw)
             gws.update(fp["gateways"])
             tds = fp["3ds"]; tds_ev = fp["3ds_evidence"]
+            extra = []
+            for m in re.finditer(r'href="([^"]*(?:checkout|/pay|/buy|payment|purchase)[^"]*)"', raw, re.I):
+                u = m.group(1)
+                if u.startswith("http") and dom in u:
+                    extra.append(u)
+                elif u.startswith("/"):
+                    extra.append(f"https://{dom}{u}")
+            for u in extra[:3]:
+                if gws and tds:
+                    break
+                page = fetch(u, 150000)
+                if not page:
+                    continue
+                fp2 = detect(page)
+                for k, v in fp2["gateways"].items():
+                    gws.setdefault(k, "buy:" + v)
+                if fp2["3ds"] and not tds:
+                    tds = True; tds_ev = "buy:" + fp2["3ds_evidence"]
             for path in CHECKOUT_PATHS:
                 if gws and tds:
                     break

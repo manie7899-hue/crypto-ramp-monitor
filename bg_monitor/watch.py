@@ -65,6 +65,16 @@ def main():
         pays = {p for p in PAY if p in body}
         provs = {p for p in PROV if p in body}
         cur = {"pay": sorted(pays), "prov": sorted(provs)}
+        try:
+            import sys as _s, pathlib as _pl
+            _s.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+            from fingerprints import detect
+            fp = detect(body)
+            cur["gw"] = sorted(fp["gateways"].keys())
+            cur["tds"] = fp["3ds"]
+        except Exception:
+            cur["gw"] = []
+            cur["tds"] = False
         prev = state.get(dom)
         state[dom] = cur
         if prev:
@@ -72,7 +82,10 @@ def main():
             came = sorted(set(cur["prov"]) - set(prev.get("prov", [])))
             pays_gone = sorted(set(prev.get("pay", [])) - set(cur["pay"]))
             pays_came = sorted(set(cur["pay"]) - set(prev.get("pay", [])))
-            if gone or came or pays_gone or pays_came:
+            gw_minus = sorted(set(prev.get("gw", [])) - set(cur.get("gw", [])))
+            gw_plus = sorted(set(cur.get("gw", [])) - set(prev.get("gw", [])))
+            tds_changed = prev.get("tds") != cur.get("tds")
+            if gone or came or pays_gone or pays_came or gw_minus or gw_plus or tds_changed:
                 rec = {"ts": int(time.time()), "domain": dom, "name": g.get("name", dom),
                        "prov_minus": gone, "prov_plus": came,
                        "pay_minus": pays_gone, "pay_plus": pays_came}
@@ -86,7 +99,13 @@ def main():
                 if pays_gone:
                     msg += f"➖ оплата: {', '.join(pays_gone)}\n"
                 if pays_came:
-                    msg += f"➕ оплата: {', '.join(pays_came)}"
+                    msg += f"➕ оплата: {', '.join(pays_came)}\n"
+                if gw_minus:
+                    msg += f"➖ шлюз по коду: {', '.join(gw_minus)}\n"
+                if gw_plus:
+                    msg += f"➕ шлюз по коду: {', '.join(gw_plus)}\n"
+                if tds_changed:
+                    msg += f"🔐 3D-Secure: {'появился' if cur.get('tds') else 'пропал'}"
                 tg(msg)
     STATE.write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
     CHANGES.write_text(json.dumps(changes[:500], ensure_ascii=False, indent=1), encoding="utf-8")
