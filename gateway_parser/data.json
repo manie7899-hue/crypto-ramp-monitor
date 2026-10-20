@@ -18682,5 +18682,29 @@
     },
     "notes": "Карточные депозиты и банковские переводы — через Swapped.",
     "partners": []
+  },
+  "northstake.dk": {
+    "name": "Northstake",
+    "type": "Стейкинг/кастоди (институциональный)",
+    "fees": "по договору",
+    "kyc": {
+      "обязателен": "Да — B2B/институциональный онбординг",
+      "лимиты": "по договору",
+      "уровни": [
+        "KYB/AML"
+      ]
+    },
+    "notes": "Датская Northstake ApS: стейкинг ETH, Staking Vault Manager (Lido V3 stVaults), кастоди на MPC (50+ сетей), валидаторная инфраструктура. CASP-лицензия Danish FSA под MiCA (FTID 10905). Merchant of record для EU/EEA-клиентов Swapped.",
+    "licenses": [
+      "Danish FSA (CASP/MiCA)"
+    ],
+    "partners": [
+      {
+        "name": "Swapped (merchant of record EU/EEA)",
+        "type": "платёжный процессор",
+        "url": "https://swapped.com",
+        "note": "EU/EEA-клиенты Swapped обслуживаются Northstake ApS"
+      }
+    ]
   }
 }
