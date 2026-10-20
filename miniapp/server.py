@@ -97,9 +97,23 @@ def ai_chat(text):
         return None
     act = ai_mod.parse_action(reply)
     if act:
-        res = do_action(act)
-        if res:
-            return res
+        low = text.lower()
+        kind = act.get("action")
+        allowed = {
+            "add": bool(re.search(r"(добав|add\\b)", low)),
+            "hunt": bool(re.search(r"(охот|hunt|поищи|ищи|найди сайт)", low)),
+            "search": bool(re.search(r"(найди|поиск|search)", low)),
+            "stats": bool(re.search(r"(статистик|сколько|stats)", low)),
+            "list": bool(re.search(r"(гифт|бирж|кошел|шлюз|обменник|процессор|defi|список)", low)),
+            "answer": True,
+        }.get(kind, False)
+        dom = str(act.get("domain") or "").lower()
+        if dom in ("site.com", "example.com", "domain.com") or (dom and "." not in dom):
+            allowed = False
+        if allowed:
+            res = do_action(act)
+            if res:
+                return res
     return esc(reply).replace("\n", "<br>")
 
 
