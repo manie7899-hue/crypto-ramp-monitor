@@ -4222,6 +4222,24 @@
         "type": "казино",
         "url": "https://shuffle.com",
         "note": "acceptedPaymentMethod: cryptocurrencies, swapped.com, moonpay; блог «buy crypto with swapped»"
+      },
+      {
+        "name": "Fortune Box",
+        "type": "казино",
+        "url": "https://fortunebox.com",
+        "note": "help-центр: «Alternative Deposit Methods — Swapped»"
+      },
+      {
+        "name": "Hyperliquid",
+        "type": "DEX",
+        "url": "https://app.hyperliquid.xyz",
+        "note": "«Fiat on-ramp is powered by Swapped.com» (офиц. FAQ)"
+      },
+      {
+        "name": "Phantom",
+        "type": "кошелёк",
+        "url": "https://phantom.app",
+        "note": "список онрамп-провайдеров Phantom: Swapped"
       }
     ]
   },
@@ -18616,6 +18634,18 @@
       ]
     },
     "notes": "Крипто-казино. Принимает карты через Swapped и MoonPay (acceptedPaymentMethod в коде).",
+    "partners": []
+  },
+  "app.hyperliquid.xyz": {
+    "name": "Hyperliquid",
+    "type": "DEX (перпы)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "по провайдеру",
+      "лимиты": "—",
+      "уровни": []
+    },
+    "notes": "фиатный онрамп через Swapped.com",
     "partners": []
   }
 }
