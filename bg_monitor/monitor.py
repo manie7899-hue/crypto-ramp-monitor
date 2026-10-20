@@ -54,7 +54,7 @@ QUERIES = [
     ("\"Wert\" checkout L2 OR marketplace OR game", "wert"),
     ("Wert payment provider new project", "wert"),
     ("site:x.com Wert presale crypto", "wert"),
-    ("site:twitter.com "powered by Wert"", "wert"),
+    ("site:twitter.com \"powered by Wert\"", "wert"),
     ("site:x.com Wert buy token card", "wert"),
     ("site:x.com memecoin presale card Wert", "wert"),
 ]
