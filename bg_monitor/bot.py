@@ -27,6 +27,16 @@ PART_PAGE = 36
 
 # ---- премиум (кастомные) эмодзи: emoji -> emoji_id ----
 PE_PATH = BASE / "premium_emoji.json"
+APP_URL_PATH = BASE / "miniapp_url.txt"
+
+
+def app_url():
+    try:
+        u = APP_URL_PATH.read_text(encoding="utf-8").strip()
+        return u if u.startswith("https://") else ""
+    except Exception:
+        return ""
+
 try:
     PREMIUM = json.loads(PE_PATH.read_text(encoding="utf-8"))
 except Exception:
@@ -206,7 +216,7 @@ def load_data():
 
 
 # ---------------------------------------------------------------- меню
-def main_menu(d):
+def main_menu(d, private=False):
     kb = {"inline_keyboard": []}
     for i in range(0, len(CATS), 2):
         row = []
@@ -224,6 +234,12 @@ def main_menu(d):
         ebtn("🔍", "Поиск", cb="search", style="primary"),
         ebtn("❓", "Помощь", cb="help"),
     ])
+    u = app_url()
+    if u:
+        if private:
+            kb["inline_keyboard"].append([{"text": "🎛 Открыть Mini App", "web_app": {"url": u + "/app/"}}])
+        else:
+            kb["inline_keyboard"].append([{"text": "🎛 Mini App", "url": u + "/app/"}])
     return kb
 
 
@@ -338,10 +354,11 @@ def handle_update(upd):
         d = load_data()
         if text.startswith("/"):
             cmd = text.split()[0].split("@")[0]
+            private = (msg.get("chat", {}).get("type") == "private")
             if cmd == "/start":
                 send(chat, "🔌 <b>Каталог крипто-платёжек и прокладок</b>\n\n"
                            "Выбери раздел 👇 или напиши слово для поиска.",
-                     main_menu(d))
+                     main_menu(d, private))
             elif cmd == "/menu":
                 send(chat, "🏠 <b>Меню</b>:", main_menu(d))
             elif cmd == "/all":
