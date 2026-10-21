@@ -3417,32 +3417,6 @@ KYC: зависит от выбранного провайдера
 
 ----------------------------------------------------------------
 
-### CryptoCloud — cryptocloud.plus
-Тип: платёжный процессор
-Комиссии: по провайдеру покупки/обмена
-KYC: зависит от выбранного провайдера
-Лимиты: по провайдеру
-  - Без KYC для кошелька/приложения
-  - KYC шлюза при покупке картой
-Примечание: Покупка/обмен крипты внутри — через шлюзы: Changelly.
-
-Прокладки (10):
-
-  [шлюз]
-  - Changelly — https://changelly.com  [встроенный провайдер покупки]
-  [интеграция]
-  - WooCommerce — https://woocommerce.com  [CMS-модуль (Trybit)]
-  - OpenCart — https://www.opencart.com  [CMS-модуль]
-  - Tilda — https://tilda.cc  [модуль приёма платежей]
-  - GetCourse — https://getcourse.ru  [CMS-модуль]
-  - XenForo 2 — https://xenforo.com  [CMS-модуль]
-  - PrestaShop — https://www.prestashop.com  [CMS-модуль]
-  - Drupal — https://www.drupal.org  [CMS-модуль]
-  - WHMCS — https://www.whmcs.com  [CMS-модуль]
-  - Telegram — https://t.me  [TG-бот приёма платежей]
-
-----------------------------------------------------------------
-
 ### CryptoMate — cryptomate.me
 Тип: сайт
 Комиссии: по провайдеру покупки/обмена
@@ -7687,29 +7661,6 @@ KYC: зависит от выбранного провайдера
   [шлюз]
   - Changelly — https://changelly.com  [встроенный провайдер покупки]
   - Guardarian — https://guardarian.com  [встроенный провайдер покупки]
-
-----------------------------------------------------------------
-
-### ZenGo — zengo.com
-Тип: кошелёк
-Комиссии: по провайдеру покупки/обмена
-KYC: зависит от выбранного провайдера
-Лимиты: по провайдеру
-  - Без KYC для кошелька/приложения
-  - KYC шлюза при покупке картой
-Примечание: Покупка картой внутри — провайдеры на выбор: Banxa, MoonPay, Transak, Ramp Network, Paybis, Unlimit.
-
-Прокладки (8):
-
-  [шлюз]
-  - Banxa — https://banxa.com  [встроенный провайдер покупки]
-  - Changelly — https://changelly.com  [встроенный провайдер покупки]
-  - MoonPay — https://moonpay.com  [встроенный провайдер покупки]
-  - Onramper — https://onramper.com  [встроенный провайдер покупки]
-  - Transak — https://transak.com  [провайдер покупки в приложении]
-  - Ramp Network — https://ramp.network  [провайдер покупки в приложении]
-  - Paybis — https://paybis.com  [провайдер покупки в приложении]
-  - Unlimit — https://unlimit.com  [провайдер покупки в приложении]
 
 ----------------------------------------------------------------
 
