@@ -1093,28 +1093,6 @@ KYC: Да — через платформу
 
 ----------------------------------------------------------------
 
-### Revolut — revolut.com
-Тип: Необанк с криптой
-Комиссии: 1.49% (стандарт), ниже в платных тарифах
-KYC: Да — полный KYC (банк)
-Лимиты: По тарифу
-  - ID + селфи + PoA
-Примечание: Крипта внутри приложения; вывод на внешние адреса есть.
-
-Прокладки (6):
-
-  [кошелёк]
-  - MetaMask — https://metamask.io  [Revolut Ramp в провайдерах MetaMask]
-  - Trust Wallet — https://trustwallet.com
-  - Ledger — https://www.ledger.com  [партнёрство Ledger+Revolut для EEA; проверь]
-  [DeFi]
-  - Uniswap — https://uniswap.org  [Revolut onramp в Uniswap]
-  - Jupiter — https://jup.ag  [встроенный buy-виджет]
-  [шлюз]
-  - Onramper — https://onramper.com  [Revolut в агрегаторе Onramper]
-
-----------------------------------------------------------------
-
 ### Coinbase Pay / Onramp — coinbase.com
 Тип: Фиат-шлюз (от биржи)
 Комиссии: ~2.5–3.5% картой

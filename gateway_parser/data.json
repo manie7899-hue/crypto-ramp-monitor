@@ -2402,7 +2402,7 @@
     "sandbox": false,
     "docs": "https://docs.changelly.com",
     "api": "https://changelly.com/business/exchange-api",
-    "enriched": 1792548909
+    "enriched": 1792552502
   },
   "alchemypay.org": {
     "name": "Alchemy Pay",
@@ -2598,7 +2598,7 @@
     "sandbox": false,
     "docs": "https://alchemypay.org/docs",
     "api": "https://alchemypay.org/api",
-    "enriched": 1792548913
+    "enriched": 1792552505
   },
   "sardine.ai": {
     "name": "Sardine",
@@ -2747,7 +2747,7 @@
     "sandbox": false,
     "docs": "https://docs.sardine.ai",
     "api": "https://sardine.ai/api",
-    "enriched": 1792548917
+    "enriched": 1792552510
   },
   "mtpelerin.com": {
     "name": "Mt Pelerin",
@@ -4289,7 +4289,7 @@
     "sandbox": false,
     "docs": "https://docs.onramp.money",
     "api": "https://api.onramp.money",
-    "enriched": 1792548945
+    "enriched": 1792552538
   },
   "onmeta.in": {
     "name": "Onmeta",
@@ -4664,7 +4664,7 @@
     "sandbox": false,
     "docs": "https://docs.transfi.com/docs/welcome-to-transfi-developer-hub",
     "api": "https://docs.transfi.com/docs/welcome-to-transfi-developer-hub",
-    "enriched": 1792548920
+    "enriched": 1792552514
   },
   "revolut.com": {
     "name": "Revolut",
@@ -4715,7 +4715,12 @@
         "note": "встроенный buy-виджет"
       }
     ],
-    "fail": 1
+    "fail": 2,
+    "trashed": {
+      "reason": "сайт не отвечает (2 проверки)",
+      "ts": 1792552605
+    },
+    "enriched": 1792552605
   },
   "coinbase.com": {
     "name": "Coinbase Pay / Onramp",
@@ -4766,7 +4771,8 @@
         "url": "https://subwallet.app",
         "note": "встроенный buy-виджет"
       }
-    ]
+    ],
+    "fail": 1
   },
   "bitpay.com": {
     "name": "BitPay",
@@ -4883,7 +4889,7 @@
     "sandbox": false,
     "docs": "https://bitpay.com/docs",
     "api": "https://bitpay.com/api",
-    "enriched": 1792548936
+    "enriched": 1792552529
   },
   "coingate.com": {
     "name": "CoinGate",
@@ -4985,7 +4991,7 @@
     "sandbox": true,
     "docs": "https://developer.coingate.com",
     "api": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,200&display=swap",
-    "enriched": 1792548960
+    "enriched": 1792552553
   },
   "nowpayments.io": {
     "name": "NOWPayments",
@@ -5814,7 +5820,7 @@
     "sandbox": false,
     "docs": "https://opennode.com/assets/images/icons/Menu/Developers/integration.svg",
     "api": "https://opennode.com/assets/images/icons/Menu/bitcoin-api.svg",
-    "enriched": 1792549005
+    "enriched": 1792552594
   },
   "bvnk.com": {
     "name": "BVNK",
@@ -5959,7 +5965,7 @@
     "sandbox": false,
     "docs": "https://developers.triple-a.io/",
     "api": "https://developers.triple-a.io/",
-    "enriched": 1792549008
+    "enriched": 1792552597
   },
   "monerium.com": {
     "name": "Monerium",
@@ -6055,7 +6061,7 @@
     "sandbox": true,
     "docs": "https://docs.monerium.com/api",
     "api": "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap",
-    "enriched": 1792549009
+    "enriched": 1792552599
   },
   "stably.io": {
     "name": "Stably",
@@ -6977,7 +6983,7 @@
     "sandbox": false,
     "docs": "https://docs.bitpanda.com",
     "api": "https://www.bitpanda.com/de/fusion/api",
-    "enriched": 1792548938
+    "enriched": 1792552532
   },
   "bybit.eu": {
     "name": "Bybit EU",
@@ -7082,7 +7088,7 @@
     "sandbox": false,
     "docs": "https://bybit.eu/docs",
     "api": "https://bybit.eu/api",
-    "enriched": 1792548963
+    "enriched": 1792552555
   },
   "dokwallet.com": {
     "name": "DOK Wallet",
@@ -8567,7 +8573,7 @@
     "sandbox": false,
     "docs": "https://docs.cakewallet.com/",
     "api": "https://docs.cakewallet.com/",
-    "enriched": 1792548965
+    "enriched": 1792552556
   },
   "camino.network": {
     "name": "Camino Network",
@@ -8815,7 +8821,7 @@
     "sandbox": false,
     "docs": "https://circle.com/developer",
     "api": "https://developers.circle.com/api-reference/wallets/common/ping",
-    "enriched": 1792549012
+    "enriched": 1792552603
   },
   "clover.com": {
     "name": "Clover",
@@ -9083,7 +9089,7 @@
     "sandbox": false,
     "docs": "https://docs.coinpayments.net/knowledge/integration-guide/",
     "api": "https://docs.coinpayments.net/knowledge/integration-guide/",
-    "enriched": 1792548947
+    "enriched": 1792552540
   },
   "coinw.com": {
     "name": "CoinW",
@@ -9270,7 +9276,7 @@
         "note": "TG-бот приёма платежей"
       }
     ],
-    "fail": 2,
+    "fail": 3,
     "trashed": {
       "reason": "сайт не отвечает (2 проверки)",
       "ts": 1792548961
@@ -9622,7 +9628,7 @@
     "sandbox": false,
     "docs": "https://edge.app/docs",
     "api": "https://edge.app/api",
-    "enriched": 1792548989
+    "enriched": 1792552581
   },
   "elementwallet.com": {
     "name": "Element Wallet",
@@ -11158,7 +11164,7 @@
     "sandbox": false,
     "docs": "https://developers.ledger.com",
     "api": "",
-    "enriched": 1792548956
+    "enriched": 1792552548
   },
   "levex.com": {
     "name": "LeveX",
@@ -11649,7 +11655,7 @@
     "sandbox": false,
     "docs": "https://metamask.io/developer",
     "api": "https://developer.metamask.io/login",
-    "enriched": 1792548994
+    "enriched": 1792552584
   },
   "minepi.com": {
     "name": "Pi Network",
@@ -14174,7 +14180,7 @@
     "sandbox": false,
     "docs": "https://developers.tangem.com",
     "api": "",
-    "enriched": 1792549018
+    "enriched": 1792552605
   },
   "tapbit.com": {
     "name": "Tapbit",
@@ -16069,7 +16075,7 @@
         "note": "провайдер покупки в приложении"
       }
     ],
-    "fail": 2,
+    "fail": 3,
     "trashed": {
       "reason": "сайт не отвечает (2 проверки)",
       "ts": 1792549009
@@ -16507,7 +16513,7 @@
     "sandbox": false,
     "docs": "",
     "api": "",
-    "enriched": 1792548997
+    "enriched": 1792552588
   },
   "gemini.com": {
     "name": "Gemini",
@@ -16613,7 +16619,7 @@
     "sandbox": false,
     "docs": "https://developer.gemini.com/",
     "api": "https://developer.gemini.com/",
-    "enriched": 1792549001
+    "enriched": 1792552591
   },
   "commerce.coinbase.com": {
     "name": "Coinbase Commerce",
