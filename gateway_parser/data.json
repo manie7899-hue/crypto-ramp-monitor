@@ -2402,7 +2402,7 @@
     "sandbox": false,
     "docs": "https://docs.changelly.com",
     "api": "https://changelly.com/business/exchange-api",
-    "enriched": 1792574102
+    "enriched": 1792577705
   },
   "alchemypay.org": {
     "name": "Alchemy Pay",
@@ -2598,7 +2598,7 @@
     "sandbox": false,
     "docs": "https://alchemypay.org/docs",
     "api": "https://alchemypay.org/api",
-    "enriched": 1792574106
+    "enriched": 1792577710
   },
   "sardine.ai": {
     "name": "Sardine",
@@ -2747,7 +2747,7 @@
     "sandbox": false,
     "docs": "https://docs.sardine.ai",
     "api": "https://sardine.ai/api",
-    "enriched": 1792574110
+    "enriched": 1792577713
   },
   "mtpelerin.com": {
     "name": "Mt Pelerin",
@@ -4289,7 +4289,7 @@
     "sandbox": false,
     "docs": "https://docs.onramp.money",
     "api": "https://api.onramp.money",
-    "enriched": 1792574140
+    "enriched": 1792577742
   },
   "onmeta.in": {
     "name": "Onmeta",
@@ -4664,7 +4664,7 @@
     "sandbox": false,
     "docs": "https://docs.transfi.com/docs/welcome-to-transfi-developer-hub",
     "api": "https://docs.transfi.com/docs/welcome-to-transfi-developer-hub",
-    "enriched": 1792574114
+    "enriched": 1792577717
   },
   "revolut.com": {
     "name": "Revolut",
@@ -4715,7 +4715,7 @@
         "note": "встроенный buy-виджет"
       }
     ],
-    "fail": 8,
+    "fail": 9,
     "trashed": {
       "reason": "сайт не отвечает (2 проверки)",
       "ts": 1792552605
@@ -4772,7 +4772,7 @@
         "note": "встроенный buy-виджет"
       }
     ],
-    "fail": 7,
+    "fail": 8,
     "trashed": {
       "reason": "сайт не отвечает (2 проверки)",
       "ts": 1792556212
@@ -4894,7 +4894,7 @@
     "sandbox": false,
     "docs": "https://bitpay.com/docs",
     "api": "https://bitpay.com/api",
-    "enriched": 1792574131
+    "enriched": 1792577733
   },
   "coingate.com": {
     "name": "CoinGate",
@@ -4996,7 +4996,7 @@
     "sandbox": true,
     "docs": "https://developer.coingate.com",
     "api": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,200&display=swap",
-    "enriched": 1792574156
+    "enriched": 1792577757
   },
   "nowpayments.io": {
     "name": "NOWPayments",
@@ -5825,7 +5825,7 @@
     "sandbox": false,
     "docs": "https://opennode.com/assets/images/icons/Menu/Developers/integration.svg",
     "api": "https://opennode.com/assets/images/icons/Menu/bitcoin-api.svg",
-    "enriched": 1792574206
+    "enriched": 1792577804
   },
   "bvnk.com": {
     "name": "BVNK",
@@ -5970,7 +5970,7 @@
     "sandbox": false,
     "docs": "https://developers.triple-a.io/",
     "api": "https://developers.triple-a.io/",
-    "enriched": 1792574209
+    "enriched": 1792577808
   },
   "monerium.com": {
     "name": "Monerium",
@@ -6066,7 +6066,7 @@
     "sandbox": true,
     "docs": "https://docs.monerium.com/api",
     "api": "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap",
-    "enriched": 1792574211
+    "enriched": 1792577809
   },
   "stably.io": {
     "name": "Stably",
@@ -6988,7 +6988,7 @@
     "sandbox": false,
     "docs": "https://docs.bitpanda.com",
     "api": "https://www.bitpanda.com/de/fusion/api",
-    "enriched": 1792574133
+    "enriched": 1792577735
   },
   "bybit.eu": {
     "name": "Bybit EU",
@@ -7093,7 +7093,7 @@
     "sandbox": false,
     "docs": "https://bybit.eu/docs",
     "api": "https://bybit.eu/api",
-    "enriched": 1792574165
+    "enriched": 1792577760
   },
   "dokwallet.com": {
     "name": "DOK Wallet",
@@ -8578,7 +8578,7 @@
     "sandbox": false,
     "docs": "https://docs.cakewallet.com/",
     "api": "https://docs.cakewallet.com/",
-    "enriched": 1792574167
+    "enriched": 1792577761
   },
   "camino.network": {
     "name": "Camino Network",
@@ -8826,7 +8826,7 @@
     "sandbox": false,
     "docs": "https://circle.com/developer",
     "api": "https://developers.circle.com/api-reference/wallets/common/ping",
-    "enriched": 1792574215
+    "enriched": 1792577813
   },
   "clover.com": {
     "name": "Clover",
@@ -9083,18 +9083,57 @@
     ],
     "gateways_detected": [],
     "tds": false,
-    "pay_groups": {},
-    "pay": [],
-    "providers": [],
+    "pay_groups": {
+      "bank": [
+        "ACH",
+        "Faster Payments",
+        "SEPA",
+        "SWIFT"
+      ],
+      "crypto": [
+        "BNB",
+        "Bitcoin",
+        "Dogecoin",
+        "Ethereum",
+        "Litecoin",
+        "Solana",
+        "TRON",
+        "USDC",
+        "USDT",
+        "XRP"
+      ]
+    },
+    "pay": [
+      "ACH",
+      "BNB",
+      "Bitcoin",
+      "Dogecoin",
+      "Ethereum",
+      "Faster Payments",
+      "Litecoin",
+      "SEPA",
+      "SWIFT",
+      "Solana",
+      "TRON",
+      "USDC",
+      "USDT",
+      "XRP"
+    ],
+    "providers": [
+      "Ramp"
+    ],
     "regions": [
+      "180+ стран",
+      "Азия",
       "Весь мир",
+      "Европа",
       "США"
     ],
     "licenses": [],
     "sandbox": false,
     "docs": "https://docs.coinpayments.net/knowledge/integration-guide/",
     "api": "https://docs.coinpayments.net/knowledge/integration-guide/",
-    "enriched": 1792574143
+    "enriched": 1792577744
   },
   "coinw.com": {
     "name": "CoinW",
@@ -9281,7 +9320,7 @@
         "note": "TG-бот приёма платежей"
       }
     ],
-    "fail": 9,
+    "fail": 10,
     "trashed": {
       "reason": "сайт не отвечает (2 проверки)",
       "ts": 1792548961
@@ -9633,7 +9672,7 @@
     "sandbox": false,
     "docs": "https://edge.app/docs",
     "api": "https://edge.app/api",
-    "enriched": 1792574192
+    "enriched": 1792577786
   },
   "elementwallet.com": {
     "name": "Element Wallet",
@@ -11169,7 +11208,7 @@
     "sandbox": false,
     "docs": "https://developers.ledger.com",
     "api": "",
-    "enriched": 1792574151
+    "enriched": 1792577752
   },
   "levex.com": {
     "name": "LeveX",
@@ -11660,7 +11699,7 @@
     "sandbox": false,
     "docs": "https://metamask.io/developer",
     "api": "https://developer.metamask.io/login",
-    "enriched": 1792574196
+    "enriched": 1792577789
   },
   "minepi.com": {
     "name": "Pi Network",
@@ -14185,7 +14224,7 @@
     "sandbox": false,
     "docs": "https://developers.tangem.com",
     "api": "",
-    "enriched": 1792574219
+    "enriched": 1792577816
   },
   "tapbit.com": {
     "name": "Tapbit",
@@ -16080,7 +16119,7 @@
         "note": "провайдер покупки в приложении"
       }
     ],
-    "fail": 9,
+    "fail": 10,
     "trashed": {
       "reason": "сайт не отвечает (2 проверки)",
       "ts": 1792549009
@@ -16518,7 +16557,7 @@
     "sandbox": false,
     "docs": "",
     "api": "",
-    "enriched": 1792574200
+    "enriched": 1792577793
   },
   "gemini.com": {
     "name": "Gemini",
@@ -16624,7 +16663,7 @@
     "sandbox": false,
     "docs": "https://developer.gemini.com/",
     "api": "https://developer.gemini.com/",
-    "enriched": 1792574203
+    "enriched": 1792577796
   },
   "commerce.coinbase.com": {
     "name": "Coinbase Commerce",
