@@ -1093,29 +1093,6 @@ KYC: Да — через платформу
 
 ----------------------------------------------------------------
 
-### Coinbase Pay / Onramp — coinbase.com
-Тип: Фиат-шлюз (от биржи)
-Комиссии: ~2.5–3.5% картой
-KYC: Да — KYC Coinbase
-Лимиты: По уровням Coinbase
-  - ID + селфи
-Примечание: Coinbase Pay: кнопка «Купить» на сторонних сайтах. Есть в MetaMask. KYC обязателен для аккаунтов биржи и Onramp.
-
-Прокладки (6):
-
-  [кошелёк]
-  - MetaMask — https://metamask.io  [Coinbase Pay в провайдерах MetaMask (США)]
-  - Phantom — https://phantom.app  [Coinbase Pay — один из 8 провайдеров в Phantom]
-  - SubWallet — https://subwallet.app  [встроенный buy-виджет]
-  [платёжный процессор]
-  - Stripe — https://stripe.com  [Coinbase+Stripe: USDC на Base]
-  [мерчанты]
-  - Shopify — https://www.shopify.com  [Coinbase Payments (USDC) для мерчантов Shopify]
-  [платёжная система]
-  - Apple Pay — https://www.apple.com/apple-pay  [Coinbase Onramp принимает Apple Pay; проверь]
-
-----------------------------------------------------------------
-
 ### BitPay — bitpay.com
 Тип: Платёжный процессор + on-ramp
 Комиссии: ~1% процессинг; on-ramp ~2.5–4%
