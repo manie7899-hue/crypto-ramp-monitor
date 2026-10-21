@@ -336,6 +336,9 @@ def gateway_card_text(dom, g):
         lines.append(f"{pem('🏪')} Локальные: {', '.join(pg['local'][:6])}")
     if not pg and g.get("pay"):
         lines.append(f"{pem('💳')} Оплата: {', '.join(g['pay'][:8])}")
+    ng = g.get("net_gateways") or {}
+    if ng:
+        lines.append(f"{pem('🕵️')} По сети запросов: " + ", ".join(list(ng.keys())[:6]))
     gd = g.get("gateways_detected") or []
     if gd:
         lines.append(f"{pem('🔌')} Шлюз (по коду): " + ", ".join(x["name"] for x in gd[:6]))
