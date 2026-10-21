@@ -20640,5 +20640,19 @@
         "note": "skrill.svg на странице Fiat Deposit"
       }
     ]
+  },
+  "thebittimes.com": {
+    "name": "Cryptocurrency News | Latest Bitcoin New",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-10-21, источник: search:wert:ddg:\"Wert\" crypto checkout partnership. Заголовок: Cryptocurrency News | Latest Bitcoin News today | TheBitTimes.com",
+    "partners": []
   }
 }
