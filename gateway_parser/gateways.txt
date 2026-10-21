@@ -1093,6 +1093,51 @@ KYC: Да — через платформу
 
 ----------------------------------------------------------------
 
+### Revolut — revolut.com
+Тип: Необанк с криптой
+Комиссии: 1.49% (стандарт), ниже в платных тарифах
+KYC: Да — полный KYC (банк)
+Лимиты: По тарифу
+  - ID + селфи + PoA
+Примечание: Крипта внутри приложения; вывод на внешние адреса есть.
+
+Прокладки (6):
+
+  [кошелёк]
+  - MetaMask — https://metamask.io  [Revolut Ramp в провайдерах MetaMask]
+  - Trust Wallet — https://trustwallet.com
+  - Ledger — https://www.ledger.com  [партнёрство Ledger+Revolut для EEA; проверь]
+  [DeFi]
+  - Uniswap — https://uniswap.org  [Revolut onramp в Uniswap]
+  - Jupiter — https://jup.ag  [встроенный buy-виджет]
+  [шлюз]
+  - Onramper — https://onramper.com  [Revolut в агрегаторе Onramper]
+
+----------------------------------------------------------------
+
+### Coinbase Pay / Onramp — coinbase.com
+Тип: Фиат-шлюз (от биржи)
+Комиссии: ~2.5–3.5% картой
+KYC: Да — KYC Coinbase
+Лимиты: По уровням Coinbase
+  - ID + селфи
+Примечание: Coinbase Pay: кнопка «Купить» на сторонних сайтах. Есть в MetaMask. KYC обязателен для аккаунтов биржи и Onramp.
+
+Прокладки (6):
+
+  [кошелёк]
+  - MetaMask — https://metamask.io  [Coinbase Pay в провайдерах MetaMask (США)]
+  - Phantom — https://phantom.app  [Coinbase Pay — один из 8 провайдеров в Phantom]
+  - SubWallet — https://subwallet.app  [встроенный buy-виджет]
+  [платёжный процессор]
+  - Stripe — https://stripe.com  [Coinbase+Stripe: USDC на Base]
+  [мерчанты]
+  - Shopify — https://www.shopify.com  [Coinbase Payments (USDC) для мерчантов Shopify]
+  [платёжная система]
+  - Apple Pay — https://www.apple.com/apple-pay  [Coinbase Onramp принимает Apple Pay; проверь]
+
+----------------------------------------------------------------
+
 ### BitPay — bitpay.com
 Тип: Платёжный процессор + on-ramp
 Комиссии: ~1% процессинг; on-ramp ~2.5–4%
@@ -1339,7 +1384,7 @@ KYC: Да — Sumsub (шаринг верификации)
   - sharing Sumsub для партнёров
 Примечание: Swapped Ramp: карта/банк/Apple Pay/Google Pay → крипта (buy), и обратно крипта → выплата (sell). KYC Sumsub. EU/EEA — Northstake ApS (CASP, Danish FSA). Рефанды на исходный метод (до 5 раб. дней), чарджбэки берёт на себя Swapped, ручной ревью до 30 мин.
 
-Прокладки (7):
+Прокладки (8):
 
   [казино]
   - Shuffle — https://shuffle.com  [acceptedPaymentMethod: cryptocurrencies, swapped.com, moonpay; блог «buy crypto with swapped»]
@@ -1351,6 +1396,8 @@ KYC: Да — Sumsub (шаринг верификации)
   - Hyperliquid — https://app.hyperliquid.xyz  [«Fiat on-ramp is powered by Swapped.com» (офиц. FAQ)]
   [кошелёк]
   - Phantom — https://phantom.app  [список онрамп-провайдеров Phantom: Swapped]
+  [шлюз]
+  - Kado — https://kado.money  [headless-скан: страница грузит ресурсы swapped.com (плюс Stripe)]
 
 ----------------------------------------------------------------
 
@@ -3369,6 +3416,32 @@ KYC: зависит от выбранного провайдера
 
   [шлюз]
   - Stripe (Crypto) — https://stripe.com  [встроенный провайдер покупки]
+
+----------------------------------------------------------------
+
+### CryptoCloud — cryptocloud.plus
+Тип: платёжный процессор
+Комиссии: по провайдеру покупки/обмена
+KYC: зависит от выбранного провайдера
+Лимиты: по провайдеру
+  - Без KYC для кошелька/приложения
+  - KYC шлюза при покупке картой
+Примечание: Покупка/обмен крипты внутри — через шлюзы: Changelly.
+
+Прокладки (10):
+
+  [шлюз]
+  - Changelly — https://changelly.com  [встроенный провайдер покупки]
+  [интеграция]
+  - WooCommerce — https://woocommerce.com  [CMS-модуль (Trybit)]
+  - OpenCart — https://www.opencart.com  [CMS-модуль]
+  - Tilda — https://tilda.cc  [модуль приёма платежей]
+  - GetCourse — https://getcourse.ru  [CMS-модуль]
+  - XenForo 2 — https://xenforo.com  [CMS-модуль]
+  - PrestaShop — https://www.prestashop.com  [CMS-модуль]
+  - Drupal — https://www.drupal.org  [CMS-модуль]
+  - WHMCS — https://www.whmcs.com  [CMS-модуль]
+  - Telegram — https://t.me  [TG-бот приёма платежей]
 
 ----------------------------------------------------------------
 
@@ -7619,6 +7692,29 @@ KYC: зависит от выбранного провайдера
 
 ----------------------------------------------------------------
 
+### ZenGo — zengo.com
+Тип: кошелёк
+Комиссии: по провайдеру покупки/обмена
+KYC: зависит от выбранного провайдера
+Лимиты: по провайдеру
+  - Без KYC для кошелька/приложения
+  - KYC шлюза при покупке картой
+Примечание: Покупка картой внутри — провайдеры на выбор: Banxa, MoonPay, Transak, Ramp Network, Paybis, Unlimit.
+
+Прокладки (8):
+
+  [шлюз]
+  - Banxa — https://banxa.com  [встроенный провайдер покупки]
+  - Changelly — https://changelly.com  [встроенный провайдер покупки]
+  - MoonPay — https://moonpay.com  [встроенный провайдер покупки]
+  - Onramper — https://onramper.com  [встроенный провайдер покупки]
+  - Transak — https://transak.com  [провайдер покупки в приложении]
+  - Ramp Network — https://ramp.network  [провайдер покупки в приложении]
+  - Paybis — https://paybis.com  [провайдер покупки в приложении]
+  - Unlimit — https://unlimit.com  [провайдер покупки в приложении]
+
+----------------------------------------------------------------
+
 ### Zerion — zerion.io
 Тип: кошелёк
 Комиссии: по провайдеру покупки/обмена
@@ -11253,135 +11349,5 @@ KYC: Да
   - Skrill — https://www.skrill.com  [skrill.svg на странице Fiat Deposit]
   [шлюз]
   - Simplex — https://www.simplex.com  [логотип simplex.svg на странице Fiat Deposit]
-
-----------------------------------------------------------------
-
-### Cryptocurrency News | Latest Bitcoin New — thebittimes.com
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:wert:ddg:"Wert" crypto checkout partnership. Заголовок: Cryptocurrency News | Latest Bitcoin News today | TheBitTimes.com
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### HiSwap — NO-KYC Instant Crypto Exchange  — hiswap.io
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: HiSwap — NO-KYC Instant Crypto Exchange · No Account · Best Rates · Instant Swap
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Instant Crypto Exchange: Swap Coins in M — instantcryptoexchange.co
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Instant Crypto Exchange: Swap Coins in Minutes, No Account
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### instantswap.cc | Seamless Crypto Exchang — instantswap.cc
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: instantswap.cc | Seamless Crypto Exchange
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Instant Crypto Swapping with Best Rates  — onemoment-change.com
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Instant Crypto Swapping with Best Rates | No KYC Private Exchange
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Instant Swap Crypto Directory &#xB7; Swa — swapraven.com
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Instant Swap Crypto Directory &#xB7; SwapRaven
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Bitcoin superapp - mining, earning and u — gomining.com
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:купить криптовалюту картой новый сервис. Заголовок: Bitcoin superapp - mining, earning and using BTC | GoMining
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Paymento - Decentralized Crypto Payment  — paymento.io
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: Paymento - Decentralized Crypto Payment Gateway
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Cryptocurrency Payment Gateway — plisio.net
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: Cryptocurrency Payment Gateway
-
-Прокладки (0):
-
-
-----------------------------------------------------------------
-
-### Profinvestment.com - криптобиржи, обменн — profinvestment.com
-Тип: сайт (авто-находка)
-Комиссии: —
-KYC: не проверено
-Лимиты: —
-  - —
-Примечание: Найдено фоновым монитором 2026-10-21, источник: search:gen:ddg:обменник криптовалют новое партнёрство. Заголовок: Profinvestment.com - криптобиржи, обменники, криптовалюты, биткоин
-
-Прокладки (0):
-
 
 ----------------------------------------------------------------
