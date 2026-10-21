@@ -1,5 +1,32 @@
 [
  {
+  "ts": 1792585821,
+  "domain": "coinpayments.net",
+  "name": "CoinPayments",
+  "prov_minus": [],
+  "prov_plus": [
+   "ramp"
+  ],
+  "pay_minus": [],
+  "pay_plus": [
+   "bitcoin",
+   "ethereum",
+   "sepa",
+   "swift",
+   "usdc",
+   "usdt"
+  ]
+ },
+ {
+  "ts": 1792585814,
+  "domain": "paybis.com",
+  "name": "Paybis",
+  "prov_minus": [],
+  "prov_plus": [],
+  "pay_minus": [],
+  "pay_plus": []
+ },
+ {
   "ts": 1792542610,
   "domain": "kado.money",
   "name": "Kado",
