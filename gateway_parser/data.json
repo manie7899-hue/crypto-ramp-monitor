@@ -18842,5 +18842,33 @@
         "note": "skrill.svg на странице Fiat Deposit"
       }
     ]
+  },
+  "btsesolutions.com": {
+    "name": "BTSE Enterprise Solutions",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-10-23, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: BTSE Enterprise Solutions",
+    "partners": []
+  },
+  "instaswap.com": {
+    "name": "InstaSwap | Private Crypto Swaps, Cross-",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-10-23, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: InstaSwap | Private Crypto Swaps, Cross-Chain DEX",
+    "partners": []
   }
 }

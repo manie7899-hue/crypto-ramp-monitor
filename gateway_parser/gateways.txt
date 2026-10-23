@@ -11351,3 +11351,29 @@ KYC: Да
   - Simplex — https://www.simplex.com  [логотип simplex.svg на странице Fiat Deposit]
 
 ----------------------------------------------------------------
+
+### BTSE Enterprise Solutions — btsesolutions.com
+Тип: сайт (авто-находка)
+Комиссии: —
+KYC: не проверено
+Лимиты: —
+  - —
+Примечание: Найдено фоновым монитором 2026-10-23, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: BTSE Enterprise Solutions
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
+
+### InstaSwap | Private Crypto Swaps, Cross- — instaswap.com
+Тип: сайт (авто-находка)
+Комиссии: —
+KYC: не проверено
+Лимиты: —
+  - —
+Примечание: Найдено фоновым монитором 2026-10-23, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: InstaSwap | Private Crypto Swaps, Cross-Chain DEX
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
