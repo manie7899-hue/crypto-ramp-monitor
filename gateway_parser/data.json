@@ -18884,5 +18884,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-10-24, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: Paymento - Decentralized Crypto Payment Gateway",
     "partners": []
+  },
+  "plisio.net": {
+    "name": "Cryptocurrency Payment Gateway",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-10-24, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: Cryptocurrency Payment Gateway",
+    "partners": []
   }
 }
