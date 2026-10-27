@@ -18898,5 +18898,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-10-24, источник: search:gen:ddg:crypto payment gateway partnership 2026. Заголовок: Cryptocurrency Payment Gateway",
     "partners": []
+  },
+  "baltex.io": {
+    "name": "Baltex – Instant Crypto Swaps | Fast &am",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-10-27, источник: search:gen:ddg:new fiat onramp integrated wallet crypto. Заголовок: Baltex – Instant Crypto Swaps | Fast &amp; Secure Exchange",
+    "partners": []
   }
 }
