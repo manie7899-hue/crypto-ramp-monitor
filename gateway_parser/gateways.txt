@@ -11429,3 +11429,16 @@ KYC: не проверено
 
 
 ----------------------------------------------------------------
+
+### Mesh | The Leading Payments Network for  — meshpay.com
+Тип: сайт (авто-находка)
+Комиссии: —
+KYC: не проверено
+Лимиты: —
+  - —
+Примечание: Найдено фоновым монитором 2026-11-03, источник: search:gen:ddg:crypto onramp partnership announcement. Заголовок: Mesh | The Leading Payments Network for Crypto and Stablecoins
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
