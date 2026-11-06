@@ -18940,5 +18940,33 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-03, источник: search:gen:ddg:crypto onramp partnership announcement. Заголовок: Mesh | The Leading Payments Network for Crypto and Stablecoins",
     "partners": []
+  },
+  "n.exchange": {
+    "name": "n.exchange | Crypto reimagined",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-06, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: n.exchange | Crypto reimagined",
+    "partners": []
+  },
+  "swapraven.com": {
+    "name": "Instant Crypto Swap Exchanges: Graded &a",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-06, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Instant Crypto Swap Exchanges: Graded &amp; Compared &#xB7; SwapRaven",
+    "partners": []
   }
 }
