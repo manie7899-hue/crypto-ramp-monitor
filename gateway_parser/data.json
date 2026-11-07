@@ -18968,5 +18968,33 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-06, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Instant Crypto Swap Exchanges: Graded &amp; Compared &#xB7; SwapRaven",
     "partners": []
+  },
+  "ghostswap.io": {
+    "name": "No KYC Crypto Exchange: Anonymous &amp; ",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-07, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: No KYC Crypto Exchange: Anonymous &amp; Private Swaps | GhostSwap",
+    "partners": []
+  },
+  "instantswap.cc": {
+    "name": "instantswap.cc | Seamless Crypto Exchang",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-07, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: instantswap.cc | Seamless Crypto Exchange",
+    "partners": []
   }
 }
