@@ -19024,5 +19024,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-11, источник: search:gen:ddg:new fiat onramp integrated wallet crypto. Заголовок: Web3 Infrastructure &amp; Product Development | Gizmolab",
     "partners": []
+  },
+  "simpleswapex.com": {
+    "name": "SimpleSwap | Instant Swaps | Crypto Exch",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-11, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: SimpleSwap | Instant Swaps | Crypto Exchange",
+    "partners": []
   }
 }
