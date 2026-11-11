@@ -19038,5 +19038,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-11, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: SimpleSwap | Instant Swaps | Crypto Exchange",
     "partners": []
+  },
+  "instantex.io": {
+    "name": "Fast Online Crypto Exchange | Instantex",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-11, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Fast Online Crypto Exchange | Instantex",
+    "partners": []
   }
 }
