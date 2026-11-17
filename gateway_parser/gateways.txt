@@ -11585,3 +11585,16 @@ KYC: не проверено
 
 
 ----------------------------------------------------------------
+
+### SendSwap — Anonymous No-KYC Crypto Excha — sendswap.io
+Тип: сайт (авто-находка)
+Комиссии: —
+KYC: не проверено
+Лимиты: —
+  - —
+Примечание: Найдено фоновым монитором 2026-11-17, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: SendSwap — Anonymous No-KYC Crypto Exchange · best rates | Send Swap
+
+Прокладки (0):
+
+
+----------------------------------------------------------------
