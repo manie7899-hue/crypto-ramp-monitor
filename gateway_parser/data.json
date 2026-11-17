@@ -19108,5 +19108,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-17, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: SendSwap — Anonymous No-KYC Crypto Exchange · best rates | Send Swap",
     "partners": []
+  },
+  "itswap.io": {
+    "name": "ITSwap — NO-KYC Instant Crypto Exchange ",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-17, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: ITSwap — NO-KYC Instant Crypto Exchange · best rates | IT Swap",
+    "partners": []
   }
 }
