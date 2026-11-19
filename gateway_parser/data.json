@@ -19122,5 +19122,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-17, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: ITSwap — NO-KYC Instant Crypto Exchange · best rates | IT Swap",
     "partners": []
+  },
+  "moneroswapper.io": {
+    "name": "Buy &amp; Sell Monero Anonymously | No K",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-19, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Buy &amp; Sell Monero Anonymously | No KYC | MoneroSwapper",
+    "partners": []
   }
 }
