@@ -19136,5 +19136,19 @@
     },
     "notes": "Найдено фоновым монитором 2026-11-19, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Buy &amp; Sell Monero Anonymously | No KYC | MoneroSwapper",
     "partners": []
+  },
+  "pillar.fi": {
+    "name": "Pillar. Multichain DeFi Wallet.",
+    "type": "сайт (авто-находка)",
+    "fees": "—",
+    "kyc": {
+      "обязателен": "не проверено",
+      "лимиты": "—",
+      "уровни": [
+        "—"
+      ]
+    },
+    "notes": "Найдено фоновым монитором 2026-11-21, источник: search:gen:ddg:instant swap exchange new partnership. Заголовок: Pillar. Multichain DeFi Wallet.",
+    "partners": []
   }
 }
